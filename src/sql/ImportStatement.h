@@ -13,6 +13,11 @@ namespace hsql {
   struct ImportStatement : SQLStatement {
     ImportStatement(ImportType type);
     virtual ~ImportStatement();
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+        if (tableName != nullptr) {
+          TableAccess::addWriteEntry(accessMap, tableName, schema);
+        }
+      };
 
     ImportType type;
     char* filePath;

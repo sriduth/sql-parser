@@ -251,4 +251,26 @@ char* substr(const char* source, int from, int to) {
     copy[len] = '\0';
     return copy;
 }
+
+void Expr::tablesAccessed(TableAccessMap& accessMap) const {
+    if (expr != nullptr) {
+        expr->tablesAccessed(accessMap);
+    }
+    if (expr2 != nullptr) {
+        expr2->tablesAccessed(accessMap);
+    }
+    if (exprList != nullptr) {
+        for (Expr* e : *exprList) {
+            if (e != nullptr) {
+                e->tablesAccessed(accessMap);
+            }
+        }
+    }
+    if (select != nullptr) {
+        select->tablesAccessed(accessMap);
+    }
+    if (table != nullptr) {
+        TableAccess::addReadEntry(accessMap, table, nullptr);
+    }
+}
 }  // namespace hsql

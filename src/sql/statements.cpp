@@ -328,6 +328,33 @@ namespace hsql {
     else return name;
   }
 
+    void TableRef::tablesAccessed(TableAccessMap& accessMap, TableOperation op) const {
+      switch (type) {
+        case kTableName:
+          if (name != nullptr) {
+            TableAccess::addOperation(accessMap, name, schema, op);
+          }
+              break;
+        case kTableSelect:
+          if (select != nullptr) {
+            select->tablesAccessed(accessMap);
+          }
+              break;
+        case kTableCrossProduct:
+          if (list != nullptr) {
+            for (auto it = list->begin(); it != list->end(); ++it) {
+              (*it)->tablesAccessed(accessMap, op);
+            }
+          }
+              break;
+        case kTableJoin:
+          if (join != nullptr) {
+            join->tablesAccessed(accessMap, op);
+          }
+
+      }
+    }
+
   // JoinDefinition
   JoinDefinition::JoinDefinition() :
     left(nullptr),
@@ -340,5 +367,15 @@ namespace hsql {
     delete right;
     delete condition;
   }
-
+    void JoinDefinition::tablesAccessed(TableAccessMap& accessMap, TableOperation op) const  {
+      if (left != nullptr) {
+        left->tablesAccessed(accessMap, op);
+      }
+      if (right != nullptr) {
+        right->tablesAccessed(accessMap, op);
+      }
+      if (condition != nullptr) {
+        condition->tablesAccessed(accessMap);
+      }
+    };
 } // namespace hsql

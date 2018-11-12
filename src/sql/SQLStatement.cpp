@@ -28,5 +28,4 @@ namespace hsql {
   bool SQLStatement::is(StatementType type) const {
     return isType(type);
   }
-
 }

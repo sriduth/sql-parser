@@ -10,6 +10,13 @@ namespace hsql {
   struct ExecuteStatement : SQLStatement {
     ExecuteStatement();
     virtual ~ExecuteStatement();
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+        if (parameters != nullptr) {
+          for (auto it = parameters->begin(); it != parameters->end(); ++it) {
+            (*it)->tablesAccessed(accessMap);
+          }
+        }
+      };
 
     char* name;
     std::vector<Expr*>* parameters;

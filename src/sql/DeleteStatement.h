@@ -12,7 +12,14 @@ namespace hsql {
   struct DeleteStatement : SQLStatement {
     DeleteStatement();
     virtual ~DeleteStatement();
-
+    void tablesAccessed(TableAccessMap& accessMap) const override {
+      if (expr != nullptr) {
+        expr->tablesAccessed(accessMap);
+      }
+      if (tableName != nullptr) {
+       TableAccess::addWriteEntry(accessMap, tableName, schema);
+      }
+    }
     char* schema;
     char* tableName;
     Expr* expr;

@@ -8,6 +8,13 @@ namespace hsql {
   void printOperatorExpression(Expr* expr, uintmax_t numIndent);
   void printAlias(Alias* alias, uintmax_t numIndent);
 
+    std::string strOp(TableOperation op) {
+      if (op == TableOperation::Read) {
+        return std::string("READ");
+      }
+      return std::string("MODIFY");
+    }
+
   std::string indent(uintmax_t numIndent) {
     return std::string(numIndent, '\t');
   }
@@ -232,20 +239,55 @@ namespace hsql {
 
   void printStatementInfo(const SQLStatement* stmt) {
     switch (stmt->type()) {
-    case kStmtSelect:
-      printSelectStatementInfo((const SelectStatement*) stmt, 0);
-      break;
-    case kStmtInsert:
-      printInsertStatementInfo((const InsertStatement*) stmt, 0);
-      break;
-    case kStmtCreate:
-      printCreateStatementInfo((const CreateStatement*) stmt, 0);
-      break;
-    case kStmtImport:
-      printImportStatementInfo((const ImportStatement*) stmt, 0);
-      break;
-    default:
-      break;
+//    case kStmtSelect:
+//      printSelectStatementInfo((const SelectStatement*) stmt, 0);
+//      break;
+//    case kStmtInsert:
+//      printInsertStatementInfo((const InsertStatement*) stmt, 0);
+//      break;
+//    case kStmtCreate:
+//      printCreateStatementInfo((const CreateStatement*) stmt, 0);
+//      break;
+//    case kStmtImport:
+//      printImportStatementInfo((const ImportStatement*) stmt, 0);
+//      break;
+      case kStmtSelect:
+        std::cout << "SELECT\n";
+            break;
+      case kStmtDelete:
+        std::cout << "DELETE\n";
+            break;
+      case kStmtInsert:
+        std::cout << "INSERT\n";
+            break;
+      case kStmtUpdate:
+        std::cout << "UPDATE\n";
+            break;
+      case kStmtCreate:
+        std::cout << "CREATE\n";
+            break;
+      case kStmtDrop:
+        std::cout << "DROP\n";
+            break;
+      case kStmtAlter:
+        std::cout << "ALTER\n";
+            break;
+      case kStmtExecute:
+        std::cout << "EXECUTE\n";
+            break;
+      case kStmtPrepare:
+        std::cout << "PREPARE\n";
+            break;
+      case kStmtShow:
+        std::cout << "SHOW\n";
+            break;
+      default:
+        break;
+    }
+    TableAccessMap t;
+    stmt->tablesAccessed(t);
+    for (auto it = t.begin(); it != t.end(); ++it) {
+      std::cout << it->first << ":" << strOp(it->second) << "\n";
     }
   }
 

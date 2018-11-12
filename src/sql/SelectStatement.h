@@ -46,6 +46,22 @@ namespace hsql {
   struct SelectStatement : SQLStatement {
     SelectStatement();
     virtual ~SelectStatement();
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+        if (fromTable != nullptr) {
+          fromTable->tablesAccessed(accessMap, TableOperation::Read);
+        }
+        if (selectList != nullptr) {
+          for (auto it = selectList->begin(); it != selectList->end(); ++it) {
+            (*it)->tablesAccessed(accessMap);
+          }
+        }
+        if (whereClause != nullptr) {
+          whereClause->tablesAccessed(accessMap);
+        }
+        if (unionSelect != nullptr) {
+          unionSelect->tablesAccessed(accessMap);
+        }
+      };
 
     TableRef* fromTable;
     bool selectDistinct;

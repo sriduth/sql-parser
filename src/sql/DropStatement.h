@@ -20,7 +20,11 @@ namespace hsql {
 
     DropStatement(DropType type);
     virtual ~DropStatement();
-
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+        if (name != nullptr) {
+          TableAccess::addWriteEntry(accessMap, name, schema);
+        }
+      };
     DropType type;
     bool ifExists;
     char* schema;

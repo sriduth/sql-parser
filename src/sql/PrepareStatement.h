@@ -10,6 +10,8 @@ namespace hsql {
   struct PrepareStatement : SQLStatement {
     PrepareStatement();
     virtual ~PrepareStatement();
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+      };
 
     char* name;
 

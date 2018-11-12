@@ -15,6 +15,19 @@ namespace hsql {
   struct UpdateStatement : SQLStatement {
     UpdateStatement();
     virtual ~UpdateStatement();
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+        if (updates != nullptr) {
+          for (auto it = updates->begin(); it != updates->end(); ++it) {
+            (*it)->value->tablesAccessed(accessMap);
+          }
+        }
+        if (where != nullptr) {
+          where->tablesAccessed(accessMap);
+        }
+        if (table != nullptr) {
+          table->tablesAccessed(accessMap, TableOperation::Modify);
+        }
+      };
 
     // TODO: switch to char* instead of TableRef
     TableRef* table;

@@ -2,6 +2,7 @@
 #define SQLPARSER_CREATE_STATEMENT_H
 
 #include "SQLStatement.h"
+#include "TableAccess.h"
 
 #include <ostream>
 
@@ -53,7 +54,14 @@ namespace hsql {
   struct CreateStatement : SQLStatement {
     CreateStatement(CreateType type);
     virtual ~CreateStatement();
-
+    void tablesAccessed(TableAccessMap& accessMap) const override {
+      if (select != nullptr) {
+        select->tablesAccessed(accessMap);
+      }
+      if (tableName != nullptr) {
+        TableAccess::addWriteEntry(accessMap, tableName, schema);
+      }
+    };
     CreateType type;
     bool ifNotExists; // default: false
     char* filePath;   // default: nullptr

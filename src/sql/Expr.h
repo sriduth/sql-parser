@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <memory>
 #include <vector>
-
+#include "TableAccess.h"
 namespace hsql {
 struct SelectStatement;
 
@@ -84,7 +84,7 @@ typedef struct Expr Expr;
 // Represents SQL expressions (i.e. literals, operators, column_refs).
 // TODO: When destructing a placeholder expression, we might need to alter the
 // placeholder_list.
-struct Expr {
+struct Expr :  public TableAccess {
     Expr(ExprType type);
     virtual ~Expr();
 
@@ -106,6 +106,9 @@ struct Expr {
 
     OperatorType opType;
     bool distinct;
+
+    // TableAccess
+    void tablesAccessed(TableAccessMap& accessMap) const override;
 
     // Convenience accessor methods.
 

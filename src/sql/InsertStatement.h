@@ -15,6 +15,19 @@ namespace hsql {
   struct InsertStatement : SQLStatement {
     InsertStatement(InsertType type);
     virtual ~InsertStatement();
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+        if (tableName != nullptr) {
+          TableAccess::addWriteEntry(accessMap, tableName, schema);
+        }
+        if (values != nullptr) {
+          for (auto it = values->begin(); it != values->end(); ++it) {
+            (*it)->tablesAccessed(accessMap);
+          }
+        }
+        if (select != nullptr) {
+          select->tablesAccessed(accessMap);
+        }
+      };
 
     InsertType type;
     char* schema;

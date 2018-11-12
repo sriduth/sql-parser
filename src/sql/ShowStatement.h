@@ -17,6 +17,9 @@ namespace hsql {
 
     ShowStatement(ShowType type);
     virtual ~ShowStatement();
+      void tablesAccessed(TableAccessMap& accessMap) const override {
+        TableAccess::addReadEntry(accessMap, name, schema);
+      };
 
     ShowType type;
     char* schema;

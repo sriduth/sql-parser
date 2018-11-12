@@ -2,7 +2,7 @@
 #define SQLPARSER_SQLSTATEMENT_H
 
 #include <vector>
-
+#include "TableAccess.h"
 #include "Expr.h"
 
 namespace hsql {
@@ -24,7 +24,7 @@ namespace hsql {
   };
 
   // Base struct for every SQL statement
-  struct SQLStatement {
+  struct SQLStatement : public TableAccess {
 
     SQLStatement(StatementType type);
 
@@ -44,7 +44,6 @@ namespace hsql {
 
    private:
     StatementType type_;
-
   };
 
 } // namespace hsql
