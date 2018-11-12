@@ -36,7 +36,7 @@ GMAKE = make mode=$(mode)
 NAME := sqlparser
 PARSER_CPP = $(SRCPARSER)/bison_parser.cpp  $(SRCPARSER)/flex_lexer.cpp
 PARSER_H   = $(SRCPARSER)/bison_parser.h    $(SRCPARSER)/flex_lexer.h
-LIB_CFLAGS = -std=c++1z -Wall -Werror $(OPT_FLAG)
+LIB_CFLAGS = -std=c++11 -Wall -Werror $(OPT_FLAG)
 
 static ?= no
 ifeq ($(static), yes)
@@ -120,7 +120,7 @@ $(BM_BUILD): $(BM_ALL) $(LIB_BUILD)
 ############ Test & Example ############
 ########################################
 TEST_BUILD   = $(BIN)/tests
-TEST_CFLAGS   = -std=c++1z -Wall -Werror -Isrc/ -Itest/ -L./ $(OPT_FLAG)
+TEST_CFLAGS   = -std=c++11 -Wall -Isrc/ -Itest/ -L./ $(OPT_FLAG)
 TEST_CPP     = $(shell find test/ -name '*.cpp')
 TEST_ALL     = $(shell find test/ -name '*.cpp') $(shell find test/ -name '*.h')
 EXAMPLE_SRC  = $(shell find example/ -name '*.cpp') $(shell find example/ -name '*.h')
