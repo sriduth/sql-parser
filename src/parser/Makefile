@@ -1,5 +1,5 @@
 # bison's version is too old on OSX, allow user to pass in custom path
-BISON?=/usr/local/bin/bison
+BISON?=bison
 FLEX?=flex
 
 BISON_VERSION=$(shell $(BISON) --version | head -n 1 | grep -o '[0-9]\.[0-9]\+')
