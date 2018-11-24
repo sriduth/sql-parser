@@ -55,8 +55,8 @@ extern int hsql_debug;
 
 // %code requires block
 
-#include "../sql/statements.h"
-#include "../SQLParserResult.h"
+#include "../../include/sqlparser/statements.h"
+#include "../../include/sqlparser/SQLParserResult.h"
 #include "parser_typedef.h"
 
 // Auto update column and line number

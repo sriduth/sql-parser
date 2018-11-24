@@ -1,5 +1,5 @@
 
-#include "SQLParserResult.h"
+#include "../include/sqlparser/SQLParserResult.h"
 #include  <algorithm>
 
 namespace hsql {

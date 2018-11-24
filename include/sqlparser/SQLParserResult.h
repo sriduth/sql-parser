@@ -1,7 +1,7 @@
 #ifndef SQLPARSER_SQLPARSER_RESULT_H
 #define SQLPARSER_SQLPARSER_RESULT_H
 
-#include "sql/SQLStatement.h"
+#include "SQLStatement.h"
 
 namespace hsql {
   // Represents the result of the SQLParser.

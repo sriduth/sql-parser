@@ -2,7 +2,7 @@
 #define SQLPARSER_SQLPARSER_H
 
 #include "SQLParserResult.h"
-#include "sql/statements.h"
+#include "statements.h"
 
 namespace hsql {
 

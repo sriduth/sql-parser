@@ -5,6 +5,7 @@ all: library
 #######################################
 BIN        = bin
 SRC        = src
+INCLUDE    = include/sqlparser
 SRCPARSER  = src/parser
 
 INSTALL     = /usr/local
@@ -50,8 +51,8 @@ else
 	LIB_LFLAGS = -shared -o
 endif
 LIB_CPP    = $(shell find $(SRC) -name '*.cpp' -not -path "$(SRCPARSER)/*") $(PARSER_CPP)
-LIB_H      = $(shell find $(SRC) -name '*.h' -not -path "$(SRCPARSER)/*") $(PARSER_H)
-LIB_ALL    = $(shell find $(SRC) -name '*.cpp' -not -path "$(SRCPARSER)/*") $(shell find $(SRC) -name '*.h' -not -path "$(SRCPARSER)/*")
+LIB_H      = $(shell find $(INCLUDE) -name '*.h' -not -path "$(SRCPARSER)/*") $(PARSER_H)
+LIB_ALL    = $(shell find $(SRC) -name '*.cpp' -not -path "$(SRCPARSER)/*") $(shell find $(INCLUDE) -name '*.h' -not -path "$(SRCPARSER)/*")
 LIB_OBJ    = $(LIB_CPP:%.cpp=%.o)
 
 library: $(LIB_BUILD)
@@ -96,7 +97,7 @@ install:
 ############## Benchmark ##############
 #######################################
 BM_BUILD  = $(BIN)/benchmark
-BM_CFLAGS = -std=c++17 -Wall -Isrc/ -L./ $(OPT_FLAG)
+BM_CFLAGS = -std=c++17 -Wall -Isrc/ -Iinclude/sqlparser/ -L./ $(OPT_FLAG)
 BM_PATH   = benchmark
 BM_CPP    = $(shell find $(BM_PATH)/ -name '*.cpp')
 BM_ALL    = $(shell find $(BM_PATH)/ -name '*.cpp' -or -name '*.h')
@@ -120,7 +121,7 @@ $(BM_BUILD): $(BM_ALL) $(LIB_BUILD)
 ############ Test & Example ############
 ########################################
 TEST_BUILD   = $(BIN)/tests
-TEST_CFLAGS   = -std=c++11 -Wall -Isrc/ -Itest/ -L./ $(OPT_FLAG)
+TEST_CFLAGS   = -std=c++11 -Wall -Isrc/ -Iinclude/sqlparser/ -Itest/ -L./ $(OPT_FLAG)
 TEST_CPP     = $(shell find test/ -name '*.cpp')
 TEST_ALL     = $(shell find test/ -name '*.cpp') $(shell find test/ -name '*.h')
 EXAMPLE_SRC  = $(shell find example/ -name '*.cpp') $(shell find example/ -name '*.h')
