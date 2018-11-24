@@ -16,7 +16,7 @@ namespace hsql {
         expr->tablesAccessed(accessMap);
       }
       if (tableName != nullptr) {
-       TableAccess::addWriteEntry(accessMap, tableName, schema);
+          TableAccess::addOperation(accessMap, tableName, schema, TableAccess::OpDelete);
       }
     }
     char* schema;

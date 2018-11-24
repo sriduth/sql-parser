@@ -35,7 +35,7 @@ namespace hsql {
   struct TableRef {
     TableRef(TableRefType type);
     virtual ~TableRef();
-    void tablesAccessed(TableAccessMap& accessMap, TableOperation op) const;
+      void tablesAccessed(TableAccessMap& accessMap, const std::string& op) const;
 
     TableRefType type;
 
@@ -68,7 +68,7 @@ namespace hsql {
   struct JoinDefinition {
     JoinDefinition();
     virtual ~JoinDefinition();
-    void tablesAccessed(TableAccessMap& accessMap, TableOperation op) const;
+      void tablesAccessed(TableAccessMap& accessMap, const std::string& op) const;
 
     TableRef* left;
     TableRef* right;

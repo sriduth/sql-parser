@@ -269,7 +269,7 @@ void Expr::tablesAccessed(TableAccessMap& accessMap) const {
         select->tablesAccessed(accessMap);
     }
     if (table != nullptr) {
-        TableAccess::addReadEntry(accessMap, table, nullptr);
+      TableAccess::addOperation(accessMap, table, nullptr, TableAccess::OpUnknown);
     }
 }
 }  // namespace hsql

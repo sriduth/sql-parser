@@ -24,7 +24,7 @@ namespace hsql {
           where->tablesAccessed(accessMap);
         }
         if (table != nullptr) {
-          table->tablesAccessed(accessMap, TableOperation::Modify);
+          table->tablesAccessed(accessMap, TableAccess::OpUpdate);
         }
       };
 

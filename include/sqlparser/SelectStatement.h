@@ -47,7 +47,7 @@ namespace hsql {
     virtual ~SelectStatement();
       void tablesAccessed(TableAccessMap& accessMap) const override {
         if (fromTable != nullptr) {
-          fromTable->tablesAccessed(accessMap, TableOperation::Read);
+            fromTable->tablesAccessed(accessMap, TableAccess::OpSelect);
         }
         if (selectList != nullptr) {
           for (auto it = selectList->begin(); it != selectList->end(); ++it) {

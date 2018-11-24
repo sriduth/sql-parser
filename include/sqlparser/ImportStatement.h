@@ -14,7 +14,7 @@ namespace hsql {
     virtual ~ImportStatement();
       void tablesAccessed(TableAccessMap& accessMap) const override {
         if (tableName != nullptr) {
-          TableAccess::addWriteEntry(accessMap, tableName, schema);
+            TableAccess::addOperation(accessMap, tableName, schema, TableAccess::OpImport);
         }
       };
 

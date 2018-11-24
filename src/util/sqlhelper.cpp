@@ -8,13 +8,6 @@ namespace hsql {
   void printOperatorExpression(Expr* expr, uintmax_t numIndent);
   void printAlias(Alias* alias, uintmax_t numIndent);
 
-    std::string strOp(TableOperation op) {
-      if (op == TableOperation::Read) {
-        return std::string("READ");
-      }
-      return std::string("MODIFY");
-    }
-
   std::string indent(uintmax_t numIndent) {
     return std::string(numIndent, '\t');
   }
@@ -287,7 +280,9 @@ namespace hsql {
     TableAccessMap t;
     stmt->tablesAccessed(t);
     for (auto it = t.begin(); it != t.end(); ++it) {
-      std::cout << it->first << ":" << strOp(it->second) << "\n";
+      std::cout << it->first << ":";
+      for (auto i = it->second.begin(); i != it->second.end(); ++i)
+        std::cout << *i << ' ';
     }
   }
 

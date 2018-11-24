@@ -6,40 +6,33 @@
 #include <unordered_map>
 
 namespace hsql {
-    enum class TableOperation {
-        Read,
-        Modify
-    };
-    typedef std::unordered_map<std::string, TableOperation> TableAccessMap;
+    typedef std::unordered_map<std::string, std::vector<std::string>> TableAccessMap;
 
     class TableAccess {
     public:
+        const std::string OpUnknown{"unknown"};
+        const std::string OpInsert{"insert"};
+        const std::string OpSelect{"select"};
+        const std::string OpShow{"show"};
+        const std::string OpUpdate{"update"};
+        const std::string OpDelete{"delete"};
+        const std::string OpCreate{"create"};
+        const std::string OpDrop{"drop"};
+        const std::string OpAlter{"alter"};
+        const std::string OpImport{"import"};
+
         virtual void tablesAccessed(TableAccessMap &t) const = 0;
-        static void addReadEntry(TableAccessMap& t, const char *table, const char *db)  {
-          std::string key = buildKey(table, db);
-          TableAccessMap::const_iterator it = t.find(key);
-          if (it == t.end()) {
-            t[key] = TableOperation::Read;
-          }
-        }
-        static void addWriteEntry(TableAccessMap& t, const char *table, const char *db)  {
-            t[buildKey(table, db)] = TableOperation::Modify;
-        }
-        static void addOperation(TableAccessMap &t, const char *table, const char *db, TableOperation op)  {
-            if (op == TableOperation::Read) {
-                addReadEntry(t, table, db);
-            } else {
-                addWriteEntry(t, table, db);
-            }
-        }
+        static void addOperation(TableAccessMap &t, const char *table, const char *db, const std::string& op)  {
+           t[buildKey(table, db)].push_back(op);
+         } 
         virtual ~TableAccess() {}
     private:
         static std::string buildKey(const char *table, const char *db) {
           std::string key;
+          key.append(table);
           if (db != nullptr) {
-            key.append(db);
+              key.append(".").append(db);
           }
-          key.append(".").append(table);
           return key;
         }
     };

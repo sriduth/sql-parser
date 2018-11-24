@@ -328,7 +328,7 @@ namespace hsql {
     else return name;
   }
 
-    void TableRef::tablesAccessed(TableAccessMap& accessMap, TableOperation op) const {
+  void TableRef::tablesAccessed(TableAccessMap& accessMap, const std::string& op) const {
       switch (type) {
         case kTableName:
           if (name != nullptr) {
@@ -367,7 +367,7 @@ namespace hsql {
     delete right;
     delete condition;
   }
-    void JoinDefinition::tablesAccessed(TableAccessMap& accessMap, TableOperation op) const  {
+  void JoinDefinition::tablesAccessed(TableAccessMap& accessMap, const std::string& op) const  {
       if (left != nullptr) {
         left->tablesAccessed(accessMap, op);
       }
