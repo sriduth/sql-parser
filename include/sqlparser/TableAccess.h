@@ -1,12 +1,12 @@
 #pragma once
 
-#include <vector>
+#include <set>
 #include <map>
 #include <iterator>
 #include <unordered_map>
 
 namespace hsql {
-    typedef std::unordered_map<std::string, std::vector<std::string>> TableAccessMap;
+    typedef std::unordered_map<std::string, std::set<std::string>> TableAccessMap;
 
     class TableAccess {
     public:
@@ -23,8 +23,8 @@ namespace hsql {
 
         virtual void tablesAccessed(TableAccessMap &t) const = 0;
         static void addOperation(TableAccessMap &t, const char *table, const char *db, const std::string& op)  {
-           t[buildKey(table, db)].push_back(op);
-         } 
+           t[buildKey(table, db)].insert(op);
+         }
         virtual ~TableAccess() {}
     private:
         static std::string buildKey(const char *table, const char *db) {
