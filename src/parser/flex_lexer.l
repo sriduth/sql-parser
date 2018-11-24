@@ -34,7 +34,7 @@ static std::stringstream strbuf;
 %option reentrant
 %option bison-bridge
 
-/* performance tweeks */
+/* performance tweaks */
 %option never-interactive
 %option batch
 
