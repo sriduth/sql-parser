@@ -33,6 +33,7 @@ namespace hsql {
                 addWriteEntry(t, table, db);
             }
         }
+        virtual ~TableAccess() {}
     private:
         static std::string buildKey(const char *table, const char *db) {
           std::string key;
