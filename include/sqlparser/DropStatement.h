@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_DROP_STATEMENT_H
-#define SQLPARSER_DROP_STATEMENT_H
+#pragma once
 
 #include "SQLStatement.h"
 
@@ -32,4 +31,3 @@ namespace hsql {
   };
 
 } // namespace hsql
-#endif

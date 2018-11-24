@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_TABLEREF_H
-#define SQLPARSER_TABLEREF_H
+#pragma once
 
 #include "Expr.h"
 #include <stdio.h>
@@ -79,4 +78,3 @@ namespace hsql {
   };
 
 } // namespace hsql
-#endif

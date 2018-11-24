@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_PREPARE_STATEMENT_H
-#define SQLPARSER_PREPARE_STATEMENT_H
+#pragma once
 
 #include "SQLStatement.h"
 
@@ -27,4 +26,3 @@ namespace hsql {
 
 } // namsepace hsql
 
-#endif

@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_SELECT_STATEMENT_H
-#define SQLPARSER_SELECT_STATEMENT_H
+#pragma once
 
 #include "SQLStatement.h"
 #include "Expr.h"
@@ -76,4 +75,3 @@ namespace hsql {
 
 } // namespace hsql
 
-#endif

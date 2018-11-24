@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_SQLPARSER_H
-#define SQLPARSER_SQLPARSER_H
+#pragma once
 
 #include "SQLParserResult.h"
 #include "statements.h"
@@ -35,4 +34,3 @@ namespace hsql {
 } // namespace hsql
 
 
-#endif

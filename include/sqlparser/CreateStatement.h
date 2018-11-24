@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_CREATE_STATEMENT_H
-#define SQLPARSER_CREATE_STATEMENT_H
+#pragma once
 
 #include "SQLStatement.h"
 #include "TableAccess.h"
@@ -74,4 +73,3 @@ namespace hsql {
 
 } // namespace hsql
 
-#endif

@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_EXPR_H
-#define SQLPARSER_EXPR_H
+#pragma once
 
 #include <stdlib.h>
 #include <memory>
@@ -193,4 +192,3 @@ struct Expr :  public TableAccess {
 
 }  // namespace hsql
 
-#endif

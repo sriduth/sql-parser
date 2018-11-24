@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_TABLEACCESS_H
-#define SQLPARSER_TABLEACCESS_H
+#pragma once
 
 #include <vector>
 #include <map>
@@ -46,4 +45,3 @@ namespace hsql {
     };
 } // namespace hsql
 
-#endif // SQLPARSER_TABLEACCESS_H

@@ -1,5 +1,4 @@
-#ifndef SQLPARSER_SQLSTATEMENT_H
-#define SQLPARSER_SQLSTATEMENT_H
+#pragma once
 
 #include <vector>
 #include "TableAccess.h"
@@ -63,4 +62,3 @@ namespace hsql {
 
 } // namespace hsql
 
-#endif // SQLPARSER_SQLSTATEMENT_H
