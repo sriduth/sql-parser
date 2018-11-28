@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.2.1.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2015, 2018 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -30,9 +30,6 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
-/* Undocumented macros, especially those whose name start with YY_,
-   are private implementation details.  Do not rely on them.  */
-
 #ifndef YY_HSQL_BISON_PARSER_H_INCLUDED
 # define YY_HSQL_BISON_PARSER_H_INCLUDED
 /* Debug traces.  */
@@ -51,7 +48,7 @@
 extern int hsql_debug;
 #endif
 /* "%code requires" blocks.  */
-#line 35 "bison_parser.y" /* yacc.c:1912  */
+#line 35 "bison_parser.y" /* yacc.c:1909  */
 
 // %code requires block
 
@@ -75,7 +72,7 @@ extern int hsql_debug;
 				} \
 		}
 
-#line 79 "bison_parser.h" /* yacc.c:1912  */
+#line 76 "bison_parser.h" /* yacc.c:1909  */
 
 /* Token type.  */
 #ifndef HSQL_TOKENTYPE
@@ -183,48 +180,54 @@ extern int hsql_debug;
     SQL_VIEW = 356,
     SQL_WHEN = 357,
     SQL_WITH = 358,
-    SQL_ADD = 359,
-    SQL_ALL = 360,
-    SQL_AND = 361,
-    SQL_ASC = 362,
-    SQL_CSV = 363,
-    SQL_END = 364,
-    SQL_FOR = 365,
-    SQL_INT = 366,
-    SQL_KEY = 367,
-    SQL_NOT = 368,
-    SQL_OFF = 369,
-    SQL_SET = 370,
-    SQL_TBL = 371,
-    SQL_TOP = 372,
-    SQL_AS = 373,
-    SQL_BY = 374,
-    SQL_IF = 375,
-    SQL_IN = 376,
-    SQL_IS = 377,
-    SQL_OF = 378,
-    SQL_ON = 379,
-    SQL_OR = 380,
-    SQL_TO = 381,
-    SQL_ARRAY = 382,
-    SQL_CONCAT = 383,
-    SQL_ILIKE = 384,
-    SQL_SECOND = 385,
-    SQL_MINUTE = 386,
-    SQL_HOUR = 387,
-    SQL_DAY = 388,
-    SQL_MONTH = 389,
-    SQL_YEAR = 390,
-    SQL_TRUE = 391,
-    SQL_FALSE = 392,
-    SQL_EQUALS = 393,
-    SQL_NOTEQUALS = 394,
-    SQL_LESS = 395,
-    SQL_GREATER = 396,
-    SQL_LESSEQ = 397,
-    SQL_GREATEREQ = 398,
-    SQL_NOTNULL = 399,
-    SQL_UMINUS = 400
+    SQL_LOW_PRIORITY = 359,
+    SQL_DELAYED = 360,
+    SQL_HIGH_PRIORITY = 361,
+    SQL_QUICK = 362,
+    SQL_IGNORE = 363,
+    SQL_DATABASE = 364,
+    SQL_ADD = 365,
+    SQL_ALL = 366,
+    SQL_AND = 367,
+    SQL_ASC = 368,
+    SQL_CSV = 369,
+    SQL_END = 370,
+    SQL_FOR = 371,
+    SQL_INT = 372,
+    SQL_KEY = 373,
+    SQL_NOT = 374,
+    SQL_OFF = 375,
+    SQL_SET = 376,
+    SQL_TBL = 377,
+    SQL_TOP = 378,
+    SQL_AS = 379,
+    SQL_BY = 380,
+    SQL_IF = 381,
+    SQL_IN = 382,
+    SQL_IS = 383,
+    SQL_OF = 384,
+    SQL_ON = 385,
+    SQL_OR = 386,
+    SQL_TO = 387,
+    SQL_ARRAY = 388,
+    SQL_CONCAT = 389,
+    SQL_ILIKE = 390,
+    SQL_SECOND = 391,
+    SQL_MINUTE = 392,
+    SQL_HOUR = 393,
+    SQL_DAY = 394,
+    SQL_MONTH = 395,
+    SQL_YEAR = 396,
+    SQL_TRUE = 397,
+    SQL_FALSE = 398,
+    SQL_EQUALS = 399,
+    SQL_NOTEQUALS = 400,
+    SQL_LESS = 401,
+    SQL_GREATER = 402,
+    SQL_LESSEQ = 403,
+    SQL_GREATEREQ = 404,
+    SQL_NOTNULL = 405,
+    SQL_UMINUS = 406
   };
 #endif
 
@@ -233,7 +236,7 @@ extern int hsql_debug;
 
 union HSQL_STYPE
 {
-#line 95 "bison_parser.y" /* yacc.c:1912  */
+#line 95 "bison_parser.y" /* yacc.c:1909  */
 
 	double fval;
 	int64_t ival;
@@ -254,6 +257,7 @@ union HSQL_STYPE
 	hsql::ShowStatement*    show_stmt;
 
 	hsql::TableName table_name;
+	hsql::DatabaseName db_name;
 	hsql::TableRef* table;
 	hsql::Expr* expr;
 	hsql::OrderDescription* order;
@@ -275,7 +279,7 @@ union HSQL_STYPE
 	std::vector<hsql::Expr*>* expr_vec;
 	std::vector<hsql::OrderDescription*>* order_vec;
 
-#line 279 "bison_parser.h" /* yacc.c:1912  */
+#line 283 "bison_parser.h" /* yacc.c:1909  */
 };
 
 typedef union HSQL_STYPE HSQL_STYPE;

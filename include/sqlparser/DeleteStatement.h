@@ -19,6 +19,9 @@ namespace hsql {
           TableAccess::addOperation(accessMap, tableName, schema, TableAccess::OpDelete);
       }
     }
+    bool low_priority;  // default: false
+    bool quick;         // default: false
+    bool ignore;        // default: false
     char* schema;
     char* tableName;
     Expr* expr;

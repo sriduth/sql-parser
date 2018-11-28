@@ -29,6 +29,8 @@ namespace hsql {
       };
 
     InsertType type;
+    bool priority;      // default: false
+    bool ignore;        // default: false
     char* schema;
     char* tableName;
     std::vector<char*>* columns;

@@ -29,6 +29,8 @@ namespace hsql {
       };
 
     // TODO: switch to char* instead of TableRef
+    bool low_priority;  // default: false
+    bool ignore;        // default: false
     TableRef* table;
     std::vector<UpdateClause*>* updates;
     Expr* where;

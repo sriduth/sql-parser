@@ -22,23 +22,41 @@ SELECT t1.a, t1.b, t2.c FROM "table" AS t1 JOIN (SELECT * FROM foo JOIN bar ON f
 SELECT * FROM t1 JOIN t2 ON c1 = c2;
 SELECT a, SUM(b) FROM t2 GROUP BY a HAVING SUM(b) > 100;
 # CREATE statement
+CREATE DATABASE mysqldb
+CREATE DATABASE IF NOT EXISTS mysqldb
+CREATE SCHEMA mysql_schema
+CREATE SCHEMA IF NOT EXISTS mysql_schema
 CREATE TABLE "table" FROM TBL FILE 'students.tbl'
+CREATE TEMPORARY TABLE "table" FROM TBL FILE 'students.tbl'
 CREATE TABLE IF NOT EXISTS "table" FROM TBL FILE 'students.tbl'
+CREATE TEMPORARY TABLE IF NOT EXISTS "table" FROM TBL FILE 'students.tbl'
 CREATE TABLE students (name TEXT, student_number INTEGER, city TEXT, grade DOUBLE)
 CREATE TABLE teachers (name VARCHAR(30), student_number LONG, city CHAR(10), grade FLOAT)
 # Multiple statements
 CREATE TABLE "table" FROM TBL FILE 'students.tbl'; SELECT * FROM "table";
 # INSERT
 INSERT INTO test_table VALUES (1, 2, 'test');
+INSERT LOW_PRIORITY INTO test_table VALUES (1, 2, 'test');
+INSERT DELAYED INTO test_table VALUES (1, 2, 'test');
+INSERT HIGH_PRIORITY INTO test_table VALUES (1, 2, 'test');
+INSERT IGNORE INTO test_table VALUES (1, 2, 'test');
+INSERT LOW_PRIORITY IGNORE INTO test_table VALUES (1, 2, 'test');
 INSERT INTO test_table (id, value, name) VALUES (1, 2, 'test');
 INSERT INTO test_table SELECT * FROM students;
 INSERT INTO some_schema.test_table SELECT * FROM another_schema.students;
 # DELETE
 DELETE FROM students WHERE grade > 3.0
+DELETE LOW_PRIORITY FROM students WHERE grade > 3.0
+DELETE QUICK FROM students WHERE grade > 3.0
+DELETE IGNORE FROM students WHERE grade > 3.0
+DELETE LOW_PRIORITY IGNORE FROM students WHERE grade > 3.0
 DELETE FROM students
 TRUNCATE students
 # UPDATE
 UPDATE students SET grade = 1.3 WHERE name = 'Max Mustermann';
+UPDATE LOW_PRIORITY students SET grade = 1.3 WHERE name = 'Max Mustermann';
+UPDATE IGNORE students SET grade = 1.3 WHERE name = 'Max Mustermann';
+UPDATE LOW_PRIORITY IGNORE students SET grade = 1.3 WHERE name = 'Max Mustermann';
 UPDATE students SET grade = 1.3, name='Felix Fürstenberg' WHERE name = 'Max Mustermann';
 UPDATE students SET grade = 1.0;
 UPDATE some_schema.students SET grade = 1.0;

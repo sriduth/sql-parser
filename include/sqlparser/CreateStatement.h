@@ -2,6 +2,7 @@
 
 #include "SQLStatement.h"
 #include "TableAccess.h"
+#include "Database.h"
 
 #include <ostream>
 
@@ -45,7 +46,8 @@ namespace hsql {
   enum CreateType {
     kCreateTable,
     kCreateTableFromTbl, // Hyrise file format
-    kCreateView
+    kCreateView,
+    kCreateDatabase
   };
 
   // Represents SQL Create statements.
@@ -62,10 +64,12 @@ namespace hsql {
       }
     };
     CreateType type;
+    bool temporary;   // default: false
     bool ifNotExists; // default: false
     char* filePath;   // default: nullptr
     char* schema;     // default: nullptr
     char* tableName;  // default: nullptr
+    char* databaseName;     // default: nullptr
     std::vector<ColumnDefinition*>* columns; // default: nullptr
     std::vector<char*>* viewColumns;
     SelectStatement* select;

@@ -112,6 +112,7 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 	hsql::ShowStatement*    show_stmt;
 
 	hsql::TableName table_name;
+	hsql::DatabaseName db_name;
 	hsql::TableRef* table;
 	hsql::Expr* expr;
 	hsql::OrderDescription* order;
@@ -140,6 +141,7 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
  *********************************/
 %destructor { } <fval> <ival> <uval> <bval> <order_type> <datetime_field> <column_type_t>
 %destructor { free( ($$.name) ); free( ($$.schema) ); } <table_name>
+%destructor { free( ($$.name) ); } <db_name>
 %destructor { free( ($$) ); } <sval>
 %destructor {
 	if (($$) != nullptr) {
@@ -172,7 +174,8 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 %token OUTER RIGHT TABLE UNION USING WHERE CALL CASE CHAR DATE
 %token DESC DROP ELSE FILE FROM FULL HASH HINT INTO JOIN
 %token LEFT LIKE LOAD LONG NULL PLAN SHOW TEXT THEN TIME
-%token VIEW WHEN WITH ADD ALL AND ASC CSV END FOR INT KEY
+%token VIEW WHEN WITH LOW_PRIORITY DELAYED HIGH_PRIORITY 
+%token QUICK IGNORE DATABASE ADD ALL AND ASC CSV END FOR INT KEY
 %token NOT OFF SET TBL TOP AS BY IF IN IS OF ON OR TO
 %token ARRAY CONCAT ILIKE SECOND MINUTE HOUR DAY MONTH YEAR
 %token TRUE FALSE
@@ -193,8 +196,10 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 %type <drop_stmt>	    drop_statement
 %type <show_stmt>	    show_statement
 %type <table_name>      table_name
+%type <db_name>		    db_name
 %type <sval> 		    file_path prepare_target_query
-%type <bval> 		    opt_not_exists opt_exists opt_distinct opt_column_nullable
+%type <bval> 		    opt_not_exists opt_exists opt_distinct opt_column_nullable opt_temporary
+%type <bval>		    opt_low_priority opt_priority opt_quick opt_ignore
 %type <uval>		    import_file_type opt_join_type
 %type <table> 		    opt_from_clause from_clause table_ref table_ref_atomic table_ref_name nonjoin_table_ref_atomic
 %type <table>		    join_clause table_ref_name_no_alias
@@ -410,21 +415,24 @@ show_statement:
  * Create Statement
  * CREATE TABLE students (name TEXT, student_number INTEGER, city TEXT, grade DOUBLE)
  * CREATE TABLE students FROM TBL FILE 'test/students.tbl'
+ * CREATE { DATABASE | SCHEMA } [IF NOT EXISTS] name
  ******************************/
 create_statement:
-		CREATE TABLE opt_not_exists table_name FROM TBL FILE file_path {
+		CREATE opt_temporary TABLE opt_not_exists table_name FROM TBL FILE file_path {
 			$$ = new CreateStatement(kCreateTableFromTbl);
-			$$->ifNotExists = $3;
-			$$->schema = $4.schema;
-			$$->tableName = $4.name;
-			$$->filePath = $8;
+			$$->temporary = $2;
+			$$->ifNotExists = $4;
+			$$->schema = $5.schema;
+			$$->tableName = $5.name;
+			$$->filePath = $9;
 		}
-	|	CREATE TABLE opt_not_exists table_name '(' column_def_commalist ')' {
+	|	CREATE opt_temporary TABLE opt_not_exists table_name '(' column_def_commalist ')' {
 			$$ = new CreateStatement(kCreateTable);
-			$$->ifNotExists = $3;
-			$$->schema = $4.schema;
-			$$->tableName = $4.name;
-			$$->columns = $6;
+			$$->temporary = $2;
+			$$->ifNotExists = $4;
+			$$->schema = $5.schema;
+			$$->tableName = $5.name;
+			$$->columns = $7;
 		}
 	|	CREATE VIEW opt_not_exists table_name opt_column_list AS select_statement {
 			$$ = new CreateStatement(kCreateView);
@@ -434,6 +442,21 @@ create_statement:
 			$$->viewColumns = $5;
 			$$->select = $7;
 		}
+	|	CREATE DATABASE opt_not_exists db_name {
+			$$ = new CreateStatement(kCreateDatabase);
+			$$->ifNotExists = $3;
+			$$->databaseName = $4.name;
+		}
+	|	CREATE SCHEMA opt_not_exists db_name {
+			$$ = new CreateStatement(kCreateDatabase);
+			$$->ifNotExists = $3;
+			$$->databaseName = $4.name;
+		}
+	;
+
+opt_temporary:
+		TEMPORARY { $$ = true; }
+	|	/* empty */ { $$ = false; }
 	;
 
 opt_not_exists:
@@ -506,12 +529,30 @@ opt_exists:
  * DELETE FROM students <=> TRUNCATE students
  ******************************/
 delete_statement:
-		DELETE FROM table_name opt_where {
+		DELETE opt_low_priority opt_quick opt_ignore FROM table_name opt_where {
 			$$ = new DeleteStatement();
-			$$->schema = $3.schema;
-			$$->tableName = $3.name;
-			$$->expr = $4;
+			$$->low_priority = $2;
+			$$->quick = $3;
+			$$->ignore = $4;
+			$$->schema = $6.schema;
+			$$->tableName = $6.name;
+			$$->expr = $7;
 		}
+	;
+
+opt_low_priority:
+		LOW_PRIORITY   { $$ = true; }
+	|	/* empty */    { $$ = false; }
+	;
+
+opt_quick:
+		QUICK          { $$ = true; }
+	|	/* empty */    { $$ = false; }
+	;
+
+opt_ignore:
+		IGNORE         { $$ = true; }
+	|	/* empty */    { $$ = false; }
 	;
 
 truncate_statement:
@@ -528,22 +569,33 @@ truncate_statement:
  * INSERT INTO employees SELECT * FROM stundents
  ******************************/
 insert_statement:
-		INSERT INTO table_name opt_column_list VALUES '(' literal_list ')' {
+		INSERT opt_priority opt_ignore INTO table_name opt_column_list VALUES '(' literal_list ')' {
 			$$ = new InsertStatement(kInsertValues);
-			$$->schema = $3.schema;
-			$$->tableName = $3.name;
-			$$->columns = $4;
-			$$->values = $7;
+			$$->priority = $2;
+			$$->ignore = $3;
+			$$->schema = $5.schema;
+			$$->tableName = $5.name;
+			$$->columns = $6;
+			$$->values = $9;
 		}
-	|	INSERT INTO table_name opt_column_list select_no_paren {
+	|	INSERT opt_priority opt_ignore INTO table_name opt_column_list select_no_paren {
 			$$ = new InsertStatement(kInsertSelect);
-			$$->schema = $3.schema;
-			$$->tableName = $3.name;
-			$$->columns = $4;
-			$$->select = $5;
+			$$->priority = $2;
+			$$->ignore = $3;
+			$$->schema = $5.schema;
+			$$->tableName = $5.name;
+			$$->columns = $6;
+			$$->select = $7;
 		}
 	;
 
+
+opt_priority:
+		LOW_PRIORITY    { $$ = true; }
+	|	DELAYED         { $$ = true; }
+	|	HIGH_PRIORITY   { $$ = true; }
+	|	/* empty */     { $$ = false; }
+	;
 
 opt_column_list:
 		'(' ident_commalist ')' { $$ = $2; }
@@ -557,11 +609,13 @@ opt_column_list:
  ******************************/
 
 update_statement:
-	UPDATE table_ref_name_no_alias SET update_clause_commalist opt_where {
+	UPDATE opt_low_priority opt_ignore table_ref_name_no_alias SET update_clause_commalist opt_where {
 		$$ = new UpdateStatement();
-		$$->table = $2;
-		$$->updates = $4;
-		$$->where = $5;
+		$$->low_priority = $2;
+		$$->ignore = $3;
+		$$->table = $4;
+		$$->updates = $6;
+		$$->where = $7;
 	}
 	;
 
@@ -989,6 +1043,11 @@ table_ref_name_no_alias:
 table_name:
 		IDENTIFIER                { $$.schema = nullptr; $$.name = $1;}
 	|	IDENTIFIER '.' IDENTIFIER { $$.schema = $1; $$.name = $3; }
+	;
+
+
+db_name:
+		IDENTIFIER                {$$.name = $1;}
 	;
 
 
