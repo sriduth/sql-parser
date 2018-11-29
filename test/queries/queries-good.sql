@@ -8,6 +8,9 @@ SELECT col1 AS myname, col2, 'test' FROM "table", foo AS t WHERE age > 12 AND zi
 SELECT * from "table" JOIN table2 ON a = b WHERE (b OR NOT a) AND a = 12.5
 (SELECT a FROM foo WHERE a > 12 OR b > 3 AND c NOT LIKE 's%' LIMIT 10);
 SELECT * FROM "table" LIMIT 10 OFFSET 10; SELECT * FROM another;
+SELECT * FROM `table 1` LIMIT 10 OFFSET 10; SELECT * FROM another;
+SELECT * FROM "table 1" LIMIT 10 OFFSET 10; SELECT * FROM another;
+SELECT * FROM `table 1 and 2` LIMIT 10 OFFSET 10; SELECT * FROM another;
 SELECT * FROM t1 UNION SELECT * FROM t2 ORDER BY col1;
 SELECT * FROM (SELECT * FROM t1);
 SELECT * FROM t1 UNION (SELECT * FROM t2 UNION SELECT * FROM t3) ORDER BY col1;
@@ -31,6 +34,8 @@ CREATE TEMPORARY TABLE "table" FROM TBL FILE 'students.tbl'
 CREATE TABLE IF NOT EXISTS "table" FROM TBL FILE 'students.tbl'
 CREATE TEMPORARY TABLE IF NOT EXISTS "table" FROM TBL FILE 'students.tbl'
 CREATE TABLE students (name TEXT, student_number INTEGER, city TEXT, grade DOUBLE)
+CREATE TABLE `students` (name TEXT, student_number INTEGER, city TEXT, grade DOUBLE)
+CREATE TABLE `students 1` (name TEXT, student_number INTEGER, city TEXT, grade DOUBLE)
 CREATE TABLE teachers (name VARCHAR(30), student_number LONG, city CHAR(10), grade FLOAT)
 # Multiple statements
 CREATE TABLE "table" FROM TBL FILE 'students.tbl'; SELECT * FROM "table";
