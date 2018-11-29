@@ -108,8 +108,8 @@ namespace hsql {
     free(schema);
     free(tableName);
     free(databaseName);
-    free(charsetName);
-    free(columns);
+    delete charsetName;
+    delete columns;
   }
 
   // DeleteStatement

@@ -17,7 +17,7 @@ namespace hsql {
     virtual ~AlterStatement();
       void tablesAccessed(TableAccessMap& accessMap) const override {
         if (tableName != nullptr) {
-            TableAccess::addOperation(accessMap, tableName, schema, TableAccess::OpInsert);
+            TableAccess::addOperation(accessMap, tableName, schema, TableAccess::OpAlter);
         }
       };
 
