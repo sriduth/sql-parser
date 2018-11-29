@@ -29,6 +29,7 @@ namespace hsql {
     bool equal;   // default: false
     char* schema;
     char* tableName;
+    char* databaseName;
     Expr* charsetName;
     ColumnDefinition* columns;
     std::vector<char*>* viewColumns;

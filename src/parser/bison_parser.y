@@ -655,14 +655,14 @@ update_clause:
 alter_statement:
 		ALTER DATABASE db_name opt_default CHARACTER SET opt_equal expr {
 			$$ = new AlterStatement(kAlterDatabase);
-			$$->tableName = $3.name;
+			$$->databaseName = $3.name;
 			$$->dflt = $4;
 			$$->equal = $7;
 			$$->charsetName = $8;
 		}
 	|	ALTER SCHEMA db_name opt_default CHARACTER SET opt_equal expr {
 			$$ = new AlterStatement(kAlterSchema);
-			$$->tableName = $3.name;
+			$$->databaseName = $3.name;
 			$$->dflt = $4;
 			$$->equal = $7;
 			$$->charsetName = $8;

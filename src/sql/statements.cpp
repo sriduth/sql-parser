@@ -67,6 +67,7 @@ namespace hsql {
     filePath(nullptr),
     schema(nullptr),
     tableName(nullptr),
+    databaseName(nullptr),
     columns(nullptr),
     viewColumns(nullptr),
     select(nullptr) {};
@@ -75,6 +76,7 @@ namespace hsql {
     free(filePath);
     free(schema);
     free(tableName);
+    free(databaseName);
     delete select;
 
     if (columns != nullptr) {
@@ -98,12 +100,14 @@ namespace hsql {
     type(type),
     schema(nullptr),
     tableName(nullptr),
+    databaseName(nullptr),
     charsetName(nullptr),
     viewColumns(nullptr) {};
 
   AlterStatement::~AlterStatement() {
     free(schema);
     free(tableName);
+    free(databaseName);
     free(charsetName);
 
     if (viewColumns != nullptr) {

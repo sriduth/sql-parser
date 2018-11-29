@@ -3392,7 +3392,7 @@ yyreduce:
 #line 656 "bison_parser.y" /* yacc.c:1646  */
     {
 			(yyval.alter_stmt) = new AlterStatement(kAlterDatabase);
-			(yyval.alter_stmt)->tableName = (yyvsp[-5].db_name).name;
+			(yyval.alter_stmt)->databaseName = (yyvsp[-5].db_name).name;
 			(yyval.alter_stmt)->dflt = (yyvsp[-4].bval);
 			(yyval.alter_stmt)->equal = (yyvsp[-1].bval);
 			(yyval.alter_stmt)->charsetName = (yyvsp[0].expr);
@@ -3404,7 +3404,7 @@ yyreduce:
 #line 663 "bison_parser.y" /* yacc.c:1646  */
     {
 			(yyval.alter_stmt) = new AlterStatement(kAlterSchema);
-			(yyval.alter_stmt)->tableName = (yyvsp[-5].db_name).name;
+			(yyval.alter_stmt)->databaseName = (yyvsp[-5].db_name).name;
 			(yyval.alter_stmt)->dflt = (yyvsp[-4].bval);
 			(yyval.alter_stmt)->equal = (yyvsp[-1].bval);
 			(yyval.alter_stmt)->charsetName = (yyvsp[0].expr);
