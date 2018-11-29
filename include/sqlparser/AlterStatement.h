@@ -19,9 +19,6 @@ namespace hsql {
         if (tableName != nullptr) {
             TableAccess::addOperation(accessMap, tableName, schema, TableAccess::OpInsert);
         }
-        if (select != nullptr) {
-          select->tablesAccessed(accessMap);
-        }
       };
 
     AlterType type;
@@ -32,8 +29,6 @@ namespace hsql {
     char* databaseName;
     Expr* charsetName;
     ColumnDefinition* columns;
-    std::vector<char*>* viewColumns;
-    SelectStatement* select;
   };
 
 } // namsepace hsql

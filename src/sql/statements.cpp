@@ -102,20 +102,14 @@ namespace hsql {
     tableName(nullptr),
     databaseName(nullptr),
     charsetName(nullptr),
-    viewColumns(nullptr) {};
+    columns(nullptr) {};
 
   AlterStatement::~AlterStatement() {
     free(schema);
     free(tableName);
     free(databaseName);
     free(charsetName);
-
-    if (viewColumns != nullptr) {
-      for (char* column : *viewColumns) {
-        free(column);
-      }
-      delete viewColumns;
-    }
+    free(columns);
   }
 
   // DeleteStatement
