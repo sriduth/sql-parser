@@ -7,6 +7,7 @@
 #include "UpdateStatement.h"
 #include "DeleteStatement.h"
 #include "DropStatement.h"
+#include "AlterStatement.h"
 #include "PrepareStatement.h"
 #include "ExecuteStatement.h"
 #include "ShowStatement.h"

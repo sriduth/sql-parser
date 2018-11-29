@@ -185,49 +185,51 @@ extern int hsql_debug;
     SQL_HIGH_PRIORITY = 361,
     SQL_QUICK = 362,
     SQL_IGNORE = 363,
-    SQL_DATABASE = 364,
-    SQL_ADD = 365,
-    SQL_ALL = 366,
-    SQL_AND = 367,
-    SQL_ASC = 368,
-    SQL_CSV = 369,
-    SQL_END = 370,
-    SQL_FOR = 371,
-    SQL_INT = 372,
-    SQL_KEY = 373,
-    SQL_NOT = 374,
-    SQL_OFF = 375,
-    SQL_SET = 376,
-    SQL_TBL = 377,
-    SQL_TOP = 378,
-    SQL_AS = 379,
-    SQL_BY = 380,
-    SQL_IF = 381,
-    SQL_IN = 382,
-    SQL_IS = 383,
-    SQL_OF = 384,
-    SQL_ON = 385,
-    SQL_OR = 386,
-    SQL_TO = 387,
-    SQL_ARRAY = 388,
-    SQL_CONCAT = 389,
-    SQL_ILIKE = 390,
-    SQL_SECOND = 391,
-    SQL_MINUTE = 392,
-    SQL_HOUR = 393,
-    SQL_DAY = 394,
-    SQL_MONTH = 395,
-    SQL_YEAR = 396,
-    SQL_TRUE = 397,
-    SQL_FALSE = 398,
-    SQL_EQUALS = 399,
-    SQL_NOTEQUALS = 400,
-    SQL_LESS = 401,
-    SQL_GREATER = 402,
-    SQL_LESSEQ = 403,
-    SQL_GREATEREQ = 404,
-    SQL_NOTNULL = 405,
-    SQL_UMINUS = 406
+    SQL_DATABASES = 364,
+    SQL_DATABASE = 365,
+    SQL_CHARACTER = 366,
+    SQL_ADD = 367,
+    SQL_ALL = 368,
+    SQL_AND = 369,
+    SQL_ASC = 370,
+    SQL_CSV = 371,
+    SQL_END = 372,
+    SQL_FOR = 373,
+    SQL_INT = 374,
+    SQL_KEY = 375,
+    SQL_NOT = 376,
+    SQL_OFF = 377,
+    SQL_SET = 378,
+    SQL_TBL = 379,
+    SQL_TOP = 380,
+    SQL_AS = 381,
+    SQL_BY = 382,
+    SQL_IF = 383,
+    SQL_IN = 384,
+    SQL_IS = 385,
+    SQL_OF = 386,
+    SQL_ON = 387,
+    SQL_OR = 388,
+    SQL_TO = 389,
+    SQL_ARRAY = 390,
+    SQL_CONCAT = 391,
+    SQL_ILIKE = 392,
+    SQL_SECOND = 393,
+    SQL_MINUTE = 394,
+    SQL_HOUR = 395,
+    SQL_DAY = 396,
+    SQL_MONTH = 397,
+    SQL_YEAR = 398,
+    SQL_TRUE = 399,
+    SQL_FALSE = 400,
+    SQL_EQUALS = 401,
+    SQL_NOTEQUALS = 402,
+    SQL_LESS = 403,
+    SQL_GREATER = 404,
+    SQL_LESSEQ = 405,
+    SQL_GREATEREQ = 406,
+    SQL_NOTNULL = 407,
+    SQL_UMINUS = 408
   };
 #endif
 
@@ -253,6 +255,7 @@ union HSQL_STYPE
 	hsql::UpdateStatement* 	update_stmt;
 	hsql::DropStatement*   	drop_stmt;
 	hsql::PrepareStatement* prep_stmt;
+	hsql::AlterStatement* alter_stmt;
 	hsql::ExecuteStatement* exec_stmt;
 	hsql::ShowStatement*    show_stmt;
 
@@ -279,7 +282,7 @@ union HSQL_STYPE
 	std::vector<hsql::Expr*>* expr_vec;
 	std::vector<hsql::OrderDescription*>* order_vec;
 
-#line 283 "bison_parser.h" /* yacc.c:1909  */
+#line 286 "bison_parser.h" /* yacc.c:1909  */
 };
 
 typedef union HSQL_STYPE HSQL_STYPE;

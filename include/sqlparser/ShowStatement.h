@@ -7,7 +7,8 @@ namespace hsql {
 
   enum ShowType {
     kShowColumns,
-    kShowTables
+    kShowTables,
+    kShowDatabases
   };
 
   // Represents SQL SHOW statements.

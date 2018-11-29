@@ -108,6 +108,7 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 	hsql::UpdateStatement* 	update_stmt;
 	hsql::DropStatement*   	drop_stmt;
 	hsql::PrepareStatement* prep_stmt;
+	hsql::AlterStatement* alter_stmt;
 	hsql::ExecuteStatement* exec_stmt;
 	hsql::ShowStatement*    show_stmt;
 
@@ -175,7 +176,7 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 %token DESC DROP ELSE FILE FROM FULL HASH HINT INTO JOIN
 %token LEFT LIKE LOAD LONG NULL PLAN SHOW TEXT THEN TIME
 %token VIEW WHEN WITH LOW_PRIORITY DELAYED HIGH_PRIORITY 
-%token QUICK IGNORE DATABASE ADD ALL AND ASC CSV END FOR INT KEY
+%token QUICK IGNORE DATABASES DATABASE CHARACTER ADD ALL AND ASC CSV END FOR INT KEY
 %token NOT OFF SET TBL TOP AS BY IF IN IS OF ON OR TO
 %token ARRAY CONCAT ILIKE SECOND MINUTE HOUR DAY MONTH YEAR
 %token TRUE FALSE
@@ -195,11 +196,12 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 %type <update_stmt>     update_statement
 %type <drop_stmt>	    drop_statement
 %type <show_stmt>	    show_statement
+%type <alter_stmt>	    alter_statement
 %type <table_name>      table_name
 %type <db_name>		    db_name
 %type <sval> 		    file_path prepare_target_query
 %type <bval> 		    opt_not_exists opt_exists opt_distinct opt_column_nullable opt_temporary
-%type <bval>		    opt_low_priority opt_priority opt_quick opt_ignore
+%type <bval>		    opt_low_priority opt_priority opt_quick opt_ignore opt_default opt_equal
 %type <uval>		    import_file_type opt_join_type
 %type <table> 		    opt_from_clause from_clause table_ref table_ref_atomic table_ref_name nonjoin_table_ref_atomic
 %type <table>		    join_clause table_ref_name_no_alias
@@ -312,6 +314,7 @@ preparable_statement:
 	|	create_statement { $$ = $1; }
 	|	insert_statement { $$ = $1; }
 	|	delete_statement { $$ = $1; }
+	|	alter_statement { $$ = $1; }
 	|	truncate_statement { $$ = $1; }
 	|	update_statement { $$ = $1; }
 	|	drop_statement { $$ = $1; }
@@ -397,11 +400,15 @@ file_path:
 /******************************
  * Show Statement
  * SHOW TABLES;
+ * SHOW DATABASES;
  ******************************/
 
 show_statement:
 		SHOW TABLES {
 			$$ = new ShowStatement(kShowTables);
+		}
+	|	SHOW DATABASES {
+			$$ = new ShowStatement(kShowDatabases);
 		}
 	|	SHOW COLUMNS table_name {
 			$$ = new ShowStatement(kShowColumns);
@@ -495,6 +502,7 @@ opt_column_nullable:
 /******************************
  * Drop Statement
  * DROP TABLE students;
+ * DROP DATABASE IF EXISTS db_name;
  * DEALLOCATE PREPARE stmt;
  ******************************/
 
@@ -509,6 +517,11 @@ drop_statement:
 			$$ = new DropStatement(kDropView);
 			$$->ifExists = $3;
 			$$->schema = $4.schema;
+			$$->name = $4.name;
+		}
+	|	DROP DATABASE opt_exists db_name {
+			$$ = new DropStatement(kDropDatabase);
+			$$->ifExists = $3;
 			$$->name = $4.name;
 		}
 	|	DEALLOCATE PREPARE IDENTIFIER {
@@ -631,6 +644,47 @@ update_clause:
 			$$->value = $3;
 		}
 	;
+
+/******************************
+ * Alter Statement
+ * ALTER DATABASE db_name CHARACTER SET charset_name
+ * ALTER SCHEMA db_name CHARACTER SET charset_name
+ * ALTER TABLE table_name ADD column
+ ******************************/
+
+alter_statement:
+		ALTER DATABASE db_name opt_default CHARACTER SET opt_equal expr {
+			$$ = new AlterStatement(kAlterDatabase);
+			$$->tableName = $3.name;
+			$$->dflt = $4;
+			$$->equal = $7;
+			$$->charsetName = $8;
+		}
+	|	ALTER SCHEMA db_name opt_default CHARACTER SET opt_equal expr {
+			$$ = new AlterStatement(kAlterSchema);
+			$$->tableName = $3.name;
+			$$->dflt = $4;
+			$$->equal = $7;
+			$$->charsetName = $8;
+		}
+	|	ALTER TABLE table_name ADD COLUMN column_def {
+			$$ = new AlterStatement(kAlterTable);
+			$$->tableName = $3.name;
+			$$->columns = $6;
+		}
+	;
+
+opt_default:
+		DEFAULT      { $$ = true; }
+	|	/* empty */  { $$ = false; }
+	;
+
+opt_equal:
+		'='          { $$ = true; }
+	|	/* empty */  { $$ = false; }
+	;
+
+
 
 /******************************
  * Select Statement

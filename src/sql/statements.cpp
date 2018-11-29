@@ -92,6 +92,28 @@ namespace hsql {
     }
   }
 
+  // AlterStatement
+  AlterStatement::AlterStatement(AlterType type) :
+    SQLStatement(kStmtAlter),
+    type(type),
+    schema(nullptr),
+    tableName(nullptr),
+    charsetName(nullptr),
+    viewColumns(nullptr) {};
+
+  AlterStatement::~AlterStatement() {
+    free(schema);
+    free(tableName);
+    free(charsetName);
+
+    if (viewColumns != nullptr) {
+      for (char* column : *viewColumns) {
+        free(column);
+      }
+      delete viewColumns;
+    }
+  }
+
   // DeleteStatement
   DeleteStatement::DeleteStatement() :
     SQLStatement(kStmtDelete),

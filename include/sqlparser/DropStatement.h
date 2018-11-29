@@ -10,6 +10,7 @@ namespace hsql {
     kDropSchema,
     kDropIndex,
     kDropView,
+    kDropDatabase,
     kDropPreparedStatement
   };
 

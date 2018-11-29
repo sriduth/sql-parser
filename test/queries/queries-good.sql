@@ -60,9 +60,16 @@ UPDATE LOW_PRIORITY IGNORE students SET grade = 1.3 WHERE name = 'Max Mustermann
 UPDATE students SET grade = 1.3, name='Felix Fürstenberg' WHERE name = 'Max Mustermann';
 UPDATE students SET grade = 1.0;
 UPDATE some_schema.students SET grade = 1.0;
+# ALTER
+ALTER TABLE students add column Id varchar(20)
+ALTER DATABASE mysqldb CHARACTER SET charset_name;
+ALTER DATABASE mysqldb default CHARACTER SET = charset_name
+ALTER DATABASE mysqldb CHARACTER SET charset_name
 # DROP
 DROP TABLE students;
 DROP TABLE IF EXISTS students;
+DROP DATABASE mysqldb;
+DROP DATABASE IF EXISTS mysqldb;
 DROP VIEW IF EXISTS students;
 # PREPARE
 PREPARE prep_inst FROM 'INSERT INTO test VALUES (?, ?, ?)';
@@ -75,4 +82,5 @@ SELECT * FROM test WITH HINT(NO_CACHE);
 SELECT * FROM test WITH HINT(NO_CACHE, NO_SAMPLING);
 SELECT * FROM test WITH HINT(NO_CACHE, SAMPLE_RATE(0.1), OMW(1.0, 'test'));
 SHOW TABLES;
+SHOW DATABASES;
 SHOW COLUMNS students;
