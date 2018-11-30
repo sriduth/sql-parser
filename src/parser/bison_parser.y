@@ -452,12 +452,12 @@ create_statement:
 	|	CREATE DATABASE opt_not_exists db_name {
 			$$ = new CreateStatement(kCreateDatabase);
 			$$->ifNotExists = $3;
-			$$->databaseName = $4.name;
+			$$->schema = $4.name;
 		}
 	|	CREATE SCHEMA opt_not_exists db_name {
 			$$ = new CreateStatement(kCreateDatabase);
 			$$->ifNotExists = $3;
-			$$->databaseName = $4.name;
+			$$->schema = $4.name;
 		}
 	;
 
@@ -655,14 +655,14 @@ update_clause:
 alter_statement:
 		ALTER DATABASE db_name opt_default CHARACTER SET opt_equal expr {
 			$$ = new AlterStatement(kAlterDatabase);
-			$$->databaseName = $3.name;
+			$$->schema = $3.name;
 			$$->dflt = $4;
 			$$->equal = $7;
 			$$->charsetName = $8;
 		}
 	|	ALTER SCHEMA db_name opt_default CHARACTER SET opt_equal expr {
 			$$ = new AlterStatement(kAlterSchema);
-			$$->databaseName = $3.name;
+			$$->schema = $3.name;
 			$$->dflt = $4;
 			$$->equal = $7;
 			$$->charsetName = $8;
