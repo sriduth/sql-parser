@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.0.4.  */
+/* A Bison parser, made by GNU Bison 3.2.  */
 
 /* Bison interface for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015, 2018 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -30,6 +30,9 @@
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
+/* Undocumented macros, especially those whose name start with YY_,
+   are private implementation details.  Do not rely on them.  */
+
 #ifndef YY_HSQL_BISON_PARSER_H_INCLUDED
 # define YY_HSQL_BISON_PARSER_H_INCLUDED
 /* Debug traces.  */
@@ -48,7 +51,7 @@
 extern int hsql_debug;
 #endif
 /* "%code requires" blocks.  */
-#line 35 "bison_parser.y" /* yacc.c:1909  */
+#line 35 "bison_parser.y" /* yacc.c:1906  */
 
 // %code requires block
 
@@ -72,7 +75,7 @@ extern int hsql_debug;
 				} \
 		}
 
-#line 76 "bison_parser.h" /* yacc.c:1909  */
+#line 79 "bison_parser.h" /* yacc.c:1906  */
 
 /* Token type.  */
 #ifndef HSQL_TOKENTYPE
@@ -222,14 +225,27 @@ extern int hsql_debug;
     SQL_YEAR = 398,
     SQL_TRUE = 399,
     SQL_FALSE = 400,
-    SQL_EQUALS = 401,
-    SQL_NOTEQUALS = 402,
-    SQL_LESS = 403,
-    SQL_GREATER = 404,
-    SQL_LESSEQ = 405,
-    SQL_GREATEREQ = 406,
-    SQL_NOTNULL = 407,
-    SQL_UMINUS = 408
+    SQL_ESCAPED = 401,
+    SQL_DATA = 402,
+    SQL_INFILE = 403,
+    SQL_CONCURRENT = 404,
+    SQL_REPLACE = 405,
+    SQL_PARTITION = 406,
+    SQL_FIELDS = 407,
+    SQL_TERMINATED = 408,
+    SQL_OPTIONALLY = 409,
+    SQL_ENCLOSED = 410,
+    SQL_LINES = 411,
+    SQL_ROWS = 412,
+    SQL_STARTING = 413,
+    SQL_EQUALS = 414,
+    SQL_NOTEQUALS = 415,
+    SQL_LESS = 416,
+    SQL_GREATER = 417,
+    SQL_LESSEQ = 418,
+    SQL_GREATEREQ = 419,
+    SQL_NOTNULL = 420,
+    SQL_UMINUS = 421
   };
 #endif
 
@@ -238,7 +254,7 @@ extern int hsql_debug;
 
 union HSQL_STYPE
 {
-#line 95 "bison_parser.y" /* yacc.c:1909  */
+#line 95 "bison_parser.y" /* yacc.c:1906  */
 
 	double fval;
 	int64_t ival;
@@ -282,7 +298,7 @@ union HSQL_STYPE
 	std::vector<hsql::Expr*>* expr_vec;
 	std::vector<hsql::OrderDescription*>* order_vec;
 
-#line 286 "bison_parser.h" /* yacc.c:1909  */
+#line 302 "bison_parser.h" /* yacc.c:1906  */
 };
 
 typedef union HSQL_STYPE HSQL_STYPE;

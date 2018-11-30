@@ -180,6 +180,8 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 %token NOT OFF SET TBL TOP AS BY IF IN IS OF ON OR TO
 %token ARRAY CONCAT ILIKE SECOND MINUTE HOUR DAY MONTH YEAR
 %token TRUE FALSE
+%token ESCAPED DATA INFILE CONCURRENT REPLACE PARTITION FIELDS TERMINATED OPTIONALLY
+%token ENCLOSED LINES ROWS STARTING
 
 /*********************************
  ** Non-Terminal types (http://www.gnu.org/software/bison/manual/html_node/Type-Decl.html)
@@ -189,7 +191,7 @@ int yyerror(YYLTYPE* llocp, SQLParserResult* result, yyscan_t scanner, const cha
 %type <exec_stmt>	    execute_statement
 %type <prep_stmt>	    prepare_statement
 %type <select_stmt>     select_statement select_with_paren select_no_paren select_clause select_paren_or_clause
-%type <import_stmt>     import_statement
+%type <import_stmt>     import_statement load_statement
 %type <create_stmt>     create_statement
 %type <insert_stmt>     insert_statement
 %type <delete_stmt>     delete_statement truncate_statement
@@ -311,7 +313,8 @@ statement:
 preparable_statement:
 		select_statement { $$ = $1; }
 	|	import_statement { $$ = $1; }
-	|	create_statement { $$ = $1; }
+    |   load_statement { $$ = $1; }
+    |   create_statement { $$ = $1; }
 	|	insert_statement { $$ = $1; }
 	|	delete_statement { $$ = $1; }
 	|	alter_statement { $$ = $1; }
@@ -396,6 +399,54 @@ file_path:
 		string_literal { $$ = strdup($1->name); delete $1; }
 	;
 
+
+/******************************
+ * LOAD DATA statement
+ * LOAD DATA INFILE 'data.txt' INTO TABLE db2.my_table;
+ ******************************/
+load_statement:
+  LOAD DATA opt_low_priority_or_concurrent opt_local INFILE file_path opt_replace_or_ignore INTO TABLE table_name opt_fields_or_columns opt_lines opt_ignore_lines_rows opt_column_list {
+			$$ = new ImportStatement(kImportCSV);
+			$$->filePath = $6;
+			$$->schema = $10.schema;
+			$$->tableName = $10.name;
+		}
+	;
+
+opt_low_priority_or_concurrent:
+		LOW_PRIORITY 
+	|	CONCURRENT
+    |       /* empty */
+	;
+
+opt_replace_or_ignore:
+		REPLACE
+	|	IGNORE
+    |       /* empty */
+	;
+
+opt_local:
+		LOCAL    
+	|	/* empty */    
+	;
+
+opt_fields_or_columns:
+                FIELDS TERMINATED BY STRING
+                | COLUMNS TERMINATED BY STRING
+                |        /* empty */
+                ;
+
+opt_lines:
+        LINES STARTING BY STRING
+        | LINES TERMINATED BY STRING
+        |        /* empty */
+        ;
+
+opt_ignore_lines_rows:
+                IGNORE INTVAL LINES
+        |        IGNORE INTVAL ROWS
+        |       /* empty */
+;
 
 /******************************
  * Show Statement
