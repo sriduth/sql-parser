@@ -1,7 +1,11 @@
-C++ SQL Parser
-=========================
+C++ SQL Parser Library
+======================
 
-This is a SQL Parser for C++. It parses the given SQL query (SQL99) into
-C++ objects along with a map of tables accessed and the operations on each
-table.  This parser was derived from [Hyrise SQL Parser](https://github.com/hyrise/sql-parser)
-for use in [Envoy](https://github.com/envoyproxy/envoy) mysql proxy.
+This code has been forked from [Hyrise SQL
+Parser](https://github.com/hyrise/sql-parser). Files have been moved around
+and modified to make it easy for inclusion in envoy mysql_proxy. MySQL
+specific extensions have been added to the SQL parser.
+
+The SQL parser library will be eventually merged into envoy core and used
+as a generic SQL parser for different database implementations (MySQL,
+Postgres, etc.).
