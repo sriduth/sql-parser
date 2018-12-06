@@ -39,8 +39,23 @@ static std::vector<SQLQuery> sql_queries = {
   {"LongSelectList26",    "SELECT a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z FROM test;"},
   {"LongSelectElement26", "SELECT abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy FROM test;"},
   {"LongSelectList52",    "SELECT a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z FROM test;"},
-  {"LongSelectElement52", "SELECT abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy FROM test;"},
-  {"TwoSelects",          "SELECT * FROM test; SELECT age, street AS address FROM data;"},
+  {"LongSelectElement52", "SELECT abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy FROM test;"},  
+  {"TwoSelects",          "SELECT * FROM test; SELECT age, street AS address FROM data1;"},
+  {"LargeInsert",         "INSERT INTO test VALUES (\'abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz"
+   "abcdefghijklmnopqrstuvwxyz\')"
+  },
   {"ExecuteNoParams",     "EXECUTE procedure;"},
   {"Execute2Params",      "EXECUTE procedure(11, 'test');"},
   {"Execute10Params",     "EXECUTE procedure(11, 'test', 5.6, 4.2, 'abc', 6, 7, 8, 9, 10000);"},
