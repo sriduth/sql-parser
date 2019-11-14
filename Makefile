@@ -50,7 +50,7 @@ else
 	LIB_CFLAGS  +=  -fPIC
 	LIB_LFLAGS = -shared -o
 endif
-LIB_CPP    = $(shell find $(SRC) -name '*.cpp' -not -path "$(SRCPARSER)/*") $(PARSER_CPP)
+LIB_CPP    = $(sort $(shell find $(SRC) -name '*.cpp' -not -path "$(SRCPARSER)/*") $(PARSER_CPP))
 LIB_H      = $(shell find $(INCLUDE) -name '*.h' -not -path "$(SRCPARSER)/*") $(PARSER_H)
 LIB_ALL    = $(shell find $(SRC) -name '*.cpp' -not -path "$(SRCPARSER)/*") $(shell find $(INCLUDE) -name '*.h' -not -path "$(SRCPARSER)/*")
 LIB_OBJ    = $(LIB_CPP:%.cpp=%.o)
