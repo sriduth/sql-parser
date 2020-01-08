@@ -40,6 +40,7 @@ static std::stringstream strbuf;
 
 /* other flags */
 %option noyywrap
+%option noinput
 %option nounput
 %option warn
 %option case-insensitive
