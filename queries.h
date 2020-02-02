@@ -8,6 +8,7 @@ typedef std::pair<std::string, std::string> SQLQuery;
 
 // name, query
 static std::vector<SQLQuery> sql_queries = {
+  {"Q0", "!INSERT INTO test_table VALUESd (1, 2, 'test');"},
   {"Q1", "SELECT * FROM test;"},
   {"Q2", "SELECT a, b AS address FROM (SELECT * FROM test WHERE c < 100 AND b > 3) t1 WHERE a < 10 AND b < 100;"},
   {"Q3", "SELECT \"left\".a, \"left\".b, \"right\".a, \"right\".b FROM table_a AS \"left\" JOIN table_b AS \"right\" ON \"left\".a = \"right\".a;"},

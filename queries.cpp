@@ -36,7 +36,7 @@ std::vector<SQLQuery> getQueriesFromDirectory(const std::string& dir_path) {
   std::vector<SQLQuery> queries;
   for (const std::string& file_path : files) {
     const filesystem::path p(file_path);
-    const std::string query = readFileContents(file_path);
+    std::string query = readFileContents(file_path);
     queries.emplace_back(p.filename(), query);
   }
   return queries;

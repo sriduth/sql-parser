@@ -1,5 +1,5 @@
 
-// Generated from MySqlParser.g4 by ANTLR 4.7.1
+// Generated from MySqlParser.g4 by ANTLR 4.8
 
 
 #include "MySqlParserListener.h"
@@ -2617,6 +2617,14 @@ tree::TerminalNode* MySqlParser::CreateIndexContext::EXCLUSIVE(size_t i) {
   return getToken(MySqlParser::EXCLUSIVE, i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::CreateIndexContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::CreateIndexContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 
 size_t MySqlParser::CreateIndexContext::getRuleIndex() const {
   return MySqlParser::RuleCreateIndex;
@@ -2870,6 +2878,14 @@ tree::TerminalNode* MySqlParser::CreateLogfileGroupContext::COMMENT() {
   return getToken(MySqlParser::COMMENT, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::CreateLogfileGroupContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::CreateLogfileGroupContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 std::vector<MySqlParser::FileSizeLiteralContext *> MySqlParser::CreateLogfileGroupContext::fileSizeLiteral() {
   return getRuleContexts<MySqlParser::FileSizeLiteralContext>();
 }
@@ -3058,6 +3074,14 @@ MySqlParser::FullIdContext* MySqlParser::CreateProcedureContext::fullId() {
   return getRuleContext<MySqlParser::FullIdContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::CreateProcedureContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::CreateProcedureContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 MySqlParser::RoutineBodyContext* MySqlParser::CreateProcedureContext::routineBody() {
   return getRuleContext<MySqlParser::RoutineBodyContext>(0);
 }
@@ -3072,6 +3096,14 @@ std::vector<MySqlParser::ProcedureParameterContext *> MySqlParser::CreateProcedu
 
 MySqlParser::ProcedureParameterContext* MySqlParser::CreateProcedureContext::procedureParameter(size_t i) {
   return getRuleContext<MySqlParser::ProcedureParameterContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::CreateProcedureContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CreateProcedureContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 std::vector<MySqlParser::RoutineOptionContext *> MySqlParser::CreateProcedureContext::routineOption() {
@@ -3897,6 +3929,14 @@ MySqlParser::FullIdContext* MySqlParser::CreateFunctionContext::fullId() {
   return getRuleContext<MySqlParser::FullIdContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::CreateFunctionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::CreateFunctionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::CreateFunctionContext::RETURNS() {
   return getToken(MySqlParser::RETURNS, 0);
 }
@@ -3923,6 +3963,14 @@ std::vector<MySqlParser::FunctionParameterContext *> MySqlParser::CreateFunction
 
 MySqlParser::FunctionParameterContext* MySqlParser::CreateFunctionContext::functionParameter(size_t i) {
   return getRuleContext<MySqlParser::FunctionParameterContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::CreateFunctionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CreateFunctionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 std::vector<MySqlParser::RoutineOptionContext *> MySqlParser::CreateFunctionContext::routineOption() {
@@ -5514,6 +5562,10 @@ tree::TerminalNode* MySqlParser::CreateServerContext::OPTIONS() {
   return getToken(MySqlParser::OPTIONS, 0);
 }
 
+tree::TerminalNode* MySqlParser::CreateServerContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::ServerOptionContext *> MySqlParser::CreateServerContext::serverOption() {
   return getRuleContexts<MySqlParser::ServerOptionContext>();
 }
@@ -5522,12 +5574,24 @@ MySqlParser::ServerOptionContext* MySqlParser::CreateServerContext::serverOption
   return getRuleContext<MySqlParser::ServerOptionContext>(i);
 }
 
+tree::TerminalNode* MySqlParser::CreateServerContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::CreateServerContext::MYSQL() {
   return getToken(MySqlParser::MYSQL, 0);
 }
 
 tree::TerminalNode* MySqlParser::CreateServerContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::CreateServerContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CreateServerContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -5647,6 +5711,14 @@ tree::TerminalNode* MySqlParser::CopyCreateTableContext::LIKE() {
   return getToken(MySqlParser::LIKE, 0);
 }
 
+tree::TerminalNode* MySqlParser::CopyCreateTableContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::CopyCreateTableContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::CopyCreateTableContext::TEMPORARY() {
   return getToken(MySqlParser::TEMPORARY, 0);
 }
@@ -5703,6 +5775,14 @@ MySqlParser::TableOptionContext* MySqlParser::ColumnCreateTableContext::tableOpt
 
 MySqlParser::PartitionDefinitionsContext* MySqlParser::ColumnCreateTableContext::partitionDefinitions() {
   return getRuleContext<MySqlParser::PartitionDefinitionsContext>(0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::ColumnCreateTableContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ColumnCreateTableContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::ColumnCreateTableContext::ColumnCreateTableContext(CreateTableContext *ctx) { copyFrom(ctx); }
@@ -5769,6 +5849,14 @@ tree::TerminalNode* MySqlParser::QueryCreateTableContext::IGNORE() {
 
 tree::TerminalNode* MySqlParser::QueryCreateTableContext::REPLACE() {
   return getToken(MySqlParser::REPLACE, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::QueryCreateTableContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::QueryCreateTableContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::QueryCreateTableContext::QueryCreateTableContext(CreateTableContext *ctx) { copyFrom(ctx); }
@@ -6122,6 +6210,14 @@ tree::TerminalNode* MySqlParser::CreateTablespaceInnodbContext::FILE_BLOCK_SIZE(
   return getToken(MySqlParser::FILE_BLOCK_SIZE, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::CreateTablespaceInnodbContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::CreateTablespaceInnodbContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 tree::TerminalNode* MySqlParser::CreateTablespaceInnodbContext::ENGINE() {
   return getToken(MySqlParser::ENGINE, 0);
 }
@@ -6298,6 +6394,14 @@ tree::TerminalNode* MySqlParser::CreateTablespaceNdbContext::WAIT() {
 
 tree::TerminalNode* MySqlParser::CreateTablespaceNdbContext::COMMENT() {
   return getToken(MySqlParser::COMMENT, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::CreateTablespaceNdbContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::CreateTablespaceNdbContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
 }
 
 std::vector<MySqlParser::FileSizeLiteralContext *> MySqlParser::CreateTablespaceNdbContext::fileSizeLiteral() {
@@ -6717,6 +6821,10 @@ tree::TerminalNode* MySqlParser::CreateViewContext::ALGORITHM() {
   return getToken(MySqlParser::ALGORITHM, 0);
 }
 
+tree::TerminalNode* MySqlParser::CreateViewContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::OwnerStatementContext* MySqlParser::CreateViewContext::ownerStatement() {
   return getRuleContext<MySqlParser::OwnerStatementContext>(0);
 }
@@ -6729,8 +6837,16 @@ tree::TerminalNode* MySqlParser::CreateViewContext::SECURITY() {
   return getToken(MySqlParser::SECURITY, 0);
 }
 
+tree::TerminalNode* MySqlParser::CreateViewContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::CreateViewContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::CreateViewContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::CreateViewContext::WITH() {
@@ -6953,6 +7069,10 @@ tree::TerminalNode* MySqlParser::CreateDatabaseOptionContext::DEFAULT(size_t i) 
   return getToken(MySqlParser::DEFAULT, i);
 }
 
+tree::TerminalNode* MySqlParser::CreateDatabaseOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 tree::TerminalNode* MySqlParser::CreateDatabaseOptionContext::COLLATE() {
   return getToken(MySqlParser::COLLATE, 0);
 }
@@ -7138,12 +7258,24 @@ tree::TerminalNode* MySqlParser::OwnerStatementContext::DEFINER() {
   return getToken(MySqlParser::DEFINER, 0);
 }
 
+tree::TerminalNode* MySqlParser::OwnerStatementContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::UserNameContext* MySqlParser::OwnerStatementContext::userName() {
   return getRuleContext<MySqlParser::UserNameContext>(0);
 }
 
 tree::TerminalNode* MySqlParser::OwnerStatementContext::CURRENT_USER() {
   return getToken(MySqlParser::CURRENT_USER, 0);
+}
+
+tree::TerminalNode* MySqlParser::OwnerStatementContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::OwnerStatementContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 
@@ -7525,6 +7657,10 @@ MySqlParser::TimestampValueContext* MySqlParser::timestampValue() {
 
 MySqlParser::IntervalExprContext::IntervalExprContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
+}
+
+tree::TerminalNode* MySqlParser::IntervalExprContext::PLUS() {
+  return getToken(MySqlParser::PLUS, 0);
 }
 
 tree::TerminalNode* MySqlParser::IntervalExprContext::INTERVAL() {
@@ -7966,6 +8102,10 @@ tree::TerminalNode* MySqlParser::IndexOptionContext::KEY_BLOCK_SIZE() {
 
 MySqlParser::FileSizeLiteralContext* MySqlParser::IndexOptionContext::fileSizeLiteral() {
   return getRuleContext<MySqlParser::FileSizeLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::IndexOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::IndexTypeContext* MySqlParser::IndexOptionContext::indexType() {
@@ -8684,12 +8824,28 @@ MySqlParser::CreateDefinitionsContext::CreateDefinitionsContext(ParserRuleContex
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::CreateDefinitionsContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::CreateDefinitionContext *> MySqlParser::CreateDefinitionsContext::createDefinition() {
   return getRuleContexts<MySqlParser::CreateDefinitionContext>();
 }
 
 MySqlParser::CreateDefinitionContext* MySqlParser::CreateDefinitionsContext::createDefinition(size_t i) {
   return getRuleContext<MySqlParser::CreateDefinitionContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::CreateDefinitionsContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::CreateDefinitionsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CreateDefinitionsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -9948,8 +10104,16 @@ tree::TerminalNode* MySqlParser::GeneratedColumnConstraintContext::AS() {
   return getToken(MySqlParser::AS, 0);
 }
 
+tree::TerminalNode* MySqlParser::GeneratedColumnConstraintContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::GeneratedColumnConstraintContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::GeneratedColumnConstraintContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::GeneratedColumnConstraintContext::GENERATED() {
@@ -10288,8 +10452,16 @@ tree::TerminalNode* MySqlParser::CheckTableConstraintContext::CHECK() {
   return getToken(MySqlParser::CHECK, 0);
 }
 
+tree::TerminalNode* MySqlParser::CheckTableConstraintContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::CheckTableConstraintContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::CheckTableConstraintContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::CheckTableConstraintContext::CONSTRAINT() {
@@ -17570,6 +17742,10 @@ MySqlParser::EngineNameContext* MySqlParser::TableOptionEngineContext::engineNam
   return getRuleContext<MySqlParser::EngineNameContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionEngineContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionEngineContext::TableOptionEngineContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionEngineContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17590,6 +17766,10 @@ tree::TerminalNode* MySqlParser::TableOptionMaxRowsContext::MAX_ROWS() {
 
 MySqlParser::DecimalLiteralContext* MySqlParser::TableOptionMaxRowsContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionMaxRowsContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionMaxRowsContext::TableOptionMaxRowsContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17618,6 +17798,10 @@ tree::TerminalNode* MySqlParser::TableOptionCollateContext::DEFAULT() {
   return getToken(MySqlParser::DEFAULT, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionCollateContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionCollateContext::TableOptionCollateContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionCollateContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17638,6 +17822,18 @@ tree::TerminalNode* MySqlParser::TableOptionPersistentContext::STATS_PERSISTENT(
 
 tree::TerminalNode* MySqlParser::TableOptionPersistentContext::DEFAULT() {
   return getToken(MySqlParser::DEFAULT, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionPersistentContext::ZERO_DECIMAL() {
+  return getToken(MySqlParser::ZERO_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionPersistentContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionPersistentContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionPersistentContext::TableOptionPersistentContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17684,8 +17880,20 @@ tree::TerminalNode* MySqlParser::TableOptionPackKeysContext::PACK_KEYS() {
   return getToken(MySqlParser::PACK_KEYS, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionPackKeysContext::ZERO_DECIMAL() {
+  return getToken(MySqlParser::ZERO_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionPackKeysContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
 tree::TerminalNode* MySqlParser::TableOptionPackKeysContext::DEFAULT() {
   return getToken(MySqlParser::DEFAULT, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionPackKeysContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionPackKeysContext::TableOptionPackKeysContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17710,6 +17918,10 @@ tree::TerminalNode* MySqlParser::TableOptionPasswordContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionPasswordContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionPasswordContext::TableOptionPasswordContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionPasswordContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17728,8 +17940,20 @@ tree::TerminalNode* MySqlParser::TableOptionUnionContext::UNION() {
   return getToken(MySqlParser::UNION, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionUnionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::TablesContext* MySqlParser::TableOptionUnionContext::tables() {
   return getRuleContext<MySqlParser::TablesContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionUnionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionUnionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionUnionContext::TableOptionUnionContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17752,6 +17976,10 @@ tree::TerminalNode* MySqlParser::TableOptionSamplePageContext::STATS_SAMPLE_PAGE
 
 MySqlParser::DecimalLiteralContext* MySqlParser::TableOptionSamplePageContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionSamplePageContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionSamplePageContext::TableOptionSamplePageContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17792,6 +18020,10 @@ tree::TerminalNode* MySqlParser::TableOptionCharsetContext::DEFAULT(size_t i) {
   return getToken(MySqlParser::DEFAULT, i);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionCharsetContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionCharsetContext::TableOptionCharsetContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionCharsetContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17818,6 +18050,10 @@ tree::TerminalNode* MySqlParser::TableOptionIndexDirectoryContext::STRING_LITERA
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionIndexDirectoryContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionIndexDirectoryContext::TableOptionIndexDirectoryContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionIndexDirectoryContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17840,6 +18076,10 @@ MySqlParser::FileSizeLiteralContext* MySqlParser::TableOptionKeyBlockSizeContext
   return getRuleContext<MySqlParser::FileSizeLiteralContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionKeyBlockSizeContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionKeyBlockSizeContext::TableOptionKeyBlockSizeContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionKeyBlockSizeContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17860,6 +18100,10 @@ tree::TerminalNode* MySqlParser::TableOptionEncryptionContext::ENCRYPTION() {
 
 tree::TerminalNode* MySqlParser::TableOptionEncryptionContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionEncryptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionEncryptionContext::TableOptionEncryptionContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17888,6 +18132,10 @@ tree::TerminalNode* MySqlParser::TableOptionDataDirectoryContext::STRING_LITERAL
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionDataDirectoryContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionDataDirectoryContext::TableOptionDataDirectoryContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionDataDirectoryContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17908,6 +18156,18 @@ tree::TerminalNode* MySqlParser::TableOptionRecalculationContext::STATS_AUTO_REC
 
 tree::TerminalNode* MySqlParser::TableOptionRecalculationContext::DEFAULT() {
   return getToken(MySqlParser::DEFAULT, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionRecalculationContext::ZERO_DECIMAL() {
+  return getToken(MySqlParser::ZERO_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionRecalculationContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionRecalculationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionRecalculationContext::TableOptionRecalculationContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17932,6 +18192,10 @@ MySqlParser::DecimalLiteralContext* MySqlParser::TableOptionAutoIncrementContext
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionAutoIncrementContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionAutoIncrementContext::TableOptionAutoIncrementContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionAutoIncrementContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17954,6 +18218,18 @@ tree::TerminalNode* MySqlParser::TableOptionChecksumContext::PAGE_CHECKSUM() {
   return getToken(MySqlParser::PAGE_CHECKSUM, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionChecksumContext::ZERO_DECIMAL() {
+  return getToken(MySqlParser::ZERO_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionChecksumContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionChecksumContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionChecksumContext::TableOptionChecksumContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionChecksumContext::enterRule(tree::ParseTreeListener *listener) {
@@ -17970,6 +18246,18 @@ void MySqlParser::TableOptionChecksumContext::exitRule(tree::ParseTreeListener *
 
 tree::TerminalNode* MySqlParser::TableOptionDelayContext::DELAY_KEY_WRITE() {
   return getToken(MySqlParser::DELAY_KEY_WRITE, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionDelayContext::ZERO_DECIMAL() {
+  return getToken(MySqlParser::ZERO_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionDelayContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionDelayContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionDelayContext::TableOptionDelayContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -17994,6 +18282,10 @@ tree::TerminalNode* MySqlParser::TableOptionConnectionContext::STRING_LITERAL() 
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionConnectionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionConnectionContext::TableOptionConnectionContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionConnectionContext::enterRule(tree::ParseTreeListener *listener) {
@@ -18016,6 +18308,10 @@ tree::TerminalNode* MySqlParser::TableOptionCommentContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionCommentContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionCommentContext::TableOptionCommentContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionCommentContext::enterRule(tree::ParseTreeListener *listener) {
@@ -18036,6 +18332,10 @@ tree::TerminalNode* MySqlParser::TableOptionAverageContext::AVG_ROW_LENGTH() {
 
 MySqlParser::DecimalLiteralContext* MySqlParser::TableOptionAverageContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionAverageContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionAverageContext::TableOptionAverageContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -18080,6 +18380,10 @@ tree::TerminalNode* MySqlParser::TableOptionRowFormatContext::COMPACT() {
   return getToken(MySqlParser::COMPACT, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionRowFormatContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionRowFormatContext::TableOptionRowFormatContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionRowFormatContext::enterRule(tree::ParseTreeListener *listener) {
@@ -18104,6 +18408,10 @@ tree::TerminalNode* MySqlParser::TableOptionCompressionContext::STRING_LITERAL()
 
 tree::TerminalNode* MySqlParser::TableOptionCompressionContext::ID() {
   return getToken(MySqlParser::ID, 0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionCompressionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionCompressionContext::TableOptionCompressionContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -18136,6 +18444,10 @@ tree::TerminalNode* MySqlParser::TableOptionInsertMethodContext::LAST() {
   return getToken(MySqlParser::LAST, 0);
 }
 
+tree::TerminalNode* MySqlParser::TableOptionInsertMethodContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::TableOptionInsertMethodContext::TableOptionInsertMethodContext(TableOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::TableOptionInsertMethodContext::enterRule(tree::ParseTreeListener *listener) {
@@ -18156,6 +18468,10 @@ tree::TerminalNode* MySqlParser::TableOptionMinRowsContext::MIN_ROWS() {
 
 MySqlParser::DecimalLiteralContext* MySqlParser::TableOptionMinRowsContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableOptionMinRowsContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::TableOptionMinRowsContext::TableOptionMinRowsContext(TableOptionContext *ctx) { copyFrom(ctx); }
@@ -18950,12 +19266,20 @@ MySqlParser::SubpartitionFunctionDefinitionContext* MySqlParser::PartitionDefini
   return getRuleContext<MySqlParser::SubpartitionFunctionDefinitionContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionDefinitionsContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::PartitionDefinitionContext *> MySqlParser::PartitionDefinitionsContext::partitionDefinition() {
   return getRuleContexts<MySqlParser::PartitionDefinitionContext>();
 }
 
 MySqlParser::PartitionDefinitionContext* MySqlParser::PartitionDefinitionsContext::partitionDefinition(size_t i) {
   return getRuleContext<MySqlParser::PartitionDefinitionContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::PartitionDefinitionsContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 std::vector<MySqlParser::DecimalLiteralContext *> MySqlParser::PartitionDefinitionsContext::decimalLiteral() {
@@ -18968,6 +19292,14 @@ MySqlParser::DecimalLiteralContext* MySqlParser::PartitionDefinitionsContext::de
 
 tree::TerminalNode* MySqlParser::PartitionDefinitionsContext::SUBPARTITIONS() {
   return getToken(MySqlParser::SUBPARTITIONS, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::PartitionDefinitionsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::PartitionDefinitionsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -19094,8 +19426,16 @@ tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::KEY() {
   return getToken(MySqlParser::KEY, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::PartitionFunctionKeyContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::LINEAR() {
@@ -19104,6 +19444,18 @@ tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::LINEAR() {
 
 tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::ALGORITHM() {
   return getToken(MySqlParser::ALGORITHM, 0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionFunctionKeyContext::TWO_DECIMAL() {
+  return getToken(MySqlParser::TWO_DECIMAL, 0);
 }
 
 MySqlParser::PartitionFunctionKeyContext::PartitionFunctionKeyContext(PartitionFunctionDefinitionContext *ctx) { copyFrom(ctx); }
@@ -19124,8 +19476,16 @@ tree::TerminalNode* MySqlParser::PartitionFunctionHashContext::HASH() {
   return getToken(MySqlParser::HASH, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionFunctionHashContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::PartitionFunctionHashContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionFunctionHashContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::PartitionFunctionHashContext::LINEAR() {
@@ -19150,8 +19510,16 @@ tree::TerminalNode* MySqlParser::PartitionFunctionListContext::LIST() {
   return getToken(MySqlParser::LIST, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionFunctionListContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::PartitionFunctionListContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionFunctionListContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::PartitionFunctionListContext::COLUMNS() {
@@ -19180,8 +19548,16 @@ tree::TerminalNode* MySqlParser::PartitionFunctionRangeContext::RANGE() {
   return getToken(MySqlParser::RANGE, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionFunctionRangeContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::PartitionFunctionRangeContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionFunctionRangeContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::PartitionFunctionRangeContext::COLUMNS() {
@@ -19387,8 +19763,16 @@ tree::TerminalNode* MySqlParser::SubPartitionFunctionHashContext::HASH() {
   return getToken(MySqlParser::HASH, 0);
 }
 
+tree::TerminalNode* MySqlParser::SubPartitionFunctionHashContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::SubPartitionFunctionHashContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::SubPartitionFunctionHashContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::SubPartitionFunctionHashContext::LINEAR() {
@@ -19413,8 +19797,16 @@ tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::KEY() {
   return getToken(MySqlParser::KEY, 0);
 }
 
+tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::SubPartitionFunctionKeyContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::LINEAR() {
@@ -19423,6 +19815,18 @@ tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::LINEAR() {
 
 tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::ALGORITHM() {
   return getToken(MySqlParser::ALGORITHM, 0);
+}
+
+tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::SubPartitionFunctionKeyContext::TWO_DECIMAL() {
+  return getToken(MySqlParser::TWO_DECIMAL, 0);
 }
 
 MySqlParser::SubPartitionFunctionKeyContext::SubPartitionFunctionKeyContext(SubpartitionFunctionDefinitionContext *ctx) { copyFrom(ctx); }
@@ -19564,12 +19968,28 @@ tree::TerminalNode* MySqlParser::PartitionComparisionContext::THAN() {
   return getToken(MySqlParser::THAN, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionComparisionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::PartitionDefinerAtomContext *> MySqlParser::PartitionComparisionContext::partitionDefinerAtom() {
   return getRuleContexts<MySqlParser::PartitionDefinerAtomContext>();
 }
 
 MySqlParser::PartitionDefinerAtomContext* MySqlParser::PartitionComparisionContext::partitionDefinerAtom(size_t i) {
   return getRuleContext<MySqlParser::PartitionDefinerAtomContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::PartitionComparisionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::PartitionComparisionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::PartitionComparisionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 std::vector<MySqlParser::PartitionOptionContext *> MySqlParser::PartitionComparisionContext::partitionOption() {
@@ -19618,12 +20038,28 @@ tree::TerminalNode* MySqlParser::PartitionListAtomContext::IN() {
   return getToken(MySqlParser::IN, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionListAtomContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::PartitionDefinerAtomContext *> MySqlParser::PartitionListAtomContext::partitionDefinerAtom() {
   return getRuleContexts<MySqlParser::PartitionDefinerAtomContext>();
 }
 
 MySqlParser::PartitionDefinerAtomContext* MySqlParser::PartitionListAtomContext::partitionDefinerAtom(size_t i) {
   return getRuleContext<MySqlParser::PartitionDefinerAtomContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::PartitionListAtomContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::PartitionListAtomContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::PartitionListAtomContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 std::vector<MySqlParser::PartitionOptionContext *> MySqlParser::PartitionListAtomContext::partitionOption() {
@@ -19672,12 +20108,28 @@ tree::TerminalNode* MySqlParser::PartitionListVectorContext::IN() {
   return getToken(MySqlParser::IN, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionListVectorContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::PartitionDefinerVectorContext *> MySqlParser::PartitionListVectorContext::partitionDefinerVector() {
   return getRuleContexts<MySqlParser::PartitionDefinerVectorContext>();
 }
 
 MySqlParser::PartitionDefinerVectorContext* MySqlParser::PartitionListVectorContext::partitionDefinerVector(size_t i) {
   return getRuleContext<MySqlParser::PartitionDefinerVectorContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::PartitionListVectorContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::PartitionListVectorContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::PartitionListVectorContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 std::vector<MySqlParser::PartitionOptionContext *> MySqlParser::PartitionListVectorContext::partitionOption() {
@@ -19732,6 +20184,14 @@ std::vector<MySqlParser::SubpartitionDefinitionContext *> MySqlParser::Partition
 
 MySqlParser::SubpartitionDefinitionContext* MySqlParser::PartitionSimpleContext::subpartitionDefinition(size_t i) {
   return getRuleContext<MySqlParser::SubpartitionDefinitionContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::PartitionSimpleContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::PartitionSimpleContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::PartitionSimpleContext::PartitionSimpleContext(PartitionDefinitionContext *ctx) { copyFrom(ctx); }
@@ -20182,12 +20642,28 @@ MySqlParser::PartitionDefinerVectorContext::PartitionDefinerVectorContext(Parser
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::PartitionDefinerVectorContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::PartitionDefinerAtomContext *> MySqlParser::PartitionDefinerVectorContext::partitionDefinerAtom() {
   return getRuleContexts<MySqlParser::PartitionDefinerAtomContext>();
 }
 
 MySqlParser::PartitionDefinerAtomContext* MySqlParser::PartitionDefinerVectorContext::partitionDefinerAtom(size_t i) {
   return getRuleContext<MySqlParser::PartitionDefinerAtomContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::PartitionDefinerVectorContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::PartitionDefinerVectorContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::PartitionDefinerVectorContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -20353,6 +20829,10 @@ tree::TerminalNode* MySqlParser::PartitionOptionCommentContext::STRING_LITERAL()
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionOptionCommentContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::PartitionOptionCommentContext::PartitionOptionCommentContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::PartitionOptionCommentContext::enterRule(tree::ParseTreeListener *listener) {
@@ -20373,6 +20853,10 @@ tree::TerminalNode* MySqlParser::PartitionOptionNodeGroupContext::NODEGROUP() {
 
 MySqlParser::UidContext* MySqlParser::PartitionOptionNodeGroupContext::uid() {
   return getRuleContext<MySqlParser::UidContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionOptionNodeGroupContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::PartitionOptionNodeGroupContext::PartitionOptionNodeGroupContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
@@ -20401,6 +20885,10 @@ tree::TerminalNode* MySqlParser::PartitionOptionIndexDirectoryContext::STRING_LI
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionOptionIndexDirectoryContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::PartitionOptionIndexDirectoryContext::PartitionOptionIndexDirectoryContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::PartitionOptionIndexDirectoryContext::enterRule(tree::ParseTreeListener *listener) {
@@ -20423,6 +20911,10 @@ MySqlParser::DecimalLiteralContext* MySqlParser::PartitionOptionMaxRowsContext::
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionOptionMaxRowsContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::PartitionOptionMaxRowsContext::PartitionOptionMaxRowsContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::PartitionOptionMaxRowsContext::enterRule(tree::ParseTreeListener *listener) {
@@ -20443,6 +20935,10 @@ tree::TerminalNode* MySqlParser::PartitionOptionTablespaceContext::TABLESPACE() 
 
 MySqlParser::UidContext* MySqlParser::PartitionOptionTablespaceContext::uid() {
   return getRuleContext<MySqlParser::UidContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionOptionTablespaceContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::PartitionOptionTablespaceContext::PartitionOptionTablespaceContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
@@ -20471,6 +20967,10 @@ tree::TerminalNode* MySqlParser::PartitionOptionEngineContext::STORAGE() {
   return getToken(MySqlParser::STORAGE, 0);
 }
 
+tree::TerminalNode* MySqlParser::PartitionOptionEngineContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::PartitionOptionEngineContext::PartitionOptionEngineContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::PartitionOptionEngineContext::enterRule(tree::ParseTreeListener *listener) {
@@ -20491,6 +20991,10 @@ tree::TerminalNode* MySqlParser::PartitionOptionMinRowsContext::MIN_ROWS() {
 
 MySqlParser::DecimalLiteralContext* MySqlParser::PartitionOptionMinRowsContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionOptionMinRowsContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::PartitionOptionMinRowsContext::PartitionOptionMinRowsContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
@@ -20517,6 +21021,10 @@ tree::TerminalNode* MySqlParser::PartitionOptionDataDirectoryContext::DIRECTORY(
 
 tree::TerminalNode* MySqlParser::PartitionOptionDataDirectoryContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::PartitionOptionDataDirectoryContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::PartitionOptionDataDirectoryContext::PartitionOptionDataDirectoryContext(PartitionOptionContext *ctx) { copyFrom(ctx); }
@@ -21345,6 +21853,14 @@ tree::TerminalNode* MySqlParser::AlterLogfileGroupContext::WAIT() {
   return getToken(MySqlParser::WAIT, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::AlterLogfileGroupContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::AlterLogfileGroupContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 
 size_t MySqlParser::AlterLogfileGroupContext::getRuleIndex() const {
   return MySqlParser::RuleAlterLogfileGroup;
@@ -21545,12 +22061,28 @@ tree::TerminalNode* MySqlParser::AlterServerContext::OPTIONS() {
   return getToken(MySqlParser::OPTIONS, 0);
 }
 
+tree::TerminalNode* MySqlParser::AlterServerContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::ServerOptionContext *> MySqlParser::AlterServerContext::serverOption() {
   return getRuleContexts<MySqlParser::ServerOptionContext>();
 }
 
 MySqlParser::ServerOptionContext* MySqlParser::AlterServerContext::serverOption(size_t i) {
   return getRuleContext<MySqlParser::ServerOptionContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::AlterServerContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::AlterServerContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterServerContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -21657,6 +22189,14 @@ tree::TerminalNode* MySqlParser::AlterTableContext::ONLINE() {
 
 tree::TerminalNode* MySqlParser::AlterTableContext::OFFLINE() {
   return getToken(MySqlParser::OFFLINE, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::AlterTableContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterTableContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -21808,6 +22348,14 @@ tree::TerminalNode* MySqlParser::AlterTablespaceContext::INITIAL_SIZE() {
   return getToken(MySqlParser::INITIAL_SIZE, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::AlterTablespaceContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::AlterTablespaceContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 MySqlParser::FileSizeLiteralContext* MySqlParser::AlterTablespaceContext::fileSizeLiteral() {
   return getRuleContext<MySqlParser::FileSizeLiteralContext>(0);
 }
@@ -21938,6 +22486,10 @@ tree::TerminalNode* MySqlParser::AlterViewContext::ALGORITHM() {
   return getToken(MySqlParser::ALGORITHM, 0);
 }
 
+tree::TerminalNode* MySqlParser::AlterViewContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::OwnerStatementContext* MySqlParser::AlterViewContext::ownerStatement() {
   return getRuleContext<MySqlParser::OwnerStatementContext>(0);
 }
@@ -21950,8 +22502,16 @@ tree::TerminalNode* MySqlParser::AlterViewContext::SECURITY() {
   return getToken(MySqlParser::SECURITY, 0);
 }
 
+tree::TerminalNode* MySqlParser::AlterViewContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::AlterViewContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::AlterViewContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::AlterViewContext::WITH() {
@@ -22181,6 +22741,14 @@ tree::TerminalNode* MySqlParser::AlterByDefaultCharsetContext::SET() {
   return getToken(MySqlParser::SET, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::AlterByDefaultCharsetContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::AlterByDefaultCharsetContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 MySqlParser::CharsetNameContext* MySqlParser::AlterByDefaultCharsetContext::charsetName() {
   return getRuleContext<MySqlParser::CharsetNameContext>(0);
 }
@@ -22295,12 +22863,28 @@ tree::TerminalNode* MySqlParser::AlterByAddPartitionContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
 }
 
+tree::TerminalNode* MySqlParser::AlterByAddPartitionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::PartitionDefinitionContext *> MySqlParser::AlterByAddPartitionContext::partitionDefinition() {
   return getRuleContexts<MySqlParser::PartitionDefinitionContext>();
 }
 
 MySqlParser::PartitionDefinitionContext* MySqlParser::AlterByAddPartitionContext::partitionDefinition(size_t i) {
   return getRuleContext<MySqlParser::PartitionDefinitionContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::AlterByAddPartitionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::AlterByAddPartitionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterByAddPartitionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::AlterByAddPartitionContext::AlterByAddPartitionContext(AlterSpecificationContext *ctx) { copyFrom(ctx); }
@@ -22539,6 +23123,10 @@ tree::TerminalNode* MySqlParser::AlterByAddColumnsContext::ADD() {
   return getToken(MySqlParser::ADD, 0);
 }
 
+tree::TerminalNode* MySqlParser::AlterByAddColumnsContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::UidContext *> MySqlParser::AlterByAddColumnsContext::uid() {
   return getRuleContexts<MySqlParser::UidContext>();
 }
@@ -22555,8 +23143,20 @@ MySqlParser::ColumnDefinitionContext* MySqlParser::AlterByAddColumnsContext::col
   return getRuleContext<MySqlParser::ColumnDefinitionContext>(i);
 }
 
+tree::TerminalNode* MySqlParser::AlterByAddColumnsContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::AlterByAddColumnsContext::COLUMN() {
   return getToken(MySqlParser::COLUMN, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::AlterByAddColumnsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterByAddColumnsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::AlterByAddColumnsContext::AlterByAddColumnsContext(AlterSpecificationContext *ctx) { copyFrom(ctx); }
@@ -22611,8 +23211,16 @@ tree::TerminalNode* MySqlParser::AlterByAddCheckTableConstraintContext::CHECK() 
   return getToken(MySqlParser::CHECK, 0);
 }
 
+tree::TerminalNode* MySqlParser::AlterByAddCheckTableConstraintContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::AlterByAddCheckTableConstraintContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::AlterByAddCheckTableConstraintContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::AlterByAddCheckTableConstraintContext::CONSTRAINT() {
@@ -23065,6 +23673,14 @@ MySqlParser::TableOptionContext* MySqlParser::AlterByTableOptionContext::tableOp
   return getRuleContext<MySqlParser::TableOptionContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::AlterByTableOptionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterByTableOptionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 MySqlParser::AlterByTableOptionContext::AlterByTableOptionContext(AlterSpecificationContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::AlterByTableOptionContext::enterRule(tree::ParseTreeListener *listener) {
@@ -23123,6 +23739,10 @@ tree::TerminalNode* MySqlParser::AlterByLockContext::SHARED() {
 
 tree::TerminalNode* MySqlParser::AlterByLockContext::EXCLUSIVE() {
   return getToken(MySqlParser::EXCLUSIVE, 0);
+}
+
+tree::TerminalNode* MySqlParser::AlterByLockContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::AlterByLockContext::AlterByLockContext(AlterSpecificationContext *ctx) { copyFrom(ctx); }
@@ -23339,12 +23959,28 @@ tree::TerminalNode* MySqlParser::AlterByReorganizePartitionContext::INTO() {
   return getToken(MySqlParser::INTO, 0);
 }
 
+tree::TerminalNode* MySqlParser::AlterByReorganizePartitionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::PartitionDefinitionContext *> MySqlParser::AlterByReorganizePartitionContext::partitionDefinition() {
   return getRuleContexts<MySqlParser::PartitionDefinitionContext>();
 }
 
 MySqlParser::PartitionDefinitionContext* MySqlParser::AlterByReorganizePartitionContext::partitionDefinition(size_t i) {
   return getRuleContext<MySqlParser::PartitionDefinitionContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::AlterByReorganizePartitionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::AlterByReorganizePartitionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterByReorganizePartitionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::AlterByReorganizePartitionContext::AlterByReorganizePartitionContext(AlterSpecificationContext *ctx) { copyFrom(ctx); }
@@ -23375,6 +24011,10 @@ tree::TerminalNode* MySqlParser::AlterBySetAlgorithmContext::INPLACE() {
 
 tree::TerminalNode* MySqlParser::AlterBySetAlgorithmContext::COPY() {
   return getToken(MySqlParser::COPY, 0);
+}
+
+tree::TerminalNode* MySqlParser::AlterBySetAlgorithmContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::AlterBySetAlgorithmContext::AlterBySetAlgorithmContext(AlterSpecificationContext *ctx) { copyFrom(ctx); }
@@ -36623,6 +37263,14 @@ tree::TerminalNode* MySqlParser::DropIndexContext::EXCLUSIVE(size_t i) {
   return getToken(MySqlParser::EXCLUSIVE, i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::DropIndexContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::DropIndexContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 
 size_t MySqlParser::DropIndexContext::getRuleIndex() const {
   return MySqlParser::RuleDropIndex;
@@ -36783,6 +37431,10 @@ MySqlParser::UidContext* MySqlParser::DropLogfileGroupContext::uid() {
 
 tree::TerminalNode* MySqlParser::DropLogfileGroupContext::ENGINE() {
   return getToken(MySqlParser::ENGINE, 0);
+}
+
+tree::TerminalNode* MySqlParser::DropLogfileGroupContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::EngineNameContext* MySqlParser::DropLogfileGroupContext::engineName() {
@@ -37198,6 +37850,10 @@ MySqlParser::EngineNameContext* MySqlParser::DropTablespaceContext::engineName()
   return getRuleContext<MySqlParser::EngineNameContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::DropTablespaceContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 
 size_t MySqlParser::DropTablespaceContext::getRuleIndex() const {
   return MySqlParser::RuleDropTablespace;
@@ -37360,6 +38016,14 @@ MySqlParser::IfExistsContext* MySqlParser::DropViewContext::ifExists() {
   return getRuleContext<MySqlParser::IfExistsContext>(0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::DropViewContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::DropViewContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::DropViewContext::RESTRICT() {
   return getToken(MySqlParser::RESTRICT, 0);
 }
@@ -37468,6 +38132,14 @@ std::vector<MySqlParser::RenameTableClauseContext *> MySqlParser::RenameTableCon
 
 MySqlParser::RenameTableClauseContext* MySqlParser::RenameTableContext::renameTableClause(size_t i) {
   return getRuleContext<MySqlParser::RenameTableClauseContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::RenameTableContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::RenameTableContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -37667,6 +38339,14 @@ tree::TerminalNode* MySqlParser::CallStatementContext::CALL() {
 
 MySqlParser::FullIdContext* MySqlParser::CallStatementContext::fullId() {
   return getRuleContext<MySqlParser::FullIdContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::CallStatementContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::CallStatementContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::ConstantsContext* MySqlParser::CallStatementContext::constants() {
@@ -37995,6 +38675,22 @@ tree::TerminalNode* MySqlParser::InsertStatementContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::InsertStatementContext::LR_BRACKET() {
+  return getTokens(MySqlParser::LR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::InsertStatementContext::LR_BRACKET(size_t i) {
+  return getToken(MySqlParser::LR_BRACKET, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::InsertStatementContext::RR_BRACKET() {
+  return getTokens(MySqlParser::RR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::InsertStatementContext::RR_BRACKET(size_t i) {
+  return getToken(MySqlParser::RR_BRACKET, i);
+}
+
 std::vector<MySqlParser::UpdatedElementContext *> MySqlParser::InsertStatementContext::updatedElement() {
   return getRuleContexts<MySqlParser::UpdatedElementContext>();
 }
@@ -38037,6 +38733,14 @@ tree::TerminalNode* MySqlParser::InsertStatementContext::DELAYED() {
 
 tree::TerminalNode* MySqlParser::InsertStatementContext::HIGH_PRIORITY() {
   return getToken(MySqlParser::HIGH_PRIORITY, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::InsertStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::InsertStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -38255,8 +38959,24 @@ tree::TerminalNode* MySqlParser::LoadDataStatementContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::LoadDataStatementContext::LR_BRACKET() {
+  return getTokens(MySqlParser::LR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::LoadDataStatementContext::LR_BRACKET(size_t i) {
+  return getToken(MySqlParser::LR_BRACKET, i);
+}
+
 MySqlParser::UidListContext* MySqlParser::LoadDataStatementContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::LoadDataStatementContext::RR_BRACKET() {
+  return getTokens(MySqlParser::RR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::LoadDataStatementContext::RR_BRACKET(size_t i) {
+  return getToken(MySqlParser::RR_BRACKET, i);
 }
 
 tree::TerminalNode* MySqlParser::LoadDataStatementContext::CHARACTER() {
@@ -38349,6 +39069,14 @@ std::vector<MySqlParser::SelectLinesIntoContext *> MySqlParser::LoadDataStatemen
 
 MySqlParser::SelectLinesIntoContext* MySqlParser::LoadDataStatementContext::selectLinesInto(size_t i) {
   return getRuleContext<MySqlParser::SelectLinesIntoContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::LoadDataStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::LoadDataStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -38669,6 +39397,14 @@ tree::TerminalNode* MySqlParser::LoadXmlStatementContext::BY() {
   return getToken(MySqlParser::BY, 0);
 }
 
+tree::TerminalNode* MySqlParser::LoadXmlStatementContext::LESS_SYMBOL() {
+  return getToken(MySqlParser::LESS_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::LoadXmlStatementContext::GREATER_SYMBOL() {
+  return getToken(MySqlParser::GREATER_SYMBOL, 0);
+}
+
 std::vector<tree::TerminalNode *> MySqlParser::LoadXmlStatementContext::IGNORE() {
   return getTokens(MySqlParser::IGNORE);
 }
@@ -38681,12 +39417,20 @@ MySqlParser::DecimalLiteralContext* MySqlParser::LoadXmlStatementContext::decima
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::LoadXmlStatementContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::AssignmentFieldContext *> MySqlParser::LoadXmlStatementContext::assignmentField() {
   return getRuleContexts<MySqlParser::AssignmentFieldContext>();
 }
 
 MySqlParser::AssignmentFieldContext* MySqlParser::LoadXmlStatementContext::assignmentField(size_t i) {
   return getRuleContext<MySqlParser::AssignmentFieldContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::LoadXmlStatementContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 std::vector<MySqlParser::UpdatedElementContext *> MySqlParser::LoadXmlStatementContext::updatedElement() {
@@ -38715,6 +39459,14 @@ tree::TerminalNode* MySqlParser::LoadXmlStatementContext::REPLACE() {
 
 tree::TerminalNode* MySqlParser::LoadXmlStatementContext::LINES() {
   return getToken(MySqlParser::LINES, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::LoadXmlStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::LoadXmlStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -38945,6 +39697,22 @@ tree::TerminalNode* MySqlParser::ReplaceStatementContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::ReplaceStatementContext::LR_BRACKET() {
+  return getTokens(MySqlParser::LR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::ReplaceStatementContext::LR_BRACKET(size_t i) {
+  return getToken(MySqlParser::LR_BRACKET, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::ReplaceStatementContext::RR_BRACKET() {
+  return getTokens(MySqlParser::RR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::ReplaceStatementContext::RR_BRACKET(size_t i) {
+  return getToken(MySqlParser::RR_BRACKET, i);
+}
+
 std::vector<MySqlParser::UpdatedElementContext *> MySqlParser::ReplaceStatementContext::updatedElement() {
   return getRuleContexts<MySqlParser::UpdatedElementContext>();
 }
@@ -38967,6 +39735,14 @@ tree::TerminalNode* MySqlParser::ReplaceStatementContext::LOW_PRIORITY() {
 
 tree::TerminalNode* MySqlParser::ReplaceStatementContext::DELAYED() {
   return getToken(MySqlParser::DELAYED, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::ReplaceStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ReplaceStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -39598,6 +40374,14 @@ MySqlParser::SelectStatementContext* MySqlParser::InsertStatementValueContext::s
   return getRuleContext<MySqlParser::SelectStatementContext>(0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::InsertStatementValueContext::LR_BRACKET() {
+  return getTokens(MySqlParser::LR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::InsertStatementValueContext::LR_BRACKET(size_t i) {
+  return getToken(MySqlParser::LR_BRACKET, i);
+}
+
 std::vector<MySqlParser::ExpressionsWithDefaultsContext *> MySqlParser::InsertStatementValueContext::expressionsWithDefaults() {
   return getRuleContexts<MySqlParser::ExpressionsWithDefaultsContext>();
 }
@@ -39606,12 +40390,28 @@ MySqlParser::ExpressionsWithDefaultsContext* MySqlParser::InsertStatementValueCo
   return getRuleContext<MySqlParser::ExpressionsWithDefaultsContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::InsertStatementValueContext::RR_BRACKET() {
+  return getTokens(MySqlParser::RR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::InsertStatementValueContext::RR_BRACKET(size_t i) {
+  return getToken(MySqlParser::RR_BRACKET, i);
+}
+
 tree::TerminalNode* MySqlParser::InsertStatementValueContext::VALUES() {
   return getToken(MySqlParser::VALUES, 0);
 }
 
 tree::TerminalNode* MySqlParser::InsertStatementValueContext::VALUE() {
   return getToken(MySqlParser::VALUE, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::InsertStatementValueContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::InsertStatementValueContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -39711,6 +40511,10 @@ MySqlParser::UpdatedElementContext::UpdatedElementContext(ParserRuleContext *par
 
 MySqlParser::FullColumnNameContext* MySqlParser::UpdatedElementContext::fullColumnName() {
   return getRuleContext<MySqlParser::FullColumnNameContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::UpdatedElementContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::ExpressionContext* MySqlParser::UpdatedElementContext::expression() {
@@ -41446,8 +42250,16 @@ tree::TerminalNode* MySqlParser::SingleDeleteStatementContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
 }
 
+tree::TerminalNode* MySqlParser::SingleDeleteStatementContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::SingleDeleteStatementContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::SingleDeleteStatementContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::SingleDeleteStatementContext::WHERE() {
@@ -41632,6 +42444,30 @@ MySqlParser::ExpressionContext* MySqlParser::MultipleDeleteStatementContext::exp
 
 tree::TerminalNode* MySqlParser::MultipleDeleteStatementContext::LOW_PRIORITY() {
   return getToken(MySqlParser::LOW_PRIORITY, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::MultipleDeleteStatementContext::DOT() {
+  return getTokens(MySqlParser::DOT);
+}
+
+tree::TerminalNode* MySqlParser::MultipleDeleteStatementContext::DOT(size_t i) {
+  return getToken(MySqlParser::DOT, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::MultipleDeleteStatementContext::STAR() {
+  return getTokens(MySqlParser::STAR);
+}
+
+tree::TerminalNode* MySqlParser::MultipleDeleteStatementContext::STAR(size_t i) {
+  return getToken(MySqlParser::STAR, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::MultipleDeleteStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::MultipleDeleteStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -42621,8 +43457,16 @@ MySqlParser::ComparisonOperatorContext* MySqlParser::HandlerReadIndexStatementCo
   return getRuleContext<MySqlParser::ComparisonOperatorContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::HandlerReadIndexStatementContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ConstantsContext* MySqlParser::HandlerReadIndexStatementContext::constants() {
   return getRuleContext<MySqlParser::ConstantsContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::HandlerReadIndexStatementContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::HandlerReadIndexStatementContext::WHERE() {
@@ -42974,6 +43818,14 @@ tree::TerminalNode* MySqlParser::SingleUpdateStatementContext::IGNORE() {
 
 MySqlParser::UidContext* MySqlParser::SingleUpdateStatementContext::uid() {
   return getRuleContext<MySqlParser::UidContext>(0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::SingleUpdateStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::SingleUpdateStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 tree::TerminalNode* MySqlParser::SingleUpdateStatementContext::WHERE() {
@@ -43851,6 +44703,14 @@ tree::TerminalNode* MySqlParser::MultipleUpdateStatementContext::IGNORE() {
   return getToken(MySqlParser::IGNORE, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::MultipleUpdateStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::MultipleUpdateStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::MultipleUpdateStatementContext::WHERE() {
   return getToken(MySqlParser::WHERE, 0);
 }
@@ -43967,6 +44827,14 @@ std::vector<MySqlParser::OrderByExpressionContext *> MySqlParser::OrderByClauseC
 
 MySqlParser::OrderByExpressionContext* MySqlParser::OrderByClauseContext::orderByExpression(size_t i) {
   return getRuleContext<MySqlParser::OrderByExpressionContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::OrderByClauseContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::OrderByClauseContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -44118,6 +44986,14 @@ MySqlParser::TableSourceContext* MySqlParser::TableSourcesContext::tableSource(s
   return getRuleContext<MySqlParser::TableSourceContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::TableSourcesContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::TableSourcesContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::TableSourcesContext::getRuleIndex() const {
   return MySqlParser::RuleTableSources;
@@ -44187,8 +45063,16 @@ void MySqlParser::TableSourceContext::copyFrom(TableSourceContext *ctx) {
 
 //----------------- TableSourceNestedContext ------------------------------------------------------------------
 
+tree::TerminalNode* MySqlParser::TableSourceNestedContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::TableSourceItemContext* MySqlParser::TableSourceNestedContext::tableSourceItem() {
   return getRuleContext<MySqlParser::TableSourceItemContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableSourceNestedContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 std::vector<MySqlParser::JoinPartContext *> MySqlParser::TableSourceNestedContext::joinPart() {
@@ -44336,6 +45220,14 @@ MySqlParser::SelectStatementContext* MySqlParser::SubqueryTableItemContext::sele
   return getRuleContext<MySqlParser::SelectStatementContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::SubqueryTableItemContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::SubqueryTableItemContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::SubqueryTableItemContext::AS() {
   return getToken(MySqlParser::AS, 0);
 }
@@ -44362,8 +45254,16 @@ tree::TerminalNode* MySqlParser::AtomTableItemContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
 }
 
+tree::TerminalNode* MySqlParser::AtomTableItemContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::AtomTableItemContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::AtomTableItemContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 std::vector<MySqlParser::IndexHintContext *> MySqlParser::AtomTableItemContext::indexHint() {
@@ -44382,6 +45282,14 @@ tree::TerminalNode* MySqlParser::AtomTableItemContext::AS() {
   return getToken(MySqlParser::AS, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::AtomTableItemContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AtomTableItemContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 MySqlParser::AtomTableItemContext::AtomTableItemContext(TableSourceItemContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::AtomTableItemContext::enterRule(tree::ParseTreeListener *listener) {
@@ -44396,8 +45304,16 @@ void MySqlParser::AtomTableItemContext::exitRule(tree::ParseTreeListener *listen
 }
 //----------------- TableSourcesItemContext ------------------------------------------------------------------
 
+tree::TerminalNode* MySqlParser::TableSourcesItemContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::TableSourcesContext* MySqlParser::TableSourcesItemContext::tableSources() {
   return getRuleContext<MySqlParser::TableSourcesContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableSourcesItemContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::TableSourcesItemContext::TableSourcesItemContext(TableSourceItemContext *ctx) { copyFrom(ctx); }
@@ -44557,8 +45473,16 @@ MySqlParser::IndexHintContext::IndexHintContext(ParserRuleContext *parent, size_
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::IndexHintContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::IndexHintContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::IndexHintContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::IndexHintContext::USE() {
@@ -44793,8 +45717,16 @@ tree::TerminalNode* MySqlParser::InnerJoinContext::USING() {
   return getToken(MySqlParser::USING, 0);
 }
 
+tree::TerminalNode* MySqlParser::InnerJoinContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::InnerJoinContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::InnerJoinContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::InnerJoinContext::INNER() {
@@ -44885,8 +45817,16 @@ tree::TerminalNode* MySqlParser::OuterJoinContext::USING() {
   return getToken(MySqlParser::USING, 0);
 }
 
+tree::TerminalNode* MySqlParser::OuterJoinContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::OuterJoinContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::OuterJoinContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::OuterJoinContext::OUTER() {
@@ -45141,8 +46081,16 @@ MySqlParser::QueryExpressionContext::QueryExpressionContext(ParserRuleContext *p
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::QueryExpressionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::QuerySpecificationContext* MySqlParser::QueryExpressionContext::querySpecification() {
   return getRuleContext<MySqlParser::QuerySpecificationContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::QueryExpressionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::QueryExpressionContext* MySqlParser::QueryExpressionContext::queryExpression() {
@@ -45217,8 +46165,16 @@ MySqlParser::QueryExpressionNointoContext::QueryExpressionNointoContext(ParserRu
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::QueryExpressionNointoContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::QuerySpecificationNointoContext* MySqlParser::QueryExpressionNointoContext::querySpecificationNointo() {
   return getRuleContext<MySqlParser::QuerySpecificationNointoContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::QueryExpressionNointoContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::QueryExpressionNointoContext* MySqlParser::QueryExpressionNointoContext::queryExpressionNointo() {
@@ -45975,6 +46931,18 @@ std::vector<MySqlParser::SelectElementContext *> MySqlParser::SelectElementsCont
 
 MySqlParser::SelectElementContext* MySqlParser::SelectElementsContext::selectElement(size_t i) {
   return getRuleContext<MySqlParser::SelectElementContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::SelectElementsContext::STAR() {
+  return getToken(MySqlParser::STAR, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::SelectElementsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::SelectElementsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -46895,6 +47863,14 @@ MySqlParser::FullIdContext* MySqlParser::SelectStarElementContext::fullId() {
   return getRuleContext<MySqlParser::FullIdContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::SelectStarElementContext::DOT() {
+  return getToken(MySqlParser::DOT, 0);
+}
+
+tree::TerminalNode* MySqlParser::SelectStarElementContext::STAR() {
+  return getToken(MySqlParser::STAR, 0);
+}
+
 MySqlParser::SelectStarElementContext::SelectStarElementContext(SelectElementContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::SelectStarElementContext::enterRule(tree::ParseTreeListener *listener) {
@@ -47090,6 +48066,14 @@ std::vector<MySqlParser::AssignmentFieldContext *> MySqlParser::SelectIntoVariab
 
 MySqlParser::AssignmentFieldContext* MySqlParser::SelectIntoVariablesContext::assignmentField(size_t i) {
   return getRuleContext<MySqlParser::AssignmentFieldContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::SelectIntoVariablesContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::SelectIntoVariablesContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::SelectIntoVariablesContext::SelectIntoVariablesContext(SelectIntoExpressionContext *ctx) { copyFrom(ctx); }
@@ -47580,6 +48564,14 @@ MySqlParser::ExpressionContext* MySqlParser::FromClauseContext::expression(size_
   return getRuleContext<MySqlParser::ExpressionContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::FromClauseContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::FromClauseContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::FromClauseContext::WITH() {
   return getToken(MySqlParser::WITH, 0);
 }
@@ -47788,6 +48780,10 @@ MySqlParser::LimitClauseAtomContext* MySqlParser::LimitClauseContext::limitClaus
   return getRuleContext<MySqlParser::LimitClauseAtomContext>(i);
 }
 
+tree::TerminalNode* MySqlParser::LimitClauseContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
+}
+
 
 size_t MySqlParser::LimitClauseContext::getRuleIndex() const {
   return MySqlParser::RuleLimitClause;
@@ -47954,6 +48950,14 @@ std::vector<MySqlParser::TransactionModeContext *> MySqlParser::StartTransaction
 
 MySqlParser::TransactionModeContext* MySqlParser::StartTransactionContext::transactionMode(size_t i) {
   return getRuleContext<MySqlParser::TransactionModeContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::StartTransactionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::StartTransactionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -48547,6 +49551,14 @@ MySqlParser::LockTableElementContext* MySqlParser::LockTablesContext::lockTableE
   return getRuleContext<MySqlParser::LockTableElementContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::LockTablesContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::LockTablesContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::LockTablesContext::getRuleIndex() const {
   return MySqlParser::RuleLockTables;
@@ -48672,6 +49684,18 @@ tree::TerminalNode* MySqlParser::SetAutocommitStatementContext::AUTOCOMMIT() {
   return getToken(MySqlParser::AUTOCOMMIT, 0);
 }
 
+tree::TerminalNode* MySqlParser::SetAutocommitStatementContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::SetAutocommitStatementContext::ZERO_DECIMAL() {
+  return getToken(MySqlParser::ZERO_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::SetAutocommitStatementContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
 
 size_t MySqlParser::SetAutocommitStatementContext::getRuleIndex() const {
   return MySqlParser::RuleSetAutocommitStatement;
@@ -48748,6 +49772,14 @@ std::vector<MySqlParser::TransactionOptionContext *> MySqlParser::SetTransaction
 
 MySqlParser::TransactionOptionContext* MySqlParser::SetTransactionStatementContext::transactionOption(size_t i) {
   return getRuleContext<MySqlParser::TransactionOptionContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::SetTransactionStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::SetTransactionStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 tree::TerminalNode* MySqlParser::SetTransactionStatementContext::GLOBAL() {
@@ -50035,6 +51067,14 @@ MySqlParser::MasterOptionContext* MySqlParser::ChangeMasterContext::masterOption
   return getRuleContext<MySqlParser::MasterOptionContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::ChangeMasterContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ChangeMasterContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 MySqlParser::ChannelOptionContext* MySqlParser::ChangeMasterContext::channelOption() {
   return getRuleContext<MySqlParser::ChannelOptionContext>(0);
 }
@@ -50129,6 +51169,14 @@ std::vector<MySqlParser::ReplicationFilterContext *> MySqlParser::ChangeReplicat
 
 MySqlParser::ReplicationFilterContext* MySqlParser::ChangeReplicationFilterContext::replicationFilter(size_t i) {
   return getRuleContext<MySqlParser::ReplicationFilterContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::ChangeReplicationFilterContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ChangeReplicationFilterContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -50474,6 +51522,14 @@ MySqlParser::ChannelOptionContext* MySqlParser::StartSlaveContext::channelOption
   return getRuleContext<MySqlParser::ChannelOptionContext>(0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::StartSlaveContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::StartSlaveContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::StartSlaveContext::getRuleIndex() const {
   return MySqlParser::RuleStartSlave;
@@ -50586,6 +51642,14 @@ std::vector<MySqlParser::ThreadTypeContext *> MySqlParser::StopSlaveContext::thr
 
 MySqlParser::ThreadTypeContext* MySqlParser::StopSlaveContext::threadType(size_t i) {
   return getRuleContext<MySqlParser::ThreadTypeContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::StopSlaveContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::StopSlaveContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -50781,6 +51845,10 @@ MySqlParser::StringMasterOptionContext* MySqlParser::MasterStringOptionContext::
   return getRuleContext<MySqlParser::StringMasterOptionContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::MasterStringOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 tree::TerminalNode* MySqlParser::MasterStringOptionContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
@@ -50801,6 +51869,10 @@ void MySqlParser::MasterStringOptionContext::exitRule(tree::ParseTreeListener *l
 
 tree::TerminalNode* MySqlParser::MasterRealOptionContext::MASTER_HEARTBEAT_PERIOD() {
   return getToken(MySqlParser::MASTER_HEARTBEAT_PERIOD, 0);
+}
+
+tree::TerminalNode* MySqlParser::MasterRealOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 tree::TerminalNode* MySqlParser::MasterRealOptionContext::REAL_LITERAL() {
@@ -50825,6 +51897,18 @@ MySqlParser::BoolMasterOptionContext* MySqlParser::MasterBoolOptionContext::bool
   return getRuleContext<MySqlParser::BoolMasterOptionContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::MasterBoolOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::MasterBoolOptionContext::ZERO_DECIMAL() {
+  return getToken(MySqlParser::ZERO_DECIMAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::MasterBoolOptionContext::ONE_DECIMAL() {
+  return getToken(MySqlParser::ONE_DECIMAL, 0);
+}
+
 MySqlParser::MasterBoolOptionContext::MasterBoolOptionContext(MasterOptionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::MasterBoolOptionContext::enterRule(tree::ParseTreeListener *listener) {
@@ -50843,12 +51927,32 @@ tree::TerminalNode* MySqlParser::MasterUidListOptionContext::IGNORE_SERVER_IDS()
   return getToken(MySqlParser::IGNORE_SERVER_IDS, 0);
 }
 
+tree::TerminalNode* MySqlParser::MasterUidListOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::MasterUidListOptionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::MasterUidListOptionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::UidContext *> MySqlParser::MasterUidListOptionContext::uid() {
   return getRuleContexts<MySqlParser::UidContext>();
 }
 
 MySqlParser::UidContext* MySqlParser::MasterUidListOptionContext::uid(size_t i) {
   return getRuleContext<MySqlParser::UidContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::MasterUidListOptionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::MasterUidListOptionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::MasterUidListOptionContext::MasterUidListOptionContext(MasterOptionContext *ctx) { copyFrom(ctx); }
@@ -50867,6 +51971,10 @@ void MySqlParser::MasterUidListOptionContext::exitRule(tree::ParseTreeListener *
 
 MySqlParser::DecimalMasterOptionContext* MySqlParser::MasterDecimalOptionContext::decimalMasterOption() {
   return getRuleContext<MySqlParser::DecimalMasterOptionContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::MasterDecimalOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::DecimalLiteralContext* MySqlParser::MasterDecimalOptionContext::decimalLiteral() {
@@ -52078,8 +53186,20 @@ tree::TerminalNode* MySqlParser::WildIgnoreTableReplicationContext::REPLICATE_WI
   return getToken(MySqlParser::REPLICATE_WILD_IGNORE_TABLE, 0);
 }
 
+tree::TerminalNode* MySqlParser::WildIgnoreTableReplicationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::WildIgnoreTableReplicationContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::SimpleStringsContext* MySqlParser::WildIgnoreTableReplicationContext::simpleStrings() {
   return getRuleContext<MySqlParser::SimpleStringsContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::WildIgnoreTableReplicationContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::WildIgnoreTableReplicationContext::WildIgnoreTableReplicationContext(ReplicationFilterContext *ctx) { copyFrom(ctx); }
@@ -52100,8 +53220,20 @@ tree::TerminalNode* MySqlParser::DoTableReplicationContext::REPLICATE_DO_TABLE()
   return getToken(MySqlParser::REPLICATE_DO_TABLE, 0);
 }
 
+tree::TerminalNode* MySqlParser::DoTableReplicationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::DoTableReplicationContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::TablesContext* MySqlParser::DoTableReplicationContext::tables() {
   return getRuleContext<MySqlParser::TablesContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::DoTableReplicationContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::DoTableReplicationContext::DoTableReplicationContext(ReplicationFilterContext *ctx) { copyFrom(ctx); }
@@ -52122,8 +53254,20 @@ tree::TerminalNode* MySqlParser::IgnoreTableReplicationContext::REPLICATE_IGNORE
   return getToken(MySqlParser::REPLICATE_IGNORE_TABLE, 0);
 }
 
+tree::TerminalNode* MySqlParser::IgnoreTableReplicationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::IgnoreTableReplicationContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::TablesContext* MySqlParser::IgnoreTableReplicationContext::tables() {
   return getRuleContext<MySqlParser::TablesContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::IgnoreTableReplicationContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::IgnoreTableReplicationContext::IgnoreTableReplicationContext(ReplicationFilterContext *ctx) { copyFrom(ctx); }
@@ -52144,12 +53288,32 @@ tree::TerminalNode* MySqlParser::RewriteDbReplicationContext::REPLICATE_REWRITE_
   return getToken(MySqlParser::REPLICATE_REWRITE_DB, 0);
 }
 
+tree::TerminalNode* MySqlParser::RewriteDbReplicationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::RewriteDbReplicationContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::TablePairContext *> MySqlParser::RewriteDbReplicationContext::tablePair() {
   return getRuleContexts<MySqlParser::TablePairContext>();
 }
 
 MySqlParser::TablePairContext* MySqlParser::RewriteDbReplicationContext::tablePair(size_t i) {
   return getRuleContext<MySqlParser::TablePairContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::RewriteDbReplicationContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::RewriteDbReplicationContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::RewriteDbReplicationContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::RewriteDbReplicationContext::RewriteDbReplicationContext(ReplicationFilterContext *ctx) { copyFrom(ctx); }
@@ -52170,8 +53334,20 @@ tree::TerminalNode* MySqlParser::DoDbReplicationContext::REPLICATE_DO_DB() {
   return getToken(MySqlParser::REPLICATE_DO_DB, 0);
 }
 
+tree::TerminalNode* MySqlParser::DoDbReplicationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::DoDbReplicationContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::DoDbReplicationContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::DoDbReplicationContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::DoDbReplicationContext::DoDbReplicationContext(ReplicationFilterContext *ctx) { copyFrom(ctx); }
@@ -52192,8 +53368,20 @@ tree::TerminalNode* MySqlParser::IgnoreDbReplicationContext::REPLICATE_IGNORE_DB
   return getToken(MySqlParser::REPLICATE_IGNORE_DB, 0);
 }
 
+tree::TerminalNode* MySqlParser::IgnoreDbReplicationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::IgnoreDbReplicationContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::IgnoreDbReplicationContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::IgnoreDbReplicationContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::IgnoreDbReplicationContext::IgnoreDbReplicationContext(ReplicationFilterContext *ctx) { copyFrom(ctx); }
@@ -52214,8 +53402,20 @@ tree::TerminalNode* MySqlParser::WildDoTableReplicationContext::REPLICATE_WILD_D
   return getToken(MySqlParser::REPLICATE_WILD_DO_TABLE, 0);
 }
 
+tree::TerminalNode* MySqlParser::WildDoTableReplicationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::WildDoTableReplicationContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::SimpleStringsContext* MySqlParser::WildDoTableReplicationContext::simpleStrings() {
   return getRuleContext<MySqlParser::SimpleStringsContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::WildDoTableReplicationContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::WildDoTableReplicationContext::WildDoTableReplicationContext(ReplicationFilterContext *ctx) { copyFrom(ctx); }
@@ -52386,6 +53586,18 @@ MySqlParser::TablePairContext::TablePairContext(ParserRuleContext *parent, size_
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::TablePairContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::TablePairContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
+}
+
+tree::TerminalNode* MySqlParser::TablePairContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::TableNameContext *> MySqlParser::TablePairContext::tableName() {
   return getRuleContexts<MySqlParser::TableNameContext>();
 }
@@ -52519,6 +53731,10 @@ void MySqlParser::UntilOptionContext::copyFrom(UntilOptionContext *ctx) {
 
 //----------------- GtidsUntilOptionContext ------------------------------------------------------------------
 
+tree::TerminalNode* MySqlParser::GtidsUntilOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 MySqlParser::GtuidSetContext* MySqlParser::GtidsUntilOptionContext::gtuidSet() {
   return getRuleContext<MySqlParser::GtuidSetContext>(0);
 }
@@ -52567,8 +53783,20 @@ tree::TerminalNode* MySqlParser::MasterLogUntilOptionContext::MASTER_LOG_FILE() 
   return getToken(MySqlParser::MASTER_LOG_FILE, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::MasterLogUntilOptionContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::MasterLogUntilOptionContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 tree::TerminalNode* MySqlParser::MasterLogUntilOptionContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::MasterLogUntilOptionContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
 }
 
 tree::TerminalNode* MySqlParser::MasterLogUntilOptionContext::MASTER_LOG_POS() {
@@ -52597,8 +53825,20 @@ tree::TerminalNode* MySqlParser::RelayLogUntilOptionContext::RELAY_LOG_FILE() {
   return getToken(MySqlParser::RELAY_LOG_FILE, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::RelayLogUntilOptionContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::RelayLogUntilOptionContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
 tree::TerminalNode* MySqlParser::RelayLogUntilOptionContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
+}
+
+tree::TerminalNode* MySqlParser::RelayLogUntilOptionContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
 }
 
 tree::TerminalNode* MySqlParser::RelayLogUntilOptionContext::RELAY_LOG_POS() {
@@ -52739,6 +53979,10 @@ tree::TerminalNode* MySqlParser::PluginDirConnectionOptionContext::PLUGIN_DIR() 
   return getToken(MySqlParser::PLUGIN_DIR, 0);
 }
 
+tree::TerminalNode* MySqlParser::PluginDirConnectionOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 tree::TerminalNode* MySqlParser::PluginDirConnectionOptionContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
@@ -52759,6 +54003,10 @@ void MySqlParser::PluginDirConnectionOptionContext::exitRule(tree::ParseTreeList
 
 tree::TerminalNode* MySqlParser::UserConnectionOptionContext::USER() {
   return getToken(MySqlParser::USER, 0);
+}
+
+tree::TerminalNode* MySqlParser::UserConnectionOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 tree::TerminalNode* MySqlParser::UserConnectionOptionContext::STRING_LITERAL() {
@@ -52783,6 +54031,10 @@ tree::TerminalNode* MySqlParser::DefaultAuthConnectionOptionContext::DEFAULT_AUT
   return getToken(MySqlParser::DEFAULT_AUTH, 0);
 }
 
+tree::TerminalNode* MySqlParser::DefaultAuthConnectionOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 tree::TerminalNode* MySqlParser::DefaultAuthConnectionOptionContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
@@ -52803,6 +54055,10 @@ void MySqlParser::DefaultAuthConnectionOptionContext::exitRule(tree::ParseTreeLi
 
 tree::TerminalNode* MySqlParser::PasswordConnectionOptionContext::PASSWORD() {
   return getToken(MySqlParser::PASSWORD, 0);
+}
+
+tree::TerminalNode* MySqlParser::PasswordConnectionOptionContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 tree::TerminalNode* MySqlParser::PasswordConnectionOptionContext::STRING_LITERAL() {
@@ -52906,6 +54162,14 @@ std::vector<MySqlParser::UuidSetContext *> MySqlParser::GtuidSetContext::uuidSet
 
 MySqlParser::UuidSetContext* MySqlParser::GtuidSetContext::uuidSet(size_t i) {
   return getRuleContext<MySqlParser::UuidSetContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::GtuidSetContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::GtuidSetContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 tree::TerminalNode* MySqlParser::GtuidSetContext::STRING_LITERAL() {
@@ -53775,6 +55039,10 @@ MySqlParser::UidContext* MySqlParser::BlockStatementContext::uid(size_t i) {
   return getRuleContext<MySqlParser::UidContext>(i);
 }
 
+tree::TerminalNode* MySqlParser::BlockStatementContext::COLON_SYMB() {
+  return getToken(MySqlParser::COLON_SYMB, 0);
+}
+
 std::vector<MySqlParser::DeclareVariableContext *> MySqlParser::BlockStatementContext::declareVariable() {
   return getRuleContexts<MySqlParser::DeclareVariableContext>();
 }
@@ -54394,6 +55662,10 @@ std::vector<MySqlParser::UidContext *> MySqlParser::LoopStatementContext::uid() 
 
 MySqlParser::UidContext* MySqlParser::LoopStatementContext::uid(size_t i) {
   return getRuleContext<MySqlParser::UidContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::LoopStatementContext::COLON_SYMB() {
+  return getToken(MySqlParser::COLON_SYMB, 0);
 }
 
 std::vector<MySqlParser::ProcedureSqlStatementContext *> MySqlParser::LoopStatementContext::procedureSqlStatement() {
@@ -55923,6 +57195,10 @@ std::vector<MySqlParser::UidContext *> MySqlParser::RepeatStatementContext::uid(
 
 MySqlParser::UidContext* MySqlParser::RepeatStatementContext::uid(size_t i) {
   return getRuleContext<MySqlParser::UidContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::RepeatStatementContext::COLON_SYMB() {
+  return getToken(MySqlParser::COLON_SYMB, 0);
 }
 
 std::vector<MySqlParser::ProcedureSqlStatementContext *> MySqlParser::RepeatStatementContext::procedureSqlStatement() {
@@ -57511,6 +58787,10 @@ std::vector<MySqlParser::UidContext *> MySqlParser::WhileStatementContext::uid()
 
 MySqlParser::UidContext* MySqlParser::WhileStatementContext::uid(size_t i) {
   return getRuleContext<MySqlParser::UidContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::WhileStatementContext::COLON_SYMB() {
+  return getToken(MySqlParser::COLON_SYMB, 0);
 }
 
 std::vector<MySqlParser::ProcedureSqlStatementContext *> MySqlParser::WhileStatementContext::procedureSqlStatement() {
@@ -59498,6 +60778,14 @@ tree::TerminalNode* MySqlParser::DeclareHandlerContext::UNDO() {
   return getToken(MySqlParser::UNDO, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::DeclareHandlerContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::DeclareHandlerContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::DeclareHandlerContext::getRuleIndex() const {
   return MySqlParser::RuleDeclareHandler;
@@ -60797,6 +62085,14 @@ MySqlParser::UserSpecificationContext* MySqlParser::AlterUserMysqlV56Context::us
   return getRuleContext<MySqlParser::UserSpecificationContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::AlterUserMysqlV56Context::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterUserMysqlV56Context::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 MySqlParser::AlterUserMysqlV56Context::AlterUserMysqlV56Context(AlterUserContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::AlterUserMysqlV56Context::enterRule(tree::ParseTreeListener *listener) {
@@ -60829,6 +62125,14 @@ MySqlParser::UserAuthOptionContext* MySqlParser::AlterUserMysqlV57Context::userA
 
 MySqlParser::IfExistsContext* MySqlParser::AlterUserMysqlV57Context::ifExists() {
   return getRuleContext<MySqlParser::IfExistsContext>(0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::AlterUserMysqlV57Context::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AlterUserMysqlV57Context::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 tree::TerminalNode* MySqlParser::AlterUserMysqlV57Context::REQUIRE() {
@@ -61110,6 +62414,14 @@ MySqlParser::IfNotExistsContext* MySqlParser::CreateUserMysqlV57Context::ifNotEx
   return getRuleContext<MySqlParser::IfNotExistsContext>(0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::CreateUserMysqlV57Context::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CreateUserMysqlV57Context::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::CreateUserMysqlV57Context::REQUIRE() {
   return getToken(MySqlParser::REQUIRE, 0);
 }
@@ -61190,6 +62502,14 @@ std::vector<MySqlParser::UserAuthOptionContext *> MySqlParser::CreateUserMysqlV5
 
 MySqlParser::UserAuthOptionContext* MySqlParser::CreateUserMysqlV56Context::userAuthOption(size_t i) {
   return getRuleContext<MySqlParser::UserAuthOptionContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::CreateUserMysqlV56Context::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CreateUserMysqlV56Context::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::CreateUserMysqlV56Context::CreateUserMysqlV56Context(CreateUserContext *ctx) { copyFrom(ctx); }
@@ -61408,6 +62728,14 @@ MySqlParser::IfExistsContext* MySqlParser::DropUserContext::ifExists() {
   return getRuleContext<MySqlParser::IfExistsContext>(0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::DropUserContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::DropUserContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::DropUserContext::getRuleIndex() const {
   return MySqlParser::RuleDropUser;
@@ -61512,6 +62840,14 @@ std::vector<MySqlParser::UserAuthOptionContext *> MySqlParser::GrantStatementCon
 
 MySqlParser::UserAuthOptionContext* MySqlParser::GrantStatementContext::userAuthOption(size_t i) {
   return getRuleContext<MySqlParser::UserAuthOptionContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::GrantStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::GrantStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 tree::TerminalNode* MySqlParser::GrantStatementContext::REQUIRE() {
@@ -61791,6 +63127,14 @@ MySqlParser::UserNameContext* MySqlParser::GrantProxyContext::userName(size_t i)
   return getRuleContext<MySqlParser::UserNameContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::GrantProxyContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::GrantProxyContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::GrantProxyContext::WITH() {
   return getToken(MySqlParser::WITH, 0);
 }
@@ -61894,6 +63238,14 @@ std::vector<MySqlParser::RenameUserClauseContext *> MySqlParser::RenameUserConte
 
 MySqlParser::RenameUserClauseContext* MySqlParser::RenameUserContext::renameUserClause(size_t i) {
   return getRuleContext<MySqlParser::RenameUserClauseContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::RenameUserContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::RenameUserContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -62001,6 +63353,14 @@ MySqlParser::UserNameContext* MySqlParser::DetailRevokeContext::userName(size_t 
   return getRuleContext<MySqlParser::UserNameContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::DetailRevokeContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::DetailRevokeContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::DetailRevokeContext::TABLE() {
   return getToken(MySqlParser::TABLE, 0);
 }
@@ -62033,6 +63393,14 @@ tree::TerminalNode* MySqlParser::ShortRevokeContext::REVOKE() {
 
 tree::TerminalNode* MySqlParser::ShortRevokeContext::ALL() {
   return getToken(MySqlParser::ALL, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::ShortRevokeContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ShortRevokeContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 tree::TerminalNode* MySqlParser::ShortRevokeContext::GRANT() {
@@ -62228,6 +63596,14 @@ MySqlParser::UserNameContext* MySqlParser::RevokeProxyContext::userName(size_t i
   return getRuleContext<MySqlParser::UserNameContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::RevokeProxyContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::RevokeProxyContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::RevokeProxyContext::getRuleIndex() const {
   return MySqlParser::RuleRevokeProxy;
@@ -62303,6 +63679,10 @@ tree::TerminalNode* MySqlParser::SetPasswordStatementContext::SET() {
 
 tree::TerminalNode* MySqlParser::SetPasswordStatementContext::PASSWORD() {
   return getToken(MySqlParser::PASSWORD, 0);
+}
+
+tree::TerminalNode* MySqlParser::SetPasswordStatementContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 MySqlParser::PasswordFunctionClauseContext* MySqlParser::SetPasswordStatementContext::passwordFunctionClause() {
@@ -63148,8 +64528,16 @@ MySqlParser::PrivilegeContext* MySqlParser::PrivelegeClauseContext::privilege() 
   return getRuleContext<MySqlParser::PrivilegeContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::PrivelegeClauseContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::PrivelegeClauseContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PrivelegeClauseContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 
@@ -63675,6 +65063,14 @@ MySqlParser::UidContext* MySqlParser::DefiniteSchemaPrivLevelContext::uid() {
   return getRuleContext<MySqlParser::UidContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::DefiniteSchemaPrivLevelContext::DOT() {
+  return getToken(MySqlParser::DOT, 0);
+}
+
+tree::TerminalNode* MySqlParser::DefiniteSchemaPrivLevelContext::STAR() {
+  return getToken(MySqlParser::STAR, 0);
+}
+
 MySqlParser::DefiniteSchemaPrivLevelContext::DefiniteSchemaPrivLevelContext(PrivilegeLevelContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::DefiniteSchemaPrivLevelContext::enterRule(tree::ParseTreeListener *listener) {
@@ -63719,6 +65115,10 @@ MySqlParser::UidContext* MySqlParser::DefiniteFullTablePrivLevelContext::uid(siz
   return getRuleContext<MySqlParser::UidContext>(i);
 }
 
+tree::TerminalNode* MySqlParser::DefiniteFullTablePrivLevelContext::DOT() {
+  return getToken(MySqlParser::DOT, 0);
+}
+
 MySqlParser::DefiniteFullTablePrivLevelContext::DefiniteFullTablePrivLevelContext(PrivilegeLevelContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::DefiniteFullTablePrivLevelContext::enterRule(tree::ParseTreeListener *listener) {
@@ -63732,6 +65132,18 @@ void MySqlParser::DefiniteFullTablePrivLevelContext::exitRule(tree::ParseTreeLis
     parserListener->exitDefiniteFullTablePrivLevel(this);
 }
 //----------------- GlobalPrivLevelContext ------------------------------------------------------------------
+
+std::vector<tree::TerminalNode *> MySqlParser::GlobalPrivLevelContext::STAR() {
+  return getTokens(MySqlParser::STAR);
+}
+
+tree::TerminalNode* MySqlParser::GlobalPrivLevelContext::STAR(size_t i) {
+  return getToken(MySqlParser::STAR, i);
+}
+
+tree::TerminalNode* MySqlParser::GlobalPrivLevelContext::DOT() {
+  return getToken(MySqlParser::DOT, 0);
+}
 
 MySqlParser::GlobalPrivLevelContext::GlobalPrivLevelContext(PrivilegeLevelContext *ctx) { copyFrom(ctx); }
 
@@ -63764,6 +65176,10 @@ void MySqlParser::DefiniteTablePrivLevelContext::exitRule(tree::ParseTreeListene
     parserListener->exitDefiniteTablePrivLevel(this);
 }
 //----------------- CurrentSchemaPriviLevelContext ------------------------------------------------------------------
+
+tree::TerminalNode* MySqlParser::CurrentSchemaPriviLevelContext::STAR() {
+  return getToken(MySqlParser::STAR, 0);
+}
 
 MySqlParser::CurrentSchemaPriviLevelContext::CurrentSchemaPriviLevelContext(PrivilegeLevelContext *ctx) { copyFrom(ctx); }
 
@@ -64921,6 +66337,14 @@ MySqlParser::ExpressionContext* MySqlParser::SetNewValueInsideTriggerContext::ex
   return getRuleContext<MySqlParser::ExpressionContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::SetNewValueInsideTriggerContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::SetNewValueInsideTriggerContext::VAR_ASSIGN() {
+  return getToken(MySqlParser::VAR_ASSIGN, 0);
+}
+
 MySqlParser::SetNewValueInsideTriggerContext::SetNewValueInsideTriggerContext(SetStatementContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::SetNewValueInsideTriggerContext::enterRule(tree::ParseTreeListener *listener) {
@@ -64953,6 +66377,30 @@ std::vector<MySqlParser::ExpressionContext *> MySqlParser::SetVariableContext::e
 
 MySqlParser::ExpressionContext* MySqlParser::SetVariableContext::expression(size_t i) {
   return getRuleContext<MySqlParser::ExpressionContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::SetVariableContext::EQUAL_SYMBOL() {
+  return getTokens(MySqlParser::EQUAL_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::SetVariableContext::EQUAL_SYMBOL(size_t i) {
+  return getToken(MySqlParser::EQUAL_SYMBOL, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::SetVariableContext::VAR_ASSIGN() {
+  return getTokens(MySqlParser::VAR_ASSIGN);
+}
+
+tree::TerminalNode* MySqlParser::SetVariableContext::VAR_ASSIGN(size_t i) {
+  return getToken(MySqlParser::VAR_ASSIGN, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::SetVariableContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::SetVariableContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::SetVariableContext::SetVariableContext(SetStatementContext *ctx) { copyFrom(ctx); }
@@ -65439,6 +66887,10 @@ MySqlParser::DecimalLiteralContext* MySqlParser::ShowErrorsContext::decimalLiter
   return getRuleContext<MySqlParser::DecimalLiteralContext>(i);
 }
 
+tree::TerminalNode* MySqlParser::ShowErrorsContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
+}
+
 MySqlParser::ShowErrorsContext::ShowErrorsContext(ShowStatementContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::ShowErrorsContext::enterRule(tree::ParseTreeListener *listener) {
@@ -65459,6 +66911,18 @@ tree::TerminalNode* MySqlParser::ShowCountErrorsContext::SHOW() {
 
 tree::TerminalNode* MySqlParser::ShowCountErrorsContext::COUNT() {
   return getToken(MySqlParser::COUNT, 0);
+}
+
+tree::TerminalNode* MySqlParser::ShowCountErrorsContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::ShowCountErrorsContext::STAR() {
+  return getToken(MySqlParser::STAR, 0);
+}
+
+tree::TerminalNode* MySqlParser::ShowCountErrorsContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::ShowCountErrorsContext::ERRORS() {
@@ -65721,6 +67185,10 @@ MySqlParser::DecimalLiteralContext* MySqlParser::ShowLogEventsContext::decimalLi
   return getRuleContext<MySqlParser::DecimalLiteralContext>(i);
 }
 
+tree::TerminalNode* MySqlParser::ShowLogEventsContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
+}
+
 MySqlParser::ShowLogEventsContext::ShowLogEventsContext(ShowStatementContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::ShowLogEventsContext::enterRule(tree::ParseTreeListener *listener) {
@@ -65885,6 +67353,14 @@ MySqlParser::ShowProfileTypeContext* MySqlParser::ShowProfileContext::showProfil
 
 tree::TerminalNode* MySqlParser::ShowProfileContext::LIMIT() {
   return getToken(MySqlParser::LIMIT, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::ShowProfileContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ShowProfileContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 tree::TerminalNode* MySqlParser::ShowProfileContext::FOR() {
@@ -66631,6 +68107,14 @@ tree::TerminalNode* MySqlParser::VariableClauseContext::SESSION() {
 
 tree::TerminalNode* MySqlParser::VariableClauseContext::LOCAL() {
   return getToken(MySqlParser::LOCAL, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::VariableClauseContext::AT_SIGN() {
+  return getTokens(MySqlParser::AT_SIGN);
+}
+
+tree::TerminalNode* MySqlParser::VariableClauseContext::AT_SIGN(size_t i) {
+  return getToken(MySqlParser::AT_SIGN, i);
 }
 
 
@@ -68236,8 +69720,24 @@ MySqlParser::UidContext* MySqlParser::CacheIndexStatementContext::uid() {
   return getRuleContext<MySqlParser::UidContext>(0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::CacheIndexStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CacheIndexStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::CacheIndexStatementContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
+}
+
+tree::TerminalNode* MySqlParser::CacheIndexStatementContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::CacheIndexStatementContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::UidListContext* MySqlParser::CacheIndexStatementContext::uidList() {
@@ -69059,6 +70559,14 @@ MySqlParser::FlushOptionContext* MySqlParser::FlushStatementContext::flushOption
   return getRuleContext<MySqlParser::FlushOptionContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::FlushStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::FlushStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::FlushStatementContext::NO_WRITE_TO_BINLOG() {
   return getToken(MySqlParser::NO_WRITE_TO_BINLOG, 0);
 }
@@ -69263,6 +70771,14 @@ MySqlParser::LoadedTableIndexesContext* MySqlParser::LoadIndexIntoCacheContext::
   return getRuleContext<MySqlParser::LoadedTableIndexesContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::LoadIndexIntoCacheContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::LoadIndexIntoCacheContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::LoadIndexIntoCacheContext::getRuleIndex() const {
   return MySqlParser::RuleLoadIndexIntoCache;
@@ -69443,8 +70959,16 @@ MySqlParser::TableNameContext* MySqlParser::TableIndexesContext::tableName() {
   return getRuleContext<MySqlParser::TableNameContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::TableIndexesContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::UidListContext* MySqlParser::TableIndexesContext::uidList() {
   return getRuleContext<MySqlParser::UidListContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::TableIndexesContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::TableIndexesContext::INDEX() {
@@ -69957,6 +71481,22 @@ MySqlParser::TableNameContext* MySqlParser::LoadedTableIndexesContext::tableName
 
 tree::TerminalNode* MySqlParser::LoadedTableIndexesContext::PARTITION() {
   return getToken(MySqlParser::PARTITION, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::LoadedTableIndexesContext::LR_BRACKET() {
+  return getTokens(MySqlParser::LR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::LoadedTableIndexesContext::LR_BRACKET(size_t i) {
+  return getToken(MySqlParser::LR_BRACKET, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::LoadedTableIndexesContext::RR_BRACKET() {
+  return getTokens(MySqlParser::RR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::LoadedTableIndexesContext::RR_BRACKET(size_t i) {
+  return getToken(MySqlParser::RR_BRACKET, i);
 }
 
 tree::TerminalNode* MySqlParser::LoadedTableIndexesContext::IGNORE() {
@@ -70927,6 +72467,10 @@ tree::TerminalNode* MySqlParser::FullDescribeStatementContext::DESC() {
   return getToken(MySqlParser::DESC, 0);
 }
 
+tree::TerminalNode* MySqlParser::FullDescribeStatementContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
 tree::TerminalNode* MySqlParser::FullDescribeStatementContext::EXTENDED() {
   return getToken(MySqlParser::EXTENDED, 0);
 }
@@ -71176,6 +72720,14 @@ MySqlParser::StringLiteralContext* MySqlParser::SignalStatementContext::stringLi
   return getRuleContext<MySqlParser::StringLiteralContext>(0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::SignalStatementContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::SignalStatementContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 tree::TerminalNode* MySqlParser::SignalStatementContext::VALUE() {
   return getToken(MySqlParser::VALUE, 0);
 }
@@ -71283,6 +72835,10 @@ MySqlParser::SignalStatementContext* MySqlParser::signalStatement() {
 
 MySqlParser::SignalConditionInformationContext::SignalConditionInformationContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
+}
+
+tree::TerminalNode* MySqlParser::SignalConditionInformationContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
 }
 
 tree::TerminalNode* MySqlParser::SignalConditionInformationContext::CLASS_ORIGIN() {
@@ -71593,6 +73149,10 @@ tree::TerminalNode* MySqlParser::FullIdContext::DOT_ID() {
   return getToken(MySqlParser::DOT_ID, 0);
 }
 
+tree::TerminalNode* MySqlParser::FullIdContext::DOT() {
+  return getToken(MySqlParser::DOT, 0);
+}
+
 
 size_t MySqlParser::FullIdContext::getRuleIndex() const {
   return MySqlParser::RuleFullId;
@@ -71793,8 +73353,16 @@ tree::TerminalNode* MySqlParser::IndexColumnNameContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
 }
 
+tree::TerminalNode* MySqlParser::IndexColumnNameContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::DecimalLiteralContext* MySqlParser::IndexColumnNameContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::IndexColumnNameContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::IndexColumnNameContext::ASC() {
@@ -72363,6 +73931,22 @@ MySqlParser::DecimalLiteralContext* MySqlParser::UuidSetContext::decimalLiteral(
   return getRuleContext<MySqlParser::DecimalLiteralContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::UuidSetContext::MINUS() {
+  return getTokens(MySqlParser::MINUS);
+}
+
+tree::TerminalNode* MySqlParser::UuidSetContext::MINUS(size_t i) {
+  return getToken(MySqlParser::MINUS, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::UuidSetContext::COLON_SYMB() {
+  return getTokens(MySqlParser::COLON_SYMB);
+}
+
+tree::TerminalNode* MySqlParser::UuidSetContext::COLON_SYMB(size_t i) {
+  return getToken(MySqlParser::COLON_SYMB, i);
+}
+
 
 size_t MySqlParser::UuidSetContext::getRuleIndex() const {
   return MySqlParser::RuleUuidSet;
@@ -72447,6 +74031,14 @@ std::vector<MySqlParser::XuidStringIdContext *> MySqlParser::XidContext::xuidStr
 
 MySqlParser::XuidStringIdContext* MySqlParser::XidContext::xuidStringId(size_t i) {
   return getRuleContext<MySqlParser::XuidStringIdContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::XidContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::XidContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::DecimalLiteralContext* MySqlParser::XidContext::decimalLiteral() {
@@ -72907,6 +74499,10 @@ MySqlParser::DottedIdContext::DottedIdContext(ParserRuleContext *parent, size_t 
 
 tree::TerminalNode* MySqlParser::DottedIdContext::DOT_ID() {
   return getToken(MySqlParser::DOT_ID, 0);
+}
+
+tree::TerminalNode* MySqlParser::DottedIdContext::DOT() {
+  return getToken(MySqlParser::DOT, 0);
 }
 
 MySqlParser::UidContext* MySqlParser::DottedIdContext::uid() {
@@ -73492,6 +75088,10 @@ MySqlParser::StringLiteralContext* MySqlParser::ConstantContext::stringLiteral()
 
 MySqlParser::DecimalLiteralContext* MySqlParser::ConstantContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::ConstantContext::MINUS() {
+  return getToken(MySqlParser::MINUS, 0);
 }
 
 MySqlParser::HexadecimalLiteralContext* MySqlParser::ConstantContext::hexadecimalLiteral() {
@@ -74648,12 +76248,28 @@ MySqlParser::CollectionOptionsContext::CollectionOptionsContext(ParserRuleContex
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::CollectionOptionsContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<tree::TerminalNode *> MySqlParser::CollectionOptionsContext::STRING_LITERAL() {
   return getTokens(MySqlParser::STRING_LITERAL);
 }
 
 tree::TerminalNode* MySqlParser::CollectionOptionsContext::STRING_LITERAL(size_t i) {
   return getToken(MySqlParser::STRING_LITERAL, i);
+}
+
+tree::TerminalNode* MySqlParser::CollectionOptionsContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::CollectionOptionsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::CollectionOptionsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -74961,8 +76577,16 @@ MySqlParser::LengthOneDimensionContext::LengthOneDimensionContext(ParserRuleCont
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::LengthOneDimensionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::DecimalLiteralContext* MySqlParser::LengthOneDimensionContext::decimalLiteral() {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::LengthOneDimensionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 
@@ -75014,12 +76638,24 @@ MySqlParser::LengthTwoDimensionContext::LengthTwoDimensionContext(ParserRuleCont
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::LengthTwoDimensionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::DecimalLiteralContext *> MySqlParser::LengthTwoDimensionContext::decimalLiteral() {
   return getRuleContexts<MySqlParser::DecimalLiteralContext>();
 }
 
 MySqlParser::DecimalLiteralContext* MySqlParser::LengthTwoDimensionContext::decimalLiteral(size_t i) {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::LengthTwoDimensionContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
+}
+
+tree::TerminalNode* MySqlParser::LengthTwoDimensionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 
@@ -75075,12 +76711,24 @@ MySqlParser::LengthTwoOptionalDimensionContext::LengthTwoOptionalDimensionContex
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::LengthTwoOptionalDimensionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::DecimalLiteralContext *> MySqlParser::LengthTwoOptionalDimensionContext::decimalLiteral() {
   return getRuleContexts<MySqlParser::DecimalLiteralContext>();
 }
 
 MySqlParser::DecimalLiteralContext* MySqlParser::LengthTwoOptionalDimensionContext::decimalLiteral(size_t i) {
   return getRuleContext<MySqlParser::DecimalLiteralContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::LengthTwoOptionalDimensionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::LengthTwoOptionalDimensionContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
 }
 
 
@@ -75151,6 +76799,14 @@ MySqlParser::UidContext* MySqlParser::UidListContext::uid(size_t i) {
   return getRuleContext<MySqlParser::UidContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::UidListContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::UidListContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::UidListContext::getRuleIndex() const {
   return MySqlParser::RuleUidList;
@@ -75219,6 +76875,14 @@ MySqlParser::TableNameContext* MySqlParser::TablesContext::tableName(size_t i) {
   return getRuleContext<MySqlParser::TableNameContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::TablesContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::TablesContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::TablesContext::getRuleIndex() const {
   return MySqlParser::RuleTables;
@@ -75279,12 +76943,28 @@ MySqlParser::IndexColumnNamesContext::IndexColumnNamesContext(ParserRuleContext 
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::IndexColumnNamesContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::IndexColumnNameContext *> MySqlParser::IndexColumnNamesContext::indexColumnName() {
   return getRuleContexts<MySqlParser::IndexColumnNameContext>();
 }
 
 MySqlParser::IndexColumnNameContext* MySqlParser::IndexColumnNamesContext::indexColumnName(size_t i) {
   return getRuleContext<MySqlParser::IndexColumnNameContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::IndexColumnNamesContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::IndexColumnNamesContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::IndexColumnNamesContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -75357,6 +77037,14 @@ MySqlParser::ExpressionContext* MySqlParser::ExpressionsContext::expression(size
   return getRuleContext<MySqlParser::ExpressionContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::ExpressionsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ExpressionsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::ExpressionsContext::getRuleIndex() const {
   return MySqlParser::RuleExpressions;
@@ -75421,6 +77109,14 @@ std::vector<MySqlParser::ExpressionOrDefaultContext *> MySqlParser::ExpressionsW
 
 MySqlParser::ExpressionOrDefaultContext* MySqlParser::ExpressionsWithDefaultsContext::expressionOrDefault(size_t i) {
   return getRuleContext<MySqlParser::ExpressionOrDefaultContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::ExpressionsWithDefaultsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ExpressionsWithDefaultsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -75489,6 +77185,14 @@ MySqlParser::ConstantContext* MySqlParser::ConstantsContext::constant(size_t i) 
   return getRuleContext<MySqlParser::ConstantContext>(i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::ConstantsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::ConstantsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::ConstantsContext::getRuleIndex() const {
   return MySqlParser::RuleConstants;
@@ -75555,6 +77259,14 @@ tree::TerminalNode* MySqlParser::SimpleStringsContext::STRING_LITERAL(size_t i) 
   return getToken(MySqlParser::STRING_LITERAL, i);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::SimpleStringsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::SimpleStringsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
+}
+
 
 size_t MySqlParser::SimpleStringsContext::getRuleIndex() const {
   return MySqlParser::RuleSimpleStrings;
@@ -75619,6 +77331,14 @@ std::vector<tree::TerminalNode *> MySqlParser::UserVariablesContext::LOCAL_ID() 
 
 tree::TerminalNode* MySqlParser::UserVariablesContext::LOCAL_ID(size_t i) {
   return getToken(MySqlParser::LOCAL_ID, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::UserVariablesContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::UserVariablesContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -75802,6 +77522,14 @@ MySqlParser::CurrentTimestampContext::CurrentTimestampContext(ParserRuleContext 
 
 tree::TerminalNode* MySqlParser::CurrentTimestampContext::NOW() {
   return getToken(MySqlParser::NOW, 0);
+}
+
+tree::TerminalNode* MySqlParser::CurrentTimestampContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::CurrentTimestampContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::CurrentTimestampContext::CURRENT_TIMESTAMP() {
@@ -76941,6 +78669,14 @@ MySqlParser::FullIdContext* MySqlParser::UdfFunctionCallContext::fullId() {
   return getRuleContext<MySqlParser::FullIdContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::UdfFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::UdfFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 MySqlParser::FunctionArgsContext* MySqlParser::UdfFunctionCallContext::functionArgs() {
   return getRuleContext<MySqlParser::FunctionArgsContext>(0);
 }
@@ -76979,6 +78715,14 @@ void MySqlParser::AggregateFunctionCallContext::exitRule(tree::ParseTreeListener
 
 MySqlParser::ScalarFunctionNameContext* MySqlParser::ScalarFunctionCallContext::scalarFunctionName() {
   return getRuleContext<MySqlParser::ScalarFunctionNameContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::ScalarFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::ScalarFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::FunctionArgsContext* MySqlParser::ScalarFunctionCallContext::functionArgs() {
@@ -78646,8 +80390,16 @@ tree::TerminalNode* MySqlParser::PositionFunctionCallContext::POSITION() {
   return getToken(MySqlParser::POSITION, 0);
 }
 
+tree::TerminalNode* MySqlParser::PositionFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::PositionFunctionCallContext::IN() {
   return getToken(MySqlParser::IN, 0);
+}
+
+tree::TerminalNode* MySqlParser::PositionFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 std::vector<MySqlParser::StringLiteralContext *> MySqlParser::PositionFunctionCallContext::stringLiteral() {
@@ -78684,8 +80436,16 @@ tree::TerminalNode* MySqlParser::TrimFunctionCallContext::TRIM() {
   return getToken(MySqlParser::TRIM, 0);
 }
 
+tree::TerminalNode* MySqlParser::TrimFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::TrimFunctionCallContext::FROM() {
   return getToken(MySqlParser::FROM, 0);
+}
+
+tree::TerminalNode* MySqlParser::TrimFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::TrimFunctionCallContext::BOTH() {
@@ -78768,8 +80528,16 @@ tree::TerminalNode* MySqlParser::CharFunctionCallContext::CHAR() {
   return getToken(MySqlParser::CHAR, 0);
 }
 
+tree::TerminalNode* MySqlParser::CharFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::FunctionArgsContext* MySqlParser::CharFunctionCallContext::functionArgs() {
   return getRuleContext<MySqlParser::FunctionArgsContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::CharFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::CharFunctionCallContext::USING() {
@@ -78796,6 +80564,22 @@ void MySqlParser::CharFunctionCallContext::exitRule(tree::ParseTreeListener *lis
 
 tree::TerminalNode* MySqlParser::WeightFunctionCallContext::WEIGHT_STRING() {
   return getToken(MySqlParser::WEIGHT_STRING, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::WeightFunctionCallContext::LR_BRACKET() {
+  return getTokens(MySqlParser::LR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::WeightFunctionCallContext::LR_BRACKET(size_t i) {
+  return getToken(MySqlParser::LR_BRACKET, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::WeightFunctionCallContext::RR_BRACKET() {
+  return getTokens(MySqlParser::RR_BRACKET);
+}
+
+tree::TerminalNode* MySqlParser::WeightFunctionCallContext::RR_BRACKET(size_t i) {
+  return getToken(MySqlParser::RR_BRACKET, i);
 }
 
 MySqlParser::StringLiteralContext* MySqlParser::WeightFunctionCallContext::stringLiteral() {
@@ -78844,8 +80628,20 @@ tree::TerminalNode* MySqlParser::GetFormatFunctionCallContext::GET_FORMAT() {
   return getToken(MySqlParser::GET_FORMAT, 0);
 }
 
+tree::TerminalNode* MySqlParser::GetFormatFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::GetFormatFunctionCallContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
+}
+
 MySqlParser::StringLiteralContext* MySqlParser::GetFormatFunctionCallContext::stringLiteral() {
   return getRuleContext<MySqlParser::StringLiteralContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::GetFormatFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::GetFormatFunctionCallContext::DATE() {
@@ -78920,12 +80716,20 @@ tree::TerminalNode* MySqlParser::ExtractFunctionCallContext::EXTRACT() {
   return getToken(MySqlParser::EXTRACT, 0);
 }
 
+tree::TerminalNode* MySqlParser::ExtractFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::IntervalTypeContext* MySqlParser::ExtractFunctionCallContext::intervalType() {
   return getRuleContext<MySqlParser::IntervalTypeContext>(0);
 }
 
 tree::TerminalNode* MySqlParser::ExtractFunctionCallContext::FROM() {
   return getToken(MySqlParser::FROM, 0);
+}
+
+tree::TerminalNode* MySqlParser::ExtractFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::StringLiteralContext* MySqlParser::ExtractFunctionCallContext::stringLiteral() {
@@ -78954,12 +80758,24 @@ tree::TerminalNode* MySqlParser::DataTypeFunctionCallContext::CONVERT() {
   return getToken(MySqlParser::CONVERT, 0);
 }
 
+tree::TerminalNode* MySqlParser::DataTypeFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::ExpressionContext* MySqlParser::DataTypeFunctionCallContext::expression() {
   return getRuleContext<MySqlParser::ExpressionContext>(0);
 }
 
 MySqlParser::ConvertedDataTypeContext* MySqlParser::DataTypeFunctionCallContext::convertedDataType() {
   return getRuleContext<MySqlParser::ConvertedDataTypeContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::DataTypeFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::DataTypeFunctionCallContext::COMMA() {
+  return getToken(MySqlParser::COMMA, 0);
 }
 
 tree::TerminalNode* MySqlParser::DataTypeFunctionCallContext::USING() {
@@ -78996,8 +80812,16 @@ tree::TerminalNode* MySqlParser::ValuesFunctionCallContext::VALUES() {
   return getToken(MySqlParser::VALUES, 0);
 }
 
+tree::TerminalNode* MySqlParser::ValuesFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::FullColumnNameContext* MySqlParser::ValuesFunctionCallContext::fullColumnName() {
   return getRuleContext<MySqlParser::FullColumnNameContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::ValuesFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::ValuesFunctionCallContext::ValuesFunctionCallContext(SpecificFunctionContext *ctx) { copyFrom(ctx); }
@@ -79014,8 +80838,16 @@ void MySqlParser::ValuesFunctionCallContext::exitRule(tree::ParseTreeListener *l
 }
 //----------------- SubstrFunctionCallContext ------------------------------------------------------------------
 
+tree::TerminalNode* MySqlParser::SubstrFunctionCallContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 tree::TerminalNode* MySqlParser::SubstrFunctionCallContext::FROM() {
   return getToken(MySqlParser::FROM, 0);
+}
+
+tree::TerminalNode* MySqlParser::SubstrFunctionCallContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::SubstrFunctionCallContext::SUBSTR() {
@@ -79698,6 +81530,10 @@ tree::TerminalNode* MySqlParser::LevelWeightRangeContext::LEVEL() {
   return getToken(MySqlParser::LEVEL, 0);
 }
 
+tree::TerminalNode* MySqlParser::LevelWeightRangeContext::MINUS() {
+  return getToken(MySqlParser::MINUS, 0);
+}
+
 std::vector<MySqlParser::DecimalLiteralContext *> MySqlParser::LevelWeightRangeContext::decimalLiteral() {
   return getRuleContexts<MySqlParser::DecimalLiteralContext>();
 }
@@ -79730,6 +81566,14 @@ std::vector<MySqlParser::LevelInWeightListElementContext *> MySqlParser::LevelWe
 
 MySqlParser::LevelInWeightListElementContext* MySqlParser::LevelWeightListContext::levelInWeightListElement(size_t i) {
   return getRuleContext<MySqlParser::LevelInWeightListElementContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::LevelWeightListContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::LevelWeightListContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::LevelWeightListContext::LevelWeightListContext(LevelsInWeightStringContext *ctx) { copyFrom(ctx); }
@@ -79892,8 +81736,16 @@ MySqlParser::AggregateWindowedFunctionContext::AggregateWindowedFunctionContext(
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::FunctionArgContext* MySqlParser::AggregateWindowedFunctionContext::functionArg() {
   return getRuleContext<MySqlParser::FunctionArgContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::AVG() {
@@ -79922,6 +81774,10 @@ tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::DISTINCT() {
 
 tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::COUNT() {
   return getToken(MySqlParser::COUNT, 0);
+}
+
+tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::STAR() {
+  return getToken(MySqlParser::STAR, 0);
 }
 
 MySqlParser::FunctionArgsContext* MySqlParser::AggregateWindowedFunctionContext::functionArgs() {
@@ -79994,6 +81850,14 @@ tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::SEPARATOR() {
 
 tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::STRING_LITERAL() {
   return getToken(MySqlParser::STRING_LITERAL, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::AggregateWindowedFunctionContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::AggregateWindowedFunctionContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -81619,8 +83483,16 @@ MySqlParser::PasswordFunctionClauseContext::PasswordFunctionClauseContext(Parser
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::PasswordFunctionClauseContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::FunctionArgContext* MySqlParser::PasswordFunctionClauseContext::functionArg() {
   return getRuleContext<MySqlParser::FunctionArgContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::PasswordFunctionClauseContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::PasswordFunctionClauseContext::PASSWORD() {
@@ -81723,6 +83595,14 @@ std::vector<MySqlParser::ExpressionContext *> MySqlParser::FunctionArgsContext::
 
 MySqlParser::ExpressionContext* MySqlParser::FunctionArgsContext::expression(size_t i) {
   return getRuleContext<MySqlParser::ExpressionContext>(i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::FunctionArgsContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::FunctionArgsContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 
@@ -81982,6 +83862,10 @@ tree::TerminalNode* MySqlParser::NotExpressionContext::NOT() {
   return getToken(MySqlParser::NOT, 0);
 }
 
+tree::TerminalNode* MySqlParser::NotExpressionContext::EXCLAMATION_SYMBOL() {
+  return getToken(MySqlParser::EXCLAMATION_SYMBOL, 0);
+}
+
 MySqlParser::NotExpressionContext::NotExpressionContext(ExpressionContext *ctx) { copyFrom(ctx); }
 
 void MySqlParser::NotExpressionContext::enterRule(tree::ParseTreeListener *listener) {
@@ -82048,6 +83932,7 @@ MySqlParser::ExpressionContext* MySqlParser::expression(int precedence) {
   size_t parentState = getState();
   MySqlParser::ExpressionContext *_localctx = _tracker.createInstance<ExpressionContext>(_ctx, parentState);
   MySqlParser::ExpressionContext *previousContext = _localctx;
+  (void)previousContext; // Silence compiler, in case the context is not used by generated code.
   size_t startState = 594;
   enterRecursionRule(_localctx, 594, MySqlParser::RuleExpression, precedence);
 
@@ -82235,6 +84120,14 @@ tree::TerminalNode* MySqlParser::InPredicateContext::IN() {
   return getToken(MySqlParser::IN, 0);
 }
 
+tree::TerminalNode* MySqlParser::InPredicateContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
+tree::TerminalNode* MySqlParser::InPredicateContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
 MySqlParser::SelectStatementContext* MySqlParser::InPredicateContext::selectStatement() {
   return getRuleContext<MySqlParser::SelectStatementContext>(0);
 }
@@ -82269,8 +84162,16 @@ MySqlParser::ComparisonOperatorContext* MySqlParser::SubqueryComparasionPredicat
   return getRuleContext<MySqlParser::ComparisonOperatorContext>(0);
 }
 
+tree::TerminalNode* MySqlParser::SubqueryComparasionPredicateContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::SelectStatementContext* MySqlParser::SubqueryComparasionPredicateContext::selectStatement() {
   return getRuleContext<MySqlParser::SelectStatementContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::SubqueryComparasionPredicateContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 tree::TerminalNode* MySqlParser::SubqueryComparasionPredicateContext::ALL() {
@@ -82465,6 +84366,7 @@ MySqlParser::PredicateContext* MySqlParser::predicate(int precedence) {
   size_t parentState = getState();
   MySqlParser::PredicateContext *_localctx = _tracker.createInstance<PredicateContext>(_ctx, parentState);
   MySqlParser::PredicateContext *previousContext = _localctx;
+  (void)previousContext; // Silence compiler, in case the context is not used by generated code.
   size_t startState = 596;
   enterRecursionRule(_localctx, 596, MySqlParser::RulePredicate, precedence);
 
@@ -82793,8 +84695,16 @@ void MySqlParser::CollateExpressionAtomContext::exitRule(tree::ParseTreeListener
 }
 //----------------- SubqueryExpessionAtomContext ------------------------------------------------------------------
 
+tree::TerminalNode* MySqlParser::SubqueryExpessionAtomContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::SelectStatementContext* MySqlParser::SubqueryExpessionAtomContext::selectStatement() {
   return getRuleContext<MySqlParser::SelectStatementContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::SubqueryExpessionAtomContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::SubqueryExpessionAtomContext::SubqueryExpessionAtomContext(ExpressionAtomContext *ctx) { copyFrom(ctx); }
@@ -82829,12 +84739,28 @@ void MySqlParser::MysqlVariableExpressionAtomContext::exitRule(tree::ParseTreeLi
 }
 //----------------- NestedExpressionAtomContext ------------------------------------------------------------------
 
+tree::TerminalNode* MySqlParser::NestedExpressionAtomContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::ExpressionContext *> MySqlParser::NestedExpressionAtomContext::expression() {
   return getRuleContexts<MySqlParser::ExpressionContext>();
 }
 
 MySqlParser::ExpressionContext* MySqlParser::NestedExpressionAtomContext::expression(size_t i) {
   return getRuleContext<MySqlParser::ExpressionContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::NestedExpressionAtomContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::NestedExpressionAtomContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::NestedExpressionAtomContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::NestedExpressionAtomContext::NestedExpressionAtomContext(ExpressionAtomContext *ctx) { copyFrom(ctx); }
@@ -82855,12 +84781,28 @@ tree::TerminalNode* MySqlParser::NestedRowExpressionAtomContext::ROW() {
   return getToken(MySqlParser::ROW, 0);
 }
 
+tree::TerminalNode* MySqlParser::NestedRowExpressionAtomContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 std::vector<MySqlParser::ExpressionContext *> MySqlParser::NestedRowExpressionAtomContext::expression() {
   return getRuleContexts<MySqlParser::ExpressionContext>();
 }
 
 MySqlParser::ExpressionContext* MySqlParser::NestedRowExpressionAtomContext::expression(size_t i) {
   return getRuleContext<MySqlParser::ExpressionContext>(i);
+}
+
+tree::TerminalNode* MySqlParser::NestedRowExpressionAtomContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::NestedRowExpressionAtomContext::COMMA() {
+  return getTokens(MySqlParser::COMMA);
+}
+
+tree::TerminalNode* MySqlParser::NestedRowExpressionAtomContext::COMMA(size_t i) {
+  return getToken(MySqlParser::COMMA, i);
 }
 
 MySqlParser::NestedRowExpressionAtomContext::NestedRowExpressionAtomContext(ExpressionAtomContext *ctx) { copyFrom(ctx); }
@@ -82933,8 +84875,16 @@ tree::TerminalNode* MySqlParser::ExistsExpessionAtomContext::EXISTS() {
   return getToken(MySqlParser::EXISTS, 0);
 }
 
+tree::TerminalNode* MySqlParser::ExistsExpessionAtomContext::LR_BRACKET() {
+  return getToken(MySqlParser::LR_BRACKET, 0);
+}
+
 MySqlParser::SelectStatementContext* MySqlParser::ExistsExpessionAtomContext::selectStatement() {
   return getRuleContext<MySqlParser::SelectStatementContext>(0);
+}
+
+tree::TerminalNode* MySqlParser::ExistsExpessionAtomContext::RR_BRACKET() {
+  return getToken(MySqlParser::RR_BRACKET, 0);
 }
 
 MySqlParser::ExistsExpessionAtomContext::ExistsExpessionAtomContext(ExpressionAtomContext *ctx) { copyFrom(ctx); }
@@ -83061,6 +85011,7 @@ MySqlParser::ExpressionAtomContext* MySqlParser::expressionAtom(int precedence) 
   size_t parentState = getState();
   MySqlParser::ExpressionAtomContext *_localctx = _tracker.createInstance<ExpressionAtomContext>(_ctx, parentState);
   MySqlParser::ExpressionAtomContext *previousContext = _localctx;
+  (void)previousContext; // Silence compiler, in case the context is not used by generated code.
   size_t startState = 598;
   enterRecursionRule(_localctx, 598, MySqlParser::RuleExpressionAtom, precedence);
 
@@ -83305,6 +85256,22 @@ MySqlParser::UnaryOperatorContext::UnaryOperatorContext(ParserRuleContext *paren
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::UnaryOperatorContext::EXCLAMATION_SYMBOL() {
+  return getToken(MySqlParser::EXCLAMATION_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::UnaryOperatorContext::BIT_NOT_OP() {
+  return getToken(MySqlParser::BIT_NOT_OP, 0);
+}
+
+tree::TerminalNode* MySqlParser::UnaryOperatorContext::PLUS() {
+  return getToken(MySqlParser::PLUS, 0);
+}
+
+tree::TerminalNode* MySqlParser::UnaryOperatorContext::MINUS() {
+  return getToken(MySqlParser::MINUS, 0);
+}
+
 tree::TerminalNode* MySqlParser::UnaryOperatorContext::NOT() {
   return getToken(MySqlParser::NOT, 0);
 }
@@ -83364,6 +85331,22 @@ MySqlParser::UnaryOperatorContext* MySqlParser::unaryOperator() {
 
 MySqlParser::ComparisonOperatorContext::ComparisonOperatorContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
+}
+
+tree::TerminalNode* MySqlParser::ComparisonOperatorContext::EQUAL_SYMBOL() {
+  return getToken(MySqlParser::EQUAL_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::ComparisonOperatorContext::GREATER_SYMBOL() {
+  return getToken(MySqlParser::GREATER_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::ComparisonOperatorContext::LESS_SYMBOL() {
+  return getToken(MySqlParser::LESS_SYMBOL, 0);
+}
+
+tree::TerminalNode* MySqlParser::ComparisonOperatorContext::EXCLAMATION_SYMBOL() {
+  return getToken(MySqlParser::EXCLAMATION_SYMBOL, 0);
 }
 
 
@@ -83484,12 +85467,28 @@ tree::TerminalNode* MySqlParser::LogicalOperatorContext::AND() {
   return getToken(MySqlParser::AND, 0);
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::LogicalOperatorContext::BIT_AND_OP() {
+  return getTokens(MySqlParser::BIT_AND_OP);
+}
+
+tree::TerminalNode* MySqlParser::LogicalOperatorContext::BIT_AND_OP(size_t i) {
+  return getToken(MySqlParser::BIT_AND_OP, i);
+}
+
 tree::TerminalNode* MySqlParser::LogicalOperatorContext::XOR() {
   return getToken(MySqlParser::XOR, 0);
 }
 
 tree::TerminalNode* MySqlParser::LogicalOperatorContext::OR() {
   return getToken(MySqlParser::OR, 0);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::LogicalOperatorContext::BIT_OR_OP() {
+  return getTokens(MySqlParser::BIT_OR_OP);
+}
+
+tree::TerminalNode* MySqlParser::LogicalOperatorContext::BIT_OR_OP(size_t i) {
+  return getToken(MySqlParser::BIT_OR_OP, i);
 }
 
 
@@ -83579,6 +85578,34 @@ MySqlParser::BitOperatorContext::BitOperatorContext(ParserRuleContext *parent, s
   : ParserRuleContext(parent, invokingState) {
 }
 
+std::vector<tree::TerminalNode *> MySqlParser::BitOperatorContext::LESS_SYMBOL() {
+  return getTokens(MySqlParser::LESS_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::BitOperatorContext::LESS_SYMBOL(size_t i) {
+  return getToken(MySqlParser::LESS_SYMBOL, i);
+}
+
+std::vector<tree::TerminalNode *> MySqlParser::BitOperatorContext::GREATER_SYMBOL() {
+  return getTokens(MySqlParser::GREATER_SYMBOL);
+}
+
+tree::TerminalNode* MySqlParser::BitOperatorContext::GREATER_SYMBOL(size_t i) {
+  return getToken(MySqlParser::GREATER_SYMBOL, i);
+}
+
+tree::TerminalNode* MySqlParser::BitOperatorContext::BIT_AND_OP() {
+  return getToken(MySqlParser::BIT_AND_OP, 0);
+}
+
+tree::TerminalNode* MySqlParser::BitOperatorContext::BIT_XOR_OP() {
+  return getToken(MySqlParser::BIT_XOR_OP, 0);
+}
+
+tree::TerminalNode* MySqlParser::BitOperatorContext::BIT_OR_OP() {
+  return getToken(MySqlParser::BIT_OR_OP, 0);
+}
+
 
 size_t MySqlParser::BitOperatorContext::getRuleIndex() const {
   return MySqlParser::RuleBitOperator;
@@ -83666,12 +85693,36 @@ MySqlParser::MathOperatorContext::MathOperatorContext(ParserRuleContext *parent,
   : ParserRuleContext(parent, invokingState) {
 }
 
+tree::TerminalNode* MySqlParser::MathOperatorContext::STAR() {
+  return getToken(MySqlParser::STAR, 0);
+}
+
+tree::TerminalNode* MySqlParser::MathOperatorContext::DIVIDE() {
+  return getToken(MySqlParser::DIVIDE, 0);
+}
+
+tree::TerminalNode* MySqlParser::MathOperatorContext::MODULE() {
+  return getToken(MySqlParser::MODULE, 0);
+}
+
 tree::TerminalNode* MySqlParser::MathOperatorContext::DIV() {
   return getToken(MySqlParser::DIV, 0);
 }
 
 tree::TerminalNode* MySqlParser::MathOperatorContext::MOD() {
   return getToken(MySqlParser::MOD, 0);
+}
+
+tree::TerminalNode* MySqlParser::MathOperatorContext::PLUS() {
+  return getToken(MySqlParser::PLUS, 0);
+}
+
+tree::TerminalNode* MySqlParser::MathOperatorContext::MINUS() {
+  return getToken(MySqlParser::MINUS, 0);
+}
+
+tree::TerminalNode* MySqlParser::MathOperatorContext::MINUSMINUS() {
+  return getToken(MySqlParser::MINUSMINUS, 0);
 }
 
 

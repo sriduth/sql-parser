@@ -26,6 +26,7 @@ static void BM_CharacterCount(benchmark::State& st) {
     parsers::MySqlLexer lexer(&input);
     antlr4::CommonTokenStream tokens(&lexer);
     parsers::MySqlParser parser(&tokens);
+    parser.root();
   }
 }
 BENCHMARK(BM_CharacterCount)
@@ -77,7 +78,12 @@ static void BM_ConditionalTokens(benchmark::State& st) {
     parsers::MySqlLexer lexer(&input);
     antlr4::CommonTokenStream tokens(&lexer);
     parsers::MySqlParser parser(&tokens);
-    if (parser.getNumberOfSyntaxErrors()) st.SkipWithError("Parsing failed!");
+
+    parser.root();
+    
+    if (parser.getNumberOfSyntaxErrors() > 0) {
+      st.SkipWithError("Parsing failed!");
+    }
   }
 }
 BENCHMARK(BM_ConditionalTokens)

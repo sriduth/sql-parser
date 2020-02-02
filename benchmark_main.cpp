@@ -3,6 +3,7 @@
 #include "benchmark_utils.h"
 #include "queries.h"
 
+
 int main(int argc, char** argv) {
   // Create parse and tokenize benchmarks for TPC-H queries.
   const auto tpch_queries = getTPCHQueries();
