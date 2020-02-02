@@ -29,13 +29,12 @@ void BM_TokenizeBenchmark(benchmark::State& st, const std::string& query) {
   std::string new_query = uppercase(query);
   st.counters["num_tokens"] = getNumTokens(new_query);
   st.counters["num_chars"] = query.size();
-
-  antlr4::ANTLRInputStream input(new_query);
-  parsers::MySqlLexer lexer(&input);
-
   
   while (st.KeepRunning()) {
-    antlr4::CommonTokenStream tokens(&lexer);;
+    antlr4::ANTLRInputStream input(new_query);
+    parsers::MySqlLexer lexer(&input);
+    antlr4::CommonTokenStream tokens(&lexer);
+    tokens.getNumberOfOnChannelTokens();
   }
 }
 

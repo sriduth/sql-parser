@@ -13,10 +13,10 @@ static void BM_CharacterCount(benchmark::State& st) {
   const size_t querySize = st.range(0);
 
   // Base query has size of 18 characters.
-  std::string query = "SELECT %name% FROM test;";
+  std::string query = "SELECT %name% FROM TEST;";
 
   const uint pad = querySize - 18;
-  const std::string filler = std::string(pad, 'a');
+  const std::string filler = std::string(pad, 'A');
   query.replace(7, 6, filler);
 
   st.counters["num_tokens"] = getNumTokens(query);
@@ -41,17 +41,17 @@ static void BM_ConditionalTokens(benchmark::State& st) {
   const size_t numTokens = st.range(1);
 
   // Base query contains 6 tokens.
-  std::string query = "SELECT * FROM test";
+  std::string query = "SELECT * FROM TEST";
 
   // Create conditional.
   std::stringstream condStream;
   size_t missingTokens = numTokens - 4;
   if (missingTokens > 0) {
-    condStream << " WHERE a";
+    condStream << " WHERE A";
     missingTokens -= 2;
 
     while (missingTokens > 0) {
-      condStream << " AND a";
+      condStream << " AND A";
       missingTokens -= 2;
     }
   }
@@ -60,7 +60,7 @@ static void BM_ConditionalTokens(benchmark::State& st) {
 
   if (targetSize >= query.size()) {
     const size_t pad = targetSize - query.size();
-    const std::string filler = std::string(pad, 'a');
+    const std::string filler = std::string(pad, 'A');
     query.replace(7, 1, filler);
 
   } else {
