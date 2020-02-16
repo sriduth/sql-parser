@@ -26,6 +26,7 @@ static void BM_CharacterCount(benchmark::State& st) {
     parsers::MySqlLexer lexer(&input);
     antlr4::CommonTokenStream tokens(&lexer);
     parsers::MySqlParser parser(&tokens);
+    parser.getInterpreter<antlr4::atn::ParserATNSimulator>()->setPredictionMode(antlr4::atn::PredictionMode::SLL);
     parser.root();
   }
 }
@@ -78,7 +79,8 @@ static void BM_ConditionalTokens(benchmark::State& st) {
     parsers::MySqlLexer lexer(&input);
     antlr4::CommonTokenStream tokens(&lexer);
     parsers::MySqlParser parser(&tokens);
-
+    parser.getInterpreter<antlr4::atn::ParserATNSimulator>()->setPredictionMode(antlr4::atn::PredictionMode::SLL);
+    
     parser.root();
     
     if (parser.getNumberOfSyntaxErrors() > 0) {

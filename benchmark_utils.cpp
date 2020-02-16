@@ -42,12 +42,13 @@ void BM_ParseBenchmark(benchmark::State& st, const std::string& query) {
   std::string new_query = uppercase(query);
   st.counters["num_tokens"] = getNumTokens(new_query);
   st.counters["num_chars"] = query.size();
-
+  
   while (st.KeepRunning()) {
     antlr4::ANTLRInputStream input(new_query);
     parsers::MySqlLexer lexer(&input);
     antlr4::CommonTokenStream tokens(&lexer);
     parsers::MySqlParser parser(&tokens);
+    parser.getInterpreter<antlr4::atn::ParserATNSimulator>()->setPredictionMode(antlr4::atn::PredictionMode::SLL);
     parser.root();
     if (parser.getNumberOfSyntaxErrors() > 0) {
       st.SkipWithError("Parsing failed!");

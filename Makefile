@@ -30,12 +30,18 @@ endif
 GMAKE = make mode=$(mode)
 
 BM_BUILD  = $(BIN)/benchmark
-BM_CFLAGS = -std=c++17 -Wall -I./antlr-runtime/ -I./mysql/ -L./
+BM_CFLAGS = -std=c++17 -Wall -I./antlr-runtime/ -I./mysql/ -L./ -O3
+LIB_CFLAGS = -std=c++17 -Wall -I./mysql -I./antlr-runtime -L./ -fPIC -shared
 BM_PATH   = benchmark
-BM_CPP    = $(shell find . -name '*.cpp')
-BM_ALL    = $(shell find . -name '*.cpp' -or -name '*.h')
+BM_CPP    = $(shell find . -name '*.cpp' -maxdepth 1)
+BM_ALL    = $(shell find . -name '*.cpp' -or -name '*.h' -maxdepth 1)
+LIB       = $(shell find mysql antlr-runtime -name '*.cpp' -or -name '*.h')
+LIB_CPP   = $(shell find mysql antlr-runtime -name '*.cpp')
 
 benchmark: $(BM_BUILD)
+
+library: $(LIB)
+	$(CXX) $(LIB_CFLAGS) $(LIB_CPP) -o antlr_sql_parser -lpthread -lstdc++fs
 
 run_benchmarks: benchmark
 	./$(BM_BUILD) --benchmark_counters_tabular=true
@@ -45,5 +51,5 @@ save_benchmarks: benchmark
 	./$(BM_BUILD) --benchmark_format=csv > benchmarks.csv
 
 $(BM_BUILD): $(BM_ALL) $(LIB_BUILD)
-	@mkdir -p $(BIN)/
-	$(CXX) $(BM_CFLAGS) $(BM_CPP) -o $(BM_BUILD) -lbenchmark -lpthread -lstdc++fs
+	@mkdir -p $(BIN)
+	$(CXX) $(BM_CFLAGS) $(BM_CPP) -o $(BM_BUILD) -lbenchmark -lpthread -lstdc++fs -lantlrsqlparser
